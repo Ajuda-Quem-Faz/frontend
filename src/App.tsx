@@ -1,5 +1,7 @@
-import { BrowserRouter, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import Contact from './pages/contact/Contact';
+import About from './components/about/About';
 import Footer from './components/footer/Footer'
 
 function App() {
@@ -7,9 +9,14 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes>
+      
+        <div className='min-h-[80vh]'>
+          <Routes>
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
 
-        </Routes>
+        <About />
         <Footer />
       </BrowserRouter>
     </>
