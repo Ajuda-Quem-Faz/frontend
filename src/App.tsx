@@ -5,7 +5,7 @@ import Aboutus from './pages/aboutus/Aboutus';
 import Footer from './components/footer/Footer';
 import NavBar from './components/navbar/Navbar';
 import Home from './pages/home/Home';
-import About from './pages/aboutus/Aboutus';
+// import About from './pages/aboutus/Aboutus';
 
 import Login from './pages/login/Login';
 import Cadastro from './pages/cadastro/Cadastro';
@@ -15,17 +15,15 @@ function App() {
     <>
       <BrowserRouter>
         <NavBar />
-        <div className="min-h-[80vh]">
-          <Routes>
-            <Route path="/" element={<Contact />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/aboutus" element={<Aboutus />} />
-            <Route path="/cadastro" element={<Cadastro />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
-        </div>
-        <About />
+        <Routes>
+          <Route path="/" element={<Contact />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<Aboutus />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        {/* <About /> */}
         <Footer />
       </BrowserRouter>
     </>
