@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 12px 32px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+}
+
+.swiper-pagination-bullet-active-main {
+  width: 20px;
+  border-radius: 15px;
+  background-color: orange;
+}
