@@ -2,5 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 *{font-family: 'Montserrat', sans-serif;}
 
+=======
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+  }
+>>>>>>> fe12fa0ce837d5ee3da372a78871eae993ce96b0
