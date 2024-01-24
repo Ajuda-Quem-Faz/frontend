@@ -6,6 +6,8 @@ import Footer from './components/footer/Footer'
 import NavBar from './components/navbar/Navbar';
 import About from './components/about/About';
 import Home from './pages/home/Home';
+import Cadastro from './pages/cadastro/cadastro';
+
 
 function App() {
 
@@ -19,6 +21,7 @@ function App() {
                 <Route path='/home' element={<Home />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/aboutus" element={<Aboutus />} />
+                <Route path="/cadastro" element={<Cadastro />} />
             </Routes>
           </div>
           <About />
