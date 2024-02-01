@@ -1,14 +1,18 @@
+import { useEffect } from 'react';
 import Ideia from '../../components/home/info/Info';
 import Projetos from '../../components/home/produtos-carousel/Carousel-container';
 
 function Home() {
+  useEffect(() => {
+    document.title = 'Ajuda quem Faz - Home';
+  }, []);
   return (
     <>
-      <div id="container" className="flex justify-between bg-yellow-50">
+      <div id="container" className="flex justify-between bg-light-gray">
         <div>
           <div
             id="boasVindasHome"
-            className="justify-center mx-16 my-16 text-center text-purple-800 "
+            className="justify-center mx-16 my-16 text-center text-secondary-purpleDark"
           >
             <h1 className="font-bold">Ajuda quem Faz</h1>
             <p id="textoBoasVindas" className="bottom-2.5">

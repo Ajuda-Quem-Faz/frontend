@@ -10,6 +10,7 @@ import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import Cadastro from './pages/cadastro/Cadastro';
 import { AuthProvider } from './contexts/AuthContext';
+import ListaTemas from './components/categorias/ListaCategorias';
 import FormularioCategoria from './components/formularioCategoria/FormularioCategoria';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Contact />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/categorias" element={<ListaTemas />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<Aboutus />} />
           <Route path="/cadastro" element={<Cadastro />} />

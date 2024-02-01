@@ -4,29 +4,29 @@ function About() {
   return (
     <>
       {/* Cards */}
-      <div className="bg-violet-500 w-full grid grid-cols-3 place-items-center p-2">
+      <div className="bg-secondary-purpleLight w-full grid grid-cols-3 place-items-center p-2">
         {/* Missão */}
-        <div className="bg-orange-500 grid place-items-center">
+        <div className="bg-primary-orange grid place-items-center">
           <h2 className="font-bold text-2xl">Missão</h2>
           <img src="https://static.thenounproject.com/png/526867-200.png"></img>
         </div>
         {/* Valores */}
-        <div className="bg-orange-500 grid place-items-center">
+        <div className="bg-primary-orange grid place-items-center">
           <h2 className="font-bold text-2xl">Valores</h2>
           <img src="https://static.thenounproject.com/png/526867-200.png"></img>
         </div>
         {/* Conquistas */}
-        <div className="bg-orange-500 grid place-items-center">
+        <div className="bg-primary-orange grid place-items-center">
           <h2 className="font-bold text-2xl">Conquistas</h2>
           <img src="https://static.thenounproject.com/png/526867-200.png"></img>
         </div>
       </div>
 
       {/* Historia */}
-      <div className="bg-violet-800 w-full p-2 flex">
+      <div className="bg-secondary-purple w-full p-2 flex">
         <div>
-          <h2 className="font-bold text-white">Nossa história:</h2>
-          <p className="text-white">
+          <h2 className="font-bold text-light-grayLight">Nossa história:</h2>
+          <p className="text-light-grayLight">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda expedita
             amet asperiores ipsum neque excepturi. Labore quod asperiores reprehenderit,
             facere quaerat amet quam illum libero dolorum vel corporis pariatur magnam.
@@ -40,7 +40,7 @@ function About() {
       {/* Integrantes */}
       <div className="h-full">
         <div className="grid grid-cols-3">
-          <div className="bg-purple-800 text-white grid grid-cols-2 rounded-3xl m-1 p-2">
+          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
             <div className="grid place-items-center">
               <img
                 src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"
@@ -57,7 +57,7 @@ function About() {
             </div>
           </div>
 
-          <div className="bg-purple-800 text-white grid grid-cols-2 rounded-3xl m-1 p-2">
+          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
             <div className="grid place-items-center">
               <img
                 src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"
@@ -74,7 +74,7 @@ function About() {
             </div>
           </div>
 
-          <div className="bg-purple-800 text-white grid grid-cols-2 rounded-3xl m-1 p-2">
+          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
             <div className="grid place-items-center">
               <img
                 src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"
@@ -93,7 +93,7 @@ function About() {
         </div>
 
         <div className="grid grid-cols-3">
-          <div className="bg-purple-800 text-white grid grid-cols-2 rounded-3xl m-1 p-2">
+          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
             <div className="grid place-items-center">
               <img
                 src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"
@@ -110,7 +110,7 @@ function About() {
             </div>
           </div>
 
-          <div className="bg-purple-800 text-white grid grid-cols-2 rounded-3xl m-1 p-2">
+          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
             <div className="grid place-items-center">
               <img
                 src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"
@@ -127,7 +127,7 @@ function About() {
             </div>
           </div>
 
-          <div className="bg-purple-800 text-white grid grid-cols-2 rounded-3xl m-1 p-2">
+          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
             <div className="grid place-items-center">
               <img
                 src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"
@@ -147,7 +147,7 @@ function About() {
 
         <div className="grid grid-cols-3">
           <div className="col-span-1"></div>
-          <div className="bg-purple-800 text-white grid grid-cols-2 rounded-3xl m-1 p-2">
+          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
             <div className="grid place-items-center">
               <img
                 src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"

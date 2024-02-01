@@ -6,12 +6,12 @@ const CardOng = (props: {
 }) => {
   return (
     <>
-      <div className="flex items-center h-full grid-cols-2 gap-4 p-5 text-white bg-primary-500 rounded-3xl">
+      <div className="flex items-center h-full grid-cols-2 gap-4 p-5 text-light-grayLight bg-primary-orange rounded-3xl">
         <img
           src={props.imagem}
           width={80}
           height={80}
-          className="w-32 h-32 rounded-full bg-primary-400"
+          className="w-32 h-32 rounded-full bg-primary-orangeLight"
         ></img>
         <div className="flex flex-col justify-between h-full">
           <div>

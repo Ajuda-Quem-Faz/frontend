@@ -16,7 +16,7 @@ export default function Projetos() {
       <div className="container py-10 mx-auto">
         <div className="flex justify-between">
           <h2 className="text-2xl font-bold">Doe para projetos da sua região</h2>
-          <Link to="" className="text-2xl text-primary-500 hover:underline">
+          <Link to="" className="text-2xl text-primary-orange hover:underline">
             Ver mais
           </Link>
         </div>
