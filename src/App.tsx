@@ -13,29 +13,30 @@ import { AuthProvider } from './contexts/AuthContext';
 import ListaCategorias from './components/categoria/listacategoria/ListaCategorias';
 import DeletarCategoria from './components/categoria/deletecategoria/DeleteCategoria';
 import FormularioCategoria from './components/formularioCategoria/FormularioCategoria';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <>
-    <AuthProvider>
-
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Contact />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/categorias" element={<ListaCategorias />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<Aboutus />} />
-          <Route path="/cadastro" element={<Cadastro />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/deletarCategoria/:id" element={<DeletarCategoria />}/>
-          <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
-          <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
-        </Routes>
-        {/* <About /> */}
-        <Footer />
-      </BrowserRouter>
+      <AuthProvider>
+        {/* <ToastContainer /> */}
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Contact />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/categorias" element={<ListaCategorias />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<Aboutus />} />
+            <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+            <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
+            <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
+          </Routes>
+          {/* <About /> */}
+          <Footer />
+        </BrowserRouter>
       </AuthProvider>
 
     </>

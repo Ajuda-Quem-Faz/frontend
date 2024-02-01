@@ -7,8 +7,8 @@ function NavLinks() {
     <>
       {links.map((link) => (
         <div>
-          <div className="px-3 text left md:cursor-pointer group flex flex-row items-center mx-16 hover:underline z-50">
-            <List size={36} className=" size-12" />
+          <div className="px-3 text left md:cursor-pointer group flex flex-row items-center mx-16 hover:underline z-50 gap-3">
+            <List size={22} />
             <h1 className="py-3">{link.name}</h1>
             {link.submenu && (
               <div>
