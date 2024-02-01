@@ -10,6 +10,7 @@ import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import Cadastro from './pages/cadastro/Cadastro';
 import { AuthProvider } from './contexts/AuthContext';
+import ListaCategorias from './components/categoria/listacategoria/ListaCategorias';
 import DeletarCategoria from './components/categoria/deletecategoria/DeleteCategoria';
 
 function App() {
@@ -22,11 +23,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Contact />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/categorias" element={<ListaCategorias />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<Aboutus />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/deletarcategoria" element={<DeletarCategoria />}/>
+          <Route path="/deletarCategoria/:id" element={<DeletarCategoria />}/>
         </Routes>
         {/* <About /> */}
         <Footer />

@@ -48,12 +48,12 @@ function DeletarCategoria() {
         navigate("/categorias")
     }
 
-    async function deletarTema() {
+    async function deletarCategoria() {
 
         setIsLoading(true)
 
         try {
-            await deletar(`/temas/${id}`, {
+            await deletar(`/categoria/${id}`, {
                 headers: { 'Authorization': token }
             })
             ToastAlerta('O Tema foi excluído com sucesso!', "sucesso")
@@ -91,7 +91,7 @@ function DeletarCategoria() {
                     <button
                         className='w-full text-slate-100 bg-primary-orangeLight
                                    hover:bg-primary-orange flex items-center justify-center'
-                                   onClick={deletarTema}>
+                                   onClick={deletarCategoria}>
                          {isLoading ?
                         <RotatingLines
                             strokeColor="white"
