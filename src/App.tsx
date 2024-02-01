@@ -11,7 +11,7 @@ import Cadastro from './pages/cadastro/Cadastro';
 import { AuthProvider } from './contexts/AuthContext';
 import ListaCategorias from './components/categoria/listacategoria/ListaCategorias';
 import DeletarCategoria from './components/categoria/deletecategoria/DeleteCategoria';
-import FormularioCategoria from './components/formularioCategoria/FormularioCategoria';
+import FormularioCategoria from './components/categoria/formularioCategoria/FormularioCategoria';
 
 function App() {
   return (
@@ -35,7 +35,6 @@ function App() {
         </Routes>
         </div>
 
-        {/* <About /> */}
         <Footer />
       </BrowserRouter>
 
