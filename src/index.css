@@ -18,9 +18,13 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  justify-content: space-between;
+.swiper-button-next {
+  @apply text-primary-orange;
+  @apply font-bold;
+  @apply bg-dark-black bg-opacity-15 backdrop-blur-sm hover:bg-opacity-25 transition-all pl-2 scale-75 rounded-full justify-center size-16 flex items-center;
+}
+.swiper-button-prev {
+  @apply text-primary-orange;
+  @apply font-bold;
+  @apply bg-dark-black bg-opacity-15 backdrop-blur-sm hover:bg-opacity-25 transition-all pr-2 scale-75 rounded-full justify-center size-16 flex items-center;
 }
