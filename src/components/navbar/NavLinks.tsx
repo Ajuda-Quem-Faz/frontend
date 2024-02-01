@@ -9,7 +9,7 @@ function NavLinks() {
         <div>
           <div className="px-3 text left md:cursor-pointer group flex flex-row items-center mx-16 z-50 gap-3">
             <List size={22} className='text-dark-blackLight'/>
-            <h1 className="py-3 text-dark-blackLight">{link.name}</h1>
+            <h1 className="py-3 text-dark-blackLight hover:text-light-grayLight">{link.name}</h1>
             {link.submenu && (
               <div>
                 <div className="absolute top-16 left-88 hidden group-hover:block hover:block">

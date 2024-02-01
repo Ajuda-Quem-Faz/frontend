@@ -97,22 +97,32 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <div>
-        <div className="flex justify-around p-0 bg-primary-orange text-light-grayLight gap-60 h-12 *:text-base font-semibold">
-          <div className="md:flex hidden uppercase items-center pr-96 text-secondary-purple z-50">
+
+        {/** Barra Menu */}
+        <div className="flex justify-around items-center bg-primary-orange *:text-base font-semibold text-secondary-purple">
+          {/** Categorias */}
+          <div className="uppercase items-center place-items-start">
             <NavLinks />
           </div>
-          <div className="flex justify-center">
-            <ul className="md:flex hidden uppercase items-center font-semibold text-dark-blackLight">
-              <li className="flex flex-row gap-20 pr-14 ">
-                <Link to="/" className='hover:text-white'>Produtos</Link>
-                <Link to="/about" className='hover:text-white'>Equipe</Link>
-                <Link to="/contact" className='hover:text-white'>Contato</Link>
-              </li>
-            </ul>
+
+          {/** Botões */}
+          <div className="flex-row justify-end">
+
+            <button className='uppercase hover:text-white px-10 py-3'>
+              <Link to="/" className=''>Produtos</Link>
+            </button>
+
+            <button className='uppercase hover:text-white px-10 py-3'>
+              <Link to="/about" className=''>Equipe</Link>
+            </button>
+
+            <button className='uppercase hover:text-white px-10 py-3'>
+              <Link to="/contact" className=''>Contato</Link>
+            </button>
+
           </div>
         </div>
-      </div>
+
     </div>
   );
 };
