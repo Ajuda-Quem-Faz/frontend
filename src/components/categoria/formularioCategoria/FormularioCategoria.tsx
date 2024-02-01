@@ -1,9 +1,9 @@
 import { useState, useContext, useEffect, ChangeEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Categoria from "../../models/Categoria";
-import { atualizar, buscar, cadastrar } from "../../services/Service";
-import { ToastAlerta } from "../../utils/ToastAlerta";
-import { AuthContext } from "../../contexts/AuthContext";
+import Categoria from "../../../models/Categoria";
+import { atualizar, buscar, cadastrar } from "../../../services/Service";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
+import { AuthContext } from "../../../contexts/AuthContext";
 import { RotatingLines } from "react-loader-spinner";
 
 
@@ -21,11 +21,17 @@ function FormularioCategoria() {
 
 
   async function buscarPorId(id: string) {
-    await buscar(`/categorias/${id}`, setCategoria, {
-      headers: {
-        Authorization: token,
-      },
-    });
+    try{
+      await buscar(`/categorias/${id}`, setCategoria, {
+        headers: { Authorization: token }
+      })
+    } catch (error: any) {
+      if (error.toString().includes('403')){
+        ToastAlerta('O token Expirou!', '')
+        handleLogout()
+      }
+    }
+
   }
 
   useEffect(() => {
@@ -39,7 +45,7 @@ function FormularioCategoria() {
   useEffect(() => {
     if (token === '') {
       ToastAlerta('Você precisa estar logado!', "")
-      navigate('/')
+      navigate('/login')
     }
   }, [token])
 

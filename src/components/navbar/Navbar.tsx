@@ -25,37 +25,37 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="flex w-full justify-between py-4 ">
+      <div className="flex w-full justify-between py-2">
         <div className="flex items-center justify-center w-1/5 logo-container">
-          <Link to="/home" className="flex flex-row items-center ">
+          <Link to="/home" className="flex flex-row items-center">
             {
               <img
                 src="https://ik.imagekit.io/ajudaquemfaz/Logo/Logo%20ImgKit.png?updatedAt=1706791149163"
                 alt="Logo do website"
-                className="w-auto h-16"
+                className="w-auto h-12 mr-2"
               />
             }
-            <h1 className="text-xl font-bold">Ajuda Quem Faz</h1>
+            <h1 className="text-lg font-bold">Ajuda Quem Faz</h1>
           </Link>
         </div>
-        <div className="input-group flex justify-stretch w-full border-primary-orangeLight border-2 border-none rounded-3xl">
-          <button className="flex items-center justify-center w-1/12 gap-3 text-sm font-bold bg-secondary-purpleLight hover:bg-secondary-purpleDark rounded-s-3xl">
-            <Funnel size={36} color="white" weight="bold" />
+        <div className="input-group flex justify-stretch w-full border-primary-orangeLight h-12">
+          <button className="flex items-center justify-center w-1/12 gap-3 text-sm font-bold bg-secondary-purpleLight hover:bg-secondary-purpleDark rounded-l-xl">
+            <Funnel size={30} color="white" />
           </button>
           <input
             type="text"
             placeholder="Pesquise seu produto aqui"
-            className="bg-light-grayDark px-10 w-full text-xl"
+            className="bg-light-grayDark px-8 w-full text-lg"
           />
-          <button className="grid place-content-center bg-secondary-purpleLight hover:bg-secondary-purpleDark bg-opacity-95 rounded-e-3xl w-[12.5%] ">
-            <MagnifyingGlass weight="bold" size={32} color="white" />
+          <button className="grid place-content-center bg-secondary-purpleLight hover:bg-secondary-purpleDark bg-opacity-95 rounded-r-xl w-28">
+            <MagnifyingGlass weight="bold" size={26} color="white" />
           </button>
         </div>
         <div id="header-end" className="flex items-center w-1/6 justify-evenly ">
           <a href="/" className="flex flex-col items-center justify-center">
             <ShoppingCartSimple
               className="text-secondary-purpleLight text-opacity-95"
-              size={58}
+              size={44}
               weight="duotone"
             />
           </a>
@@ -73,7 +73,7 @@ const NavBar = () => {
             ) : (
               <UserCircle
                 className="text-secondary-purpleLight"
-                size={64}
+                size={48}
                 weight="duotone"
               />
             )}
@@ -97,22 +97,32 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <div>
-        <div className="flex justify-around p-0 bg-primary-orange text-secondary-purpleDark gap-60 h-20 text-lg">
-          <div className="md:flex hidden uppercase items-center pr-96 text-secondary-purple z-50">
+
+        {/** Barra Menu */}
+        <div className="flex justify-around items-center bg-primary-orange *:text-base font-semibold text-secondary-purple">
+          {/** Categorias */}
+          <div className="uppercase items-center place-items-start">
             <NavLinks />
           </div>
-          <div className="flex justify-center">
-            <ul className="md:flex hidden uppercase items-center text-secondary-purple">
-              <li className="flex flex-row gap-20 pr-14 ">
-                <Link to="/">Produtos</Link>
-                <Link to="/about">Equipe</Link>
-                <Link to="/contact">Contato</Link>
-              </li>
-            </ul>
+
+          {/** Botões */}
+          <div className="flex-row justify-end">
+
+            <button className='uppercase hover:text-white px-10 py-3'>
+              <Link to="/" className=''>Produtos</Link>
+            </button>
+
+            <button className='uppercase hover:text-white px-10 py-3'>
+              <Link to="/about" className=''>Equipe</Link>
+            </button>
+
+            <button className='uppercase hover:text-white px-10 py-3'>
+              <Link to="/contact" className=''>Contato</Link>
+            </button>
+
           </div>
         </div>
-      </div>
+
     </div>
   );
 };

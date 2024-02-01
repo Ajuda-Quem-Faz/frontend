@@ -1,13 +1,13 @@
 import {
-  CurrencyCircleDollar,
-  Medal,
-  Storefront,
-  YoutubeLogo,
+    CurrencyCircleDollar,
+    Medal,
+    Storefront,
+    YoutubeLogo,
 } from '@phosphor-icons/react';
 import {
-  FacebookLogo,
-  InstagramLogo,
-  LinkedinLogo,
+    FacebookLogo,
+    InstagramLogo,
+    LinkedinLogo,
 } from '@phosphor-icons/react/dist/ssr';
 import { Link } from 'react-router-dom';
 

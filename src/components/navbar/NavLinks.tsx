@@ -7,21 +7,21 @@ function NavLinks() {
     <>
       {links.map((link) => (
         <div>
-          <div className="px-3 text left md:cursor-pointer group flex flex-row items-center mx-16 hover:underline z-50">
-            <List size={36} className=" size-12" />
-            <h1 className="py-3">{link.name}</h1>
+          <div className="px-3 text left md:cursor-pointer group flex flex-row items-center mx-16 z-50 gap-3">
+            <List size={22} className='text-dark-blackLight'/>
+            <h1 className="py-3 text-dark-blackLight hover:text-light-grayLight">{link.name}</h1>
             {link.submenu && (
               <div>
-                <div className="absolute top-40 left-40 hidden group-hover:block hover:block">
-                  <div className=" bg-light-gray p-5 grid grid-cols-2 gap-10">
+                <div className="absolute top-16 left-88 hidden group-hover:block hover:block">
+                  <div className=" bg-primary-orange   px-10 py-3 mt-2 grid grid-cols-2 gap-8">
                     {link.sublinks.map((mysublinks) => (
                       <div>
-                        <h1 className="text-lg font-semibold">{mysublinks.Head}</h1>
+                        <h1 className="text-lg font-semibold pb-7 text-dark-blackLight">{mysublinks.Head}</h1>
                         {mysublinks.sublink.map((slinks) => (
-                          <li className="text-sm text-dark-blackLight my-2.5 list-none">
+                          <li className="text-sm text-white my-2.5 list-none">
                             <Link
                               to={slinks.link}
-                              className=" hover:text-secondary-purpleLight"
+                              className=" hover:text-dark-blackLight"
                             >
                               {slinks.name}
                             </Link>

@@ -13,9 +13,9 @@ function ListaCategorias() {
     document.title = 'Ajuda quem Faz - Categorias';
   }, []);
 
-  const [categoria, setCategoria] = useState<Categoria[]>([]);
-
   let navigate = useNavigate();
+
+  const [categoria, setCategoria] = useState<Categoria[]>([]);
 
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
@@ -38,11 +38,12 @@ function ListaCategorias() {
       ToastAlerta('Você precisa estar logado', 'erro');
       navigate('/login');
     }
-  }, [token]);
+  } , [token] );
 
   useEffect(() => {
     buscarCategoria();
   }, [categoria.length]);
+
   return (
     <>
       {categoria.length === 0 && (
