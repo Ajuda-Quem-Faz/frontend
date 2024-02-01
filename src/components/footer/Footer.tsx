@@ -5,27 +5,29 @@ import { Link } from "react-router-dom"
 function Footer() {
     return (
         <footer className="flex flex-col">
-            <div className="flex justify-around items-center py-2 text-indigo-950 font-semibold">
-                <Link to={'/about'} className="flex flex-col items-center">
+            <div className="flex justify-around items-center py-2 text-secondary-purpleDark font-semibold">
+                <Link to={'/about'} className="flex flex-col items-center hover:text-secondary-purpleLight">
                     <Medal size={36}></Medal>
                     <p className="">Quem somos</p>
                 </Link>
-                <Link to={''} className="flex flex-col items-center">
+                <Link to={''} className="flex flex-col items-center hover:text-secondary-purpleLight">
                     <CurrencyCircleDollar size={36}></CurrencyCircleDollar>
                     <p className="">Como contribuir</p>
                 </Link>
-                <Link to={''} className="flex flex-col items-center">
+                <Link to={''} className="flex flex-col items-center hover:text-secondary-purpleLight">
                     <Storefront size={36}></Storefront>
                     <p className="">Como Vender</p>
                 </Link>
             </div>
-            <div className="flex justify-between px-10 py-3 bg-violet-950">
-                <img src="" alt="logo"></img>
+            <div className="flex justify-between px-12 items-center bg-secondary-purpleDark">
+                <Link to="/">
+                    <img src="https://ik.imagekit.io/ajudaquemfaz/Logo/Footer%20logo%20ImgKit.png?updatedAt=1706791149016" className="py-2 w-14" alt="logo"></img>
+                </Link>
                 <div id="icon" className="flex gap-8">
-                    <InstagramLogo size={40} color="#F1F1E7"></InstagramLogo>
-                    <FacebookLogo size={40} color="#F1F1E7"></FacebookLogo>
-                    <YoutubeLogo size={40} color="#F1F1E7"></YoutubeLogo>
-                    <LinkedinLogo size={40} color="#F1F1E7"></LinkedinLogo>
+                    <Link to="#"><InstagramLogo size={40} className="text-tertiary-blue hover:text-primary-orange"></InstagramLogo></Link>
+                    <Link to="#"><FacebookLogo size={40} className="text-tertiary-blue hover:text-primary-orangeLight"></FacebookLogo></Link>
+                    <Link to="#"><YoutubeLogo size={40} className="text-tertiary-blue hover:text-primary-orangeLight"></YoutubeLogo></Link>
+                    <Link to="#"><LinkedinLogo size={40} className="text-tertiary-blue hover:text-primary-orangeLight"></LinkedinLogo></Link>
                 </div>
             </div>
             <div className="flex justify-between px-8 font-bold text-xs py-1">
