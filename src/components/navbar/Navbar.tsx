@@ -98,12 +98,12 @@ const NavBar = () => {
         </div>
       </div>
       <div>
-        <div className="flex justify-around p-0 bg-primary-orange text-secondary-purpleDark gap-60 h-20 text-lg">
+        <div className="flex justify-around p-0 bg-primary-orange text-light-grayLight gap-60 h-20 text-lg">
           <div className="md:flex hidden uppercase items-center pr-96 text-secondary-purple z-50">
             <NavLinks />
           </div>
           <div className="flex justify-center">
-            <ul className="md:flex hidden uppercase items-center text-secondary-purple">
+            <ul className="md:flex hidden uppercase items-center font-semibold text-light-grayLight">
               <li className="flex flex-row gap-20 pr-14 ">
                 <Link to="/">Produtos</Link>
                 <Link to="/about">Equipe</Link>

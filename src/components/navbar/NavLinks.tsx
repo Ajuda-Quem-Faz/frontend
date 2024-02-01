@@ -13,7 +13,7 @@ function NavLinks() {
             {link.submenu && (
               <div>
                 <div className="absolute top-40 left-40 hidden group-hover:block hover:block">
-                  <div className=" bg-light-gray p-5 grid grid-cols-2 gap-10">
+                  <div className=" bg-primary-orangeLight p-5 grid grid-cols-2 gap-10">
                     {link.sublinks.map((mysublinks) => (
                       <div>
                         <h1 className="text-lg font-semibold">{mysublinks.Head}</h1>
