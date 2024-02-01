@@ -31,7 +31,7 @@ const CardProduto = (props: {
           <div className="flex justify-around items-center w-full mt-5">
             <Link
               to={props.link}
-              className="w-auto text-2xl text-center x-auto btn bg-primary-orangeLight text-light-gray flex gap-3 items-center hover:bg-primary-orangeDark"
+              className="w-auto text-2xl text-center x-auto btn bg-primary-orange text-light-gray flex gap-3 items-center hover:bg-primary-orangeDark"
             >
               Comprar
               <ShoppingCart className="text-light-gray" weight="bold" size={32} />

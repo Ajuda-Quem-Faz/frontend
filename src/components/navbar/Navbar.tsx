@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import NavLinks from './NavLinks';
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
+import { ToastAlerta } from '../../utils/ToastAlerta';
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const NavBar = () => {
 
   function logout() {
     handleLogout();
-    alert('O Usuário foi desconectado com sucesso!');
+    ToastAlerta('O Usuário foi desconectado com sucesso!', 'sucesso');
     navigate('/login');
   }
 
@@ -58,12 +59,12 @@ const NavBar = () => {
               weight="duotone"
             />
           </a>
-          <div className="group">
+          <div className="group z-50">
             {token !== '' ? (
               <img
                 src={
-                  usuario.foto
-                    ? ''
+                  usuario.foto != ``
+                    ? `${usuario.foto}`
                     : 'https://img.myloview.com.br/fotomurais/human-icon-user-symbol-profile-sign-vector-illustration-700-216582565.jpg'
                 }
                 alt="Foto do usuário"
@@ -76,18 +77,18 @@ const NavBar = () => {
                 weight="duotone"
               />
             )}
-            <ul className="absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5">
-              <li className="bg-primary-orangeLight hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
-                Cadastrar Categoria
+            <ul className="absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray">
+              <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
+                <Link to="/cadastroCategoria">Cadastrar Categoria</Link>
               </li>
-              <li className="bg-primary-orangeLight hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
+              <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
                 Settings
               </li>
-              <li className="bg-primary-orangeLight hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
+              <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
                 <a href="/login"> Login</a>
               </li>
               <li
-                className="bg-primary-orangeLight hover:bg-primary-orangeDark py-4 px-4 cursor-pointer"
+                className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer"
                 onClick={logout}
               >
                 Logout
@@ -97,16 +98,16 @@ const NavBar = () => {
         </div>
       </div>
       <div>
-        <div className="flex justify-around p-0 bg-primary-orange text-secondary-purpleDark gap-60 h-12 text-base font-semibold">
-          <div className="md:flex hidden uppercase items-center pr-96 text-secondary-purple">
+        <div className="flex justify-around p-0 bg-primary-orange text-light-grayLight gap-60 h-12 *:text-base font-semibold">
+          <div className="md:flex hidden uppercase items-center pr-96 text-secondary-purple z-50">
             <NavLinks />
           </div>
           <div className="flex justify-center">
-            <ul className="md:flex hidden uppercase items-center text-secondary-purple">
+            <ul className="md:flex hidden uppercase items-center font-semibold text-dark-blackLight">
               <li className="flex flex-row gap-20 pr-14 ">
-                <Link to="/">Produtos</Link>
-                <Link to="/about">Equipe</Link>
-                <Link to="/contact">Contato</Link>
+                <Link to="/" className='hover:text-white'>Produtos</Link>
+                <Link to="/about" className='hover:text-white'>Equipe</Link>
+                <Link to="/contact" className='hover:text-white'>Contato</Link>
               </li>
             </ul>
           </div>

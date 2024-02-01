@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect, ChangeEvent } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Categoria from "../../models/Categoria";
-import { atualizar, cadastrar } from "../../services/Service";
+import { atualizar, buscar, cadastrar } from "../../services/Service";
 import { ToastAlerta } from "../../utils/ToastAlerta";
 import { AuthContext } from "../../contexts/AuthContext";
 import { RotatingLines } from "react-loader-spinner";
@@ -18,6 +18,22 @@ function FormularioCategoria() {
   const token = usuario.token
 
   const { id } = useParams<{ id: string }>();
+
+
+  async function buscarPorId(id: string) {
+    await buscar(`/categorias/${id}`, setCategoria, {
+      headers: {
+        Authorization: token,
+      },
+    });
+  }
+
+  useEffect(() => {
+    if (id !== undefined) {
+
+        buscarPorId(id)
+    }
+}, [id])
 
 
   useEffect(() => {
@@ -48,14 +64,14 @@ function FormularioCategoria() {
         await atualizar(`/categorias`, categoria, setCategoria, {
           headers: { 'Authorization': token }
         })
-        ToastAlerta('O Categoria foi atualizado com sucesso!', "sucesso")
+        ToastAlerta('A Categoria foi atualizada com sucesso!', "sucesso")
         console.log("sucesso")
       } catch (error: any) {
         if (error.toString().includes('403')) {
           ToastAlerta('O Token Expirou!', "erro")
           handleLogout();
         } else {
-          ToastAlerta('Erro ao atualizar o Categoria.', "erro")
+          ToastAlerta('Erro ao atualizar a Categoria.', "erro")
           console.log("erro")
         }
 
@@ -65,13 +81,13 @@ function FormularioCategoria() {
         await cadastrar(`/categorias`, categoria, setCategoria, {
           headers: { 'Authorization': token }
         })
-        ToastAlerta('O Categoria foi cadastrado com sucesso!', "sucesso")
+        ToastAlerta('A Categoria foi cadastrada com sucesso!', "sucesso")
       } catch (error: any) {
         if (error.toString().includes('403')) {
           ToastAlerta('O Token Expirou!', "erro")
           handleLogout();
         } else {
-          ToastAlerta('Erro ao cadastrar o Categoria.', "erro")
+          ToastAlerta('Erro ao cadastrar a Categoria.', "erro")
         }
 
       }
