@@ -63,8 +63,8 @@ const NavBar = () => {
             {token !== '' ? (
               <img
                 src={
-                  usuario.foto
-                    ? ''
+                  usuario.foto != ``
+                    ? `${usuario.foto}`
                     : 'https://img.myloview.com.br/fotomurais/human-icon-user-symbol-profile-sign-vector-illustration-700-216582565.jpg'
                 }
                 alt="Foto do usuário"
