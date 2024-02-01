@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
-import { links } from "./MyLinks";
-import { List } from "@phosphor-icons/react";
+import { Link } from 'react-router-dom';
+import { links } from './MyLinks';
+import { List } from '@phosphor-icons/react';
 
 function NavLinks() {
- 
   return (
     <>
       {links.map((link) => (
@@ -14,18 +13,15 @@ function NavLinks() {
             {link.submenu && (
               <div>
                 <div className="absolute top-40 left-40 hidden group-hover:block hover:block">
-
-                  <div className="bg-primary-200 p-5 grid grid-cols-2 gap-10">
+                  <div className="bg-primary-orange p-5 grid grid-cols-2 gap-10">
                     {link.sublinks.map((mysublinks) => (
                       <div>
-                        <h1 className="text-lg font-semibold">
-                          {mysublinks.Head}
-                        </h1>
+                        <h1 className="text-lg font-semibold">{mysublinks.Head}</h1>
                         {mysublinks.sublink.map((slinks) => (
-                          <li className="text-sm text-gray-600 my-2.5 list-none">
+                          <li className="text-sm text-dark-blackLight my-2.5 list-none">
                             <Link
                               to={slinks.link}
-                              className=" hover:text-purple-700"
+                              className=" hover:text-secondary-purpleLight"
                             >
                               {slinks.name}
                             </Link>
