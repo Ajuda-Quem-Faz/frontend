@@ -31,10 +31,10 @@ useEffect(() => {
 
 return (
     <div className="flex justify-center">
-        <div className="flex justify-center text-slate-800 font-semibold text-2xl mx-28 py-9 w-1/4">
+        <div className="flex justify-center text-slate-800 font-semibold py-9 w-1/4">
 
             <form action="" className="flex flex-col justify-center gap-2 w-2/3" onSubmit={login}>
-                <h1 className="py-2 flex justify-center">Login</h1>
+                <h1 className="py-2 flex justify-center text-2xl">Login</h1>
                 <label className="text-lg">Usuário</label>
                 <input className="border-2 rounded-lg text-base font-normal text-slate-900 px-2 py-1"
                     placeholder="exemplo@email.com"
@@ -56,20 +56,20 @@ return (
                         atualizarEstado(e)
                     } />
                 <button className="border-2 border-solid rounded-lg border-slate-900 hover:border-purple-600 hover:text-purple-600
-                 p-1 mt-4 text-xl flex justify-center" type="submit">
+                 p-1 mt-4 text-lg flex justify-center" type="submit">
                     {isLoading ?
                         <RotatingLines
-                            strokeColor="white"
+                            strokeColor="purple"
                             strokeWidth="5"
                             animationDuration="0.75"
-                            width="24"
+                            width="28"
                             visible={true}
                         />
                         :
-                        <span>Logar</span>
+                        <span>Entrar</span>
                     }
                 </button>
-                <p className="text-lg font-normal flex justify-center gap-1">Não tem uma conta? <Link to={`/cadastro`} className="text-purple-600  hover:font-semibold">Cadastre-se aqui!</Link></p>
+                <p className= "text-center text-base border-t-2 py-3 mt-3 font-semibold">Não tem uma conta? <Link to={`/cadastro`} className="text-purple-600  hover:underline">Cadastre-se aqui!</Link></p>
             </form>
         </div>
     </div>
