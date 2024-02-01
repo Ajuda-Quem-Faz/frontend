@@ -36,7 +36,7 @@ function FormularioCategoria() {
   }
 
   function retornar() {
-    navigate("/categoria")
+    navigate("/categorias")
   }
 
   async function gerarNovaCategoria(e: ChangeEvent<HTMLFormElement>) {
@@ -49,12 +49,14 @@ function FormularioCategoria() {
           headers: { 'Authorization': token }
         })
         ToastAlerta('O Categoria foi atualizado com sucesso!', "sucesso")
+        console.log("sucesso")
       } catch (error: any) {
         if (error.toString().includes('403')) {
           ToastAlerta('O Token Expirou!', "erro")
           handleLogout();
         } else {
           ToastAlerta('Erro ao atualizar o Categoria.', "erro")
+          console.log("erro")
         }
 
       }

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import Categoria from '../../models/Categoria';
 import { DotsThree, PencilSimple, TrashSimple } from '@phosphor-icons/react';
+import Categoria from '../../../models/Categoria';
 
 interface CardCategoriaProps {
   categoria: Categoria;

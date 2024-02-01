@@ -1,10 +1,11 @@
 import { useEffect, useState, useContext } from 'react';
 import { TailSpin } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../contexts/AuthContext';
-import { buscar } from '../../services/Service';
-import Categoria from '../../models/Categoria';
-import CardCategoria from './CardCategoria';
+import { AuthContext } from '../../../contexts/AuthContext';
+import { buscar } from '../../../services/Service';
+import Categoria from '../../../models/Categoria';
+import CardCategoria from '../cardcategoria/CardCategoria';
+
 
 function ListaCategorias() {
   useEffect(() => {
