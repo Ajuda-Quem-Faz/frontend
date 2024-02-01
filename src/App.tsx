@@ -13,6 +13,7 @@ import ListaCategorias from './components/categoria/listacategoria/ListaCategori
 import DeletarCategoria from './components/categoria/deletecategoria/DeleteCategoria';
 import FormularioCategoria from './components/categoria/formularioCategoria/FormularioCategoria';
 
+
 function App() {
   return (
     <>
@@ -22,7 +23,7 @@ function App() {
       <div className='min-h-[80vh]'>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Contact />} />
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/categorias" element={<ListaCategorias />} />
           <Route path="/contact" element={<Contact />} />

@@ -2,10 +2,11 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    extend:{
     colors: {
       primary: {
         orange: '#ff9900',
-        orangeLight: '#ff9d0a',
+        orangeLight: '#ffc266',
         orangeDark: '#e99414',
       },
 
@@ -34,5 +35,6 @@ export default {
       red: '#FF1010',
     },
   },
+},
   plugins: [],
 };

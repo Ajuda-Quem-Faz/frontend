@@ -1,13 +1,13 @@
 import {
-  CurrencyCircleDollar,
-  Medal,
-  Storefront,
-  YoutubeLogo,
+    CurrencyCircleDollar,
+    Medal,
+    Storefront,
+    YoutubeLogo,
 } from '@phosphor-icons/react';
 import {
-  FacebookLogo,
-  InstagramLogo,
-  LinkedinLogo,
+    FacebookLogo,
+    InstagramLogo,
+    LinkedinLogo,
 } from '@phosphor-icons/react/dist/ssr';
 import { Link } from 'react-router-dom';
 
@@ -29,14 +29,12 @@ function Footer() {
                 </Link>
             </div>
             <div className="flex justify-between px-12 items-center bg-secondary-purpleDark">
-                <Link to="/">
-                    <img src="https://ik.imagekit.io/ajudaquemfaz/Logo/Footer%20logo%20ImgKit.png?updatedAt=1706791149016" className="py-2 w-14" alt="logo"></img>
-                </Link>
+                <img src="https://ik.imagekit.io/ajudaquemfaz/Logo/Footer%20logo%20ImgKit.png?updatedAt=1706791149016" className="py-2 w-14" alt="logo"></img>
                 <div id="icon" className="flex gap-8">
-                    <Link to="#"><InstagramLogo size={40} className="text-tertiary-blue hover:text-primary-orange"></InstagramLogo></Link>
-                    <Link to="#"><FacebookLogo size={40} className="text-tertiary-blue hover:text-primary-orangeLight"></FacebookLogo></Link>
-                    <Link to="#"><YoutubeLogo size={40} className="text-tertiary-blue hover:text-primary-orangeLight"></YoutubeLogo></Link>
-                    <Link to="#"><LinkedinLogo size={40} className="text-tertiary-blue hover:text-primary-orangeLight"></LinkedinLogo></Link>
+                    <Link to="#"><InstagramLogo size={40} className="text-tertiary-blueLight hover:text-primary-orange"></InstagramLogo></Link>
+                    <Link to="#"><FacebookLogo size={40} className="text-tertiary-blueLight hover:text-primary-orangeLight"></FacebookLogo></Link>
+                    <Link to="#"><YoutubeLogo size={40} className="text-tertiary-blueLight hover:text-primary-orangeLight"></YoutubeLogo></Link>
+                    <Link to="#"><LinkedinLogo size={40} className="text-tertiary-blueLight hover:text-primary-orangeLight"></LinkedinLogo></Link>
                 </div>
             </div>
             <div className="flex justify-between px-8 font-bold text-xs py-1">
