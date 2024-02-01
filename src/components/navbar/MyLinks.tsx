@@ -1,30 +1,44 @@
-export const links = [
+export  const links = [
   {
-    name: 'Categorias',
+    name: "Categorias",
     submenu: true,
     sublinks: [
       {
-        Head: 'Produtos',
+        Head: "Produtos",
         sublink: [
-          { name: 'Alimentos', link: '/' },
-          { name: 'Artesanais', link: '/' },
-          { name: 'Roupas', link: '/' },
-          { name: 'Pets', link: '/' },
+          { name: "Acessórios", link: "/" },
+          { name: "Alimentos", link: "/" },
+          { name: "Artesanato", link: "/" },
+          { name: "Cosméticos", link: "/" },
+          { name: "Decoração", link: "/" },
+          { name: "Livros", link: "/" },
+          { name: "Infantil", link: "/" },
+          { name: "Moda", link: "/" },
+          { name: "Pets", link: "/" },
+          { name: "Reciclados", link: "/" },
+
+
         ],
       },
       {
-        Head: "ONG's",
+          Head: "Instituições",
+          sublink: [
+            { name: "Assistência Social", link: "/" },
+            { name: "Cultura", link: "/" },
+            { name: "Saúde", link: "/" },
+            { name: "Meio ambiente", link: "/" },
+            { name: "Defesa de direitos", link: "/" },
+            { name: "Habitação", link: "/" },
+            { name: "Educação e Pesquisa", link: "/" },
+
+          ],
+        },
+        {Head: "Listar todas as categorias",
         sublink: [
-          { name: 'Educação', link: '/' },
-          { name: 'Ações', link: '/' },
-          { name: 'Teste', link: '/' },
-          { name: 'teste', link: '/' },
-        ],
-      },
-      {
-        Head: 'Listar todas as categorias',
-        sublink: [{ name: 'Todas as Categorias', link: '/categorias' }],
-      },
+          {name: "Todas as Categorias", link: "/categorias"}
+        ]
+      }
+      
     ],
   },
 ];

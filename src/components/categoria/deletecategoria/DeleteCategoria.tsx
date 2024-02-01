@@ -53,21 +53,18 @@ function DeletarCategoria() {
         setIsLoading(true)
 
         try {
-            await deletar(`/categoria/${id}`, {
-                headers: { 'Authorization': token }
+            await deletar(`/categorias/${id}`, {
+                headers: {
+                    'Authorization': token
+                }
             })
-            ToastAlerta('O Tema foi excluído com sucesso!', "sucesso")
-        } catch (error: any) {
-            if (error.toString().includes('403')) {
-                ToastAlerta('O Token Expirou!', "erro")
-                handleLogout();
-            } else {
-                ToastAlerta('Erro ao excluir o tema.',  "erro")
-            }
 
+            ToastAlerta('Categoria apagada com sucesso', 'sucesso')
+
+        } catch (error) {
+            ToastAlerta('Erro ao apagar a Categoria', 'erro')
         }
 
-        setIsLoading(false)
         retornar()
     }
 

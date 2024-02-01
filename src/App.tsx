@@ -5,8 +5,7 @@ import Aboutus from './pages/aboutus/Aboutus';
 import Footer from './components/footer/Footer';
 import NavBar from './components/navbar/Navbar';
 import Home from './pages/home/Home';
-// import About from './pages/aboutus/Aboutus';
-
+import { ToastContainer } from "react-toastify";
 import Login from './pages/login/Login';
 import Cadastro from './pages/cadastro/Cadastro';
 import { AuthProvider } from './contexts/AuthContext';
@@ -18,8 +17,9 @@ function App() {
   return (
     <>
     <AuthProvider>
-
+    <ToastContainer/>
       <BrowserRouter>
+      <div className='min-h-[80vh]'>
         <NavBar />
         <Routes>
           <Route path="/" element={<Contact />} />
@@ -33,9 +33,12 @@ function App() {
           <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
           <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
         </Routes>
+        </div>
+
         {/* <About /> */}
         <Footer />
       </BrowserRouter>
+
       </AuthProvider>
 
     </>
