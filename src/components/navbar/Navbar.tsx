@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import NavLinks from './NavLinks';
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
+import { ToastAlerta } from '../../utils/ToastAlerta';
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const NavBar = () => {
 
   function logout() {
     handleLogout();
-    alert('O Usuário foi desconectado com sucesso!');
+    ToastAlerta('O Usuário foi desconectado com sucesso!', 'sucesso');
     navigate('/login');
   }
 
@@ -29,7 +30,7 @@ const NavBar = () => {
           <Link to="/home" className="flex flex-row items-center ">
             {
               <img
-                src="https://ik.imagekit.io/pxmiddle/logo.png?updatedAt=1706225020575"
+                src="https://ik.imagekit.io/ajudaquemfaz/Logo/Logo%20ImgKit.png?updatedAt=1706791149163"
                 alt="Logo do website"
                 className="w-auto h-16"
               />
@@ -58,7 +59,7 @@ const NavBar = () => {
               weight="duotone"
             />
           </a>
-          <div className="group">
+          <div className="group z-50">
             {token !== '' ? (
               <img
                 src={
@@ -76,18 +77,18 @@ const NavBar = () => {
                 weight="duotone"
               />
             )}
-            <ul className="absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5">
-              <li className="bg-primary-orangeLight hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
-                Cadastrar Categoria
+            <ul className="absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray">
+              <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
+                <Link to="/cadastroCategoria">Cadastrar Categoria</Link>
               </li>
-              <li className="bg-primary-orangeLight hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
+              <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
                 Settings
               </li>
-              <li className="bg-primary-orangeLight hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
+              <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
                 <a href="/login"> Login</a>
               </li>
               <li
-                className="bg-primary-orangeLight hover:bg-primary-orangeDark py-4 px-4 cursor-pointer"
+                className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer"
                 onClick={logout}
               >
                 Logout
@@ -98,7 +99,7 @@ const NavBar = () => {
       </div>
       <div>
         <div className="flex justify-around p-0 bg-primary-orange text-secondary-purpleDark gap-60 h-20 text-lg">
-          <div className="md:flex hidden uppercase items-center pr-96 text-secondary-purple">
+          <div className="md:flex hidden uppercase items-center pr-96 text-secondary-purple z-50">
             <NavLinks />
           </div>
           <div className="flex justify-center">

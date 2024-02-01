@@ -5,6 +5,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import { buscar } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 import CardCategoria from '../cardcategoria/CardCategoria';
+import { ToastAlerta } from '../../../utils/ToastAlerta';
 
 
 function ListaCategorias() {
@@ -19,14 +20,14 @@ function ListaCategorias() {
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
 
-  async function buscarTemas() {
+  async function buscarCategoria() {
     try {
       await buscar('/categorias', setCategoria, {
         headers: { Authorization: token },
       });
     } catch (error: any) {
       if (error.toString().includes('403')) {
-        alert('O token expirou, favor logar novamente');
+        ToastAlerta('O token expirou, favor logar novamente', 'info');
         handleLogout();
       }
     }
@@ -34,13 +35,13 @@ function ListaCategorias() {
 
   useEffect(() => {
     if (token === '') {
-      alert('Você precisa estar logado');
+      ToastAlerta('Você precisa estar logado', 'erro');
       navigate('/login');
     }
   }, [token]);
 
   useEffect(() => {
-    buscarTemas();
+    buscarCategoria();
   }, [categoria.length]);
   return (
     <>
