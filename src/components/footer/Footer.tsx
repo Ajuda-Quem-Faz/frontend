@@ -1,13 +1,13 @@
 import {
-    CurrencyCircleDollar,
-    Medal,
-    Storefront,
-    YoutubeLogo,
+  CurrencyCircleDollar,
+  Medal,
+  Storefront,
+  YoutubeLogo,
 } from '@phosphor-icons/react';
 import {
-    FacebookLogo,
-    InstagramLogo,
-    LinkedinLogo,
+  FacebookLogo,
+  InstagramLogo,
+  LinkedinLogo,
 } from '@phosphor-icons/react/dist/ssr';
 import { Link } from 'react-router-dom';
 
@@ -45,34 +45,40 @@ function Footer() {
             alt="logo"
           ></img>
         </Link>
-        <div id="icon" className="flex w-full justify-around">
+        <div
+          id="icon"
+          className="flex w-full justify-end gap-8 md:mr-8 text-tertiary-blueLight"
+        >
           <Link to="#">
             <InstagramLogo
               size={40}
-              className="text-tertiary-blue hover:text-primary-orange"
+              className=" hover:text-primary-orange"
             ></InstagramLogo>
           </Link>
           <Link to="#">
             <FacebookLogo
               size={40}
-              className="text-tertiary-blue hover:text-primary-orangeLight"
+              className=" hover:text-primary-orangeLight"
             ></FacebookLogo>
           </Link>
           <Link to="#">
             <YoutubeLogo
               size={40}
-              className="text-tertiary-blue hover:text-primary-orangeLight"
+              className=" hover:text-primary-orangeLight"
             ></YoutubeLogo>
           </Link>
           <Link to="#">
             <LinkedinLogo
               size={40}
-              className="text-tertiary-blue hover:text-primary-orangeLight"
+              className=" hover:text-primary-orangeLight"
             ></LinkedinLogo>
           </Link>
         </div>
       </div>
-      <div className="flex justify-between px-1 font-bold text-xs py-1">
+      <div
+        id="footer-bottom"
+        className="flex justify-between px-1 font-bold text-xs py-1"
+      >
         <p>©2024 AjudaQuemFaz </p>
         <p>Termos de uso</p>
         <p>Politica de Privacidade</p>
