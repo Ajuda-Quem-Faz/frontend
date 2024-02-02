@@ -4,6 +4,7 @@ import Usuario from '../../models/Usuario';
 import { cadastrarUsuario } from '../../services/Service';
 import { RotatingLines } from 'react-loader-spinner';
 import { ToastAlerta } from '../../utils/ToastAlerta';
+import { Link } from 'react-router-dom';
 
 function Cadastro() {
   const navigate = useNavigate();
@@ -67,23 +68,22 @@ function Cadastro() {
   }
 
   return (
-    <div className="mx-auto container grid place-content-center py-4 gap-2">
-      <div className="flex justify-center text-xl items-center gap-3">
-        <img src="./logo.png" alt="" className="h-12" />
-        <h2 className="font-bold text-center">Ajuda Quem Faz</h2>
-      </div>
-      <hr />
-      <h2 className="font-bold text-center text-2xl">Cadastro</h2>
-
-      <div className="flex justify-center rounded-xl bg-primary-orangeLight md:p-12 p-6 ">
+    <div className="flex justify-center items-center">
+      <div className="flex justify-center text-dark-black font-semibold py-9 md:w-1/4">
         <form
           action=""
-          className="flex flex-col justify-center gap-2"
+          className="flex flex-col justify-center gap-2 w-2/3"
           onSubmit={cadastrarNovoUsuario}
         >
+          <div className="flex justify-center text-xl items-center gap-3">
+            <img src="./logo.png" alt="" className="h-12" />
+            <h2 className="font-bold text-center">Ajuda Quem Faz</h2>
+          </div>
+          <hr />
+          <h1 className="py-2 flex justify-center text-2xl">Cadastro</h1>
           <label className="text-lg">Nome Completo</label>
           <input
-            className="border-2 rounded-xl text-base font-normal text-dark-black px-5 py-2 bg-gray-"
+            className="border-2 rounded-lg text-base font-normal text-dark-black px-2 py-1"
             placeholder="Nome"
             type="text"
             name="nome"
@@ -91,10 +91,9 @@ function Cadastro() {
             value={usuario.nome}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
-
           <label className="text-lg">Email</label>
           <input
-            className="border-2 rounded-xl text-base font-normal text-dark-black px-5 py-2 bg-light-grayLight"
+            className="border-2 rounded-lg text-base font-normal text-dark-black px-2 py-1"
             placeholder="exemplo@email.com"
             type="email"
             name="usuario"
@@ -102,10 +101,9 @@ function Cadastro() {
             value={usuario.usuario}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
-
           <label className="text-lg">Foto</label>
           <input
-            className="border-2 rounded-xl text-base font-normal text-dark-blackLight px-5 py-2 bg-light-grayLight"
+            className="border-2 rounded-lg text-base font-normal text-dark-black px-2 py-1"
             placeholder="Url da foto"
             type="text"
             name="foto"
@@ -113,10 +111,9 @@ function Cadastro() {
             value={usuario.foto}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
-
           <label className="text-lg">Senha</label>
           <input
-            className="border-2 rounded-xl text-base font-normal text-dark-blackLight  px-5 py-2 bg-light-grayLight"
+            className="border-2 rounded-lg text-base font-normal text-dark-black px-2 py-1"
             placeholder="********"
             type="password"
             name="senha"
@@ -127,10 +124,9 @@ function Cadastro() {
             value={usuario.senha}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
-
           <label className="text-lg">Confirmar senha</label>
           <input
-            className="border-2 rounded-xl text-base font-normal text-dark-blackLight  px-5 py-2 bg-light-grayLight"
+            className="border-2 rounded-lg text-base font-normal text-dark-black px-2 py-1"
             placeholder="********"
             type="password"
             name="confirmarSenha"
@@ -138,20 +134,32 @@ function Cadastro() {
             value={confirmaSenha}
             onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
           />
-
-          <button className="flex justify-center border-2 border-solid rounded-xl bg-primary-orange hover:bg-primary-orangeDark border-primary-orange hover:border-primary-orangeDark text-light-grayLight p-1 mt-4 text-xl">
+          <button
+            className="border-2 border-solid rounded-lg border-dark-black hover:border-secondary-purple hover:text-secondary-purple
+                 p-1 mt-4 text-lg flex justify-center"
+            type="submit"
+          >
             {isLoading ? (
               <RotatingLines
-                strokeColor="white"
+                strokeColor="purple"
                 strokeWidth="5"
                 animationDuration="0.75"
-                width="24"
+                width="28"
                 visible={true}
               />
             ) : (
               <span>Cadastrar</span>
             )}
           </button>
+          <p className="text-center text-base border-t-2 py-3 mt-3 font-semibold">
+            Já tem uma conta?{' '}
+            <Link
+              to={`/login`}
+              className="text-secondary-purpleLight  hover:underline"
+            >
+              Entre aqui!
+            </Link>
+          </p>
         </form>
       </div>
     </div>
