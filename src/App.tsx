@@ -40,6 +40,7 @@ function App() {
               <Route path="/produtos" element= {<ListaProduto />} />
               <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
               <Route path="/cadastrarProduto" element={<FormularioProduto />} />
+              <Route path="/editarProduto/:id" element={<FormularioProduto />} />
             </Routes>
           </div>
 
