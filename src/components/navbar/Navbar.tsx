@@ -71,7 +71,7 @@ const NavBar = () => {
                     <img
                       src={usuario.foto}
                       alt=""
-                      className="object-cover border-2 border-secondary-purpleLight rounded-full bg-secondary-purpleLight bg-opacity-30"
+                      className="object-cover border-2 border-secondary-purpleLight rounded-full bg-secondary-purpleLight bg-opacity-30 size-11"
                     />
                   ) : (
                     <UserCircle
@@ -113,11 +113,11 @@ const NavBar = () => {
                 </div>
               </>
             ) : (
-              <div className="text-center">
+              <div className="flex items-center">
                 <a className="text-center text-nowrap md:text-base text-xs" href="/login">
                   Login
                 </a>
-                <hr />
+                <div className="h-7 w-0.5 bg-light-grayDark mx-2" />
                 <a
                   className="text-center text-nowrap md:text-base text-xs"
                   href="/cadastro"
