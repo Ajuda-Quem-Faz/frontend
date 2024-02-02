@@ -24,7 +24,7 @@ const NavLinks = () => {
             {link.submenu && (
               <div>
                 <div className="absolute left-0 top-[100px] hidden group-hover:md:block hover:md:block">
-                  <div className="">
+                  <div>
                     <div
                       className="w-4 h-4 left-3 absolute 
                     mt-1 bg-primary-orange rotate-45"
@@ -37,7 +37,7 @@ const NavLinks = () => {
                           {mysublinks.Head}
                         </h1>
                         {mysublinks.sublink.map((slink) => (
-                          <li className="text-sm my-2.5 ml-2">
+                          <li className="text-sm my-2.5 ml-2" key={slink.name}>
                             <Link to={slink.link} className="hover:text-primary">
                               {slink.name}
                             </Link>

@@ -3,9 +3,9 @@ function About() {
     <>
       {/* Cards */}
       <div className="w-full bg-light-grayDark rounded-b-3xl">
-        <div className="py-20 grid grid-cols-3 justify-between">
+        <div className="p-20 grid grid-cols-1 lg:grid-cols-3 justify-between gap-2">
           {/* Missão */}
-          <div className="ml-[30px] mr-[20x] w-[437px] h-[443px] bg-secondary-purple grid place-items-center rounded-3xl">
+          <div className="bg-secondary-purple grid place-items-center rounded-3xl">
             <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">
               Missão
             </h2>
@@ -17,7 +17,7 @@ function About() {
             </p>
           </div>
           {/* Visão */}
-          <div className="w-[437px] h-[443px] bg-secondary-purple grid place-items-center rounded-3xl">
+          <div className=" bg-secondary-purple grid place-items-center rounded-3xl">
             <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">
               Visão
             </h2>
@@ -29,7 +29,7 @@ function About() {
             </p>
           </div>
           {/* Valores */}
-          <div className="mr-[30px] ml[20px] w-[437px] h-[443px] bg-secondary-purple grid place-items-center rounded-3xl">
+          <div className="bg-secondary-purple grid place-items-center rounded-3xl">
             <h2 className="mt-[40px] font-bold text-[30px] text-tertiary-blueLight">
               Valores
             </h2>
@@ -45,7 +45,7 @@ function About() {
               <p className="mt-[20px] mb-[53px]">Transparência</p>
             </div>
           </div>
-        </div>
+      </div>
       </div>
 
       {/* Historia */}
