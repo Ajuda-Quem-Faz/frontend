@@ -28,7 +28,7 @@ export default function Produtos() {
     <>
       <div className="mx-auto flex mt-8 md:text-2xl justify-between">
         <h2 className="font-bold">Doe para projetos da sua região</h2>
-        <Link to="" className=" text-primary-orange hover:underline text-nowrap">
+        <Link to="/produtos" className=" text-primary-orange hover:underline text-nowrap">
           Ver mais
         </Link>
       </div>
