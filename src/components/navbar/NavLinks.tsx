@@ -10,7 +10,7 @@ const NavLinks = () => {
     <>
       {links.map((link) => (
         <div>
-          <div className=" md:cursor-pointer group flex items-center w-full justify-between">
+          <div className="group flex items-center w-full justify-between">
             <h1
               className="py-2 flex items-center md:pr-0 group gap-2 hover:text-light-grayLight"
               onClick={() => {

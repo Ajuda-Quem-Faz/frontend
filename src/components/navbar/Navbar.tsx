@@ -1,13 +1,12 @@
 import {
   Funnel,
-  List,
   MagnifyingGlass,
   ShoppingCartSimple,
   UserCircle,
 } from '@phosphor-icons/react';
 import { Link, useNavigate } from 'react-router-dom';
 import NavLinks from './NavLinks';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 import { ToastAlerta } from '../../utils/ToastAlerta';
 import Search from './Search';
@@ -54,7 +53,7 @@ const NavBar = () => {
           </button>
         </div>
         <div id="header-end">
-          <div className="flex gap-4">
+          <div className="flex gap-4 pr-5 md:pr-0">
             {token !== '' ? (
               <>
                 <Link to="/">
@@ -83,7 +82,7 @@ const NavBar = () => {
                   )}
 
                   {/** Menu DropDown */}
-                  <div className="absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray">
+                  <div className="absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray z-50">
                     <ul className="items-center flex-row justify-between gap-10">
                       {/** Menu Cadastrar categoria, só aparece quando o usuario é o admin */}
                       {usuario.usuario === 'root@root.com' && (
@@ -132,16 +131,16 @@ const NavBar = () => {
       </div>
 
       {/** Barra Menu */}
-      <div className="flex justify-between bg-primary-orange font-semibold text-secondary-purple px-2">
+      <div className="flex justify-between bg-primary-orange font-semibold text-secondary-purple px-2 pr-32">
         {/** Categorias */}
-        <div className="uppercase items-center flex text-lg">
+        <div className="uppercase items-center flex text-lg z-50">
           <NavLinks />
         </div>
 
         {/** Botões */}
-        <div className="justify-end md:flex hidden gap-4">
+        <div className="md:flex hidden gap-8">
           <button className="uppercase hover:text-white transition delay-75">
-            <Link to="/" className="">
+            <Link to="/produtos" className="">
               Produtos
             </Link>
           </button>
