@@ -52,13 +52,13 @@ const NavBar = () => {
           </button>
         </div>
         <div id="header-end" className="flex items-center w-1/6 justify-evenly ">
-          <a href="/" className="flex flex-col items-center justify-center">
+          <Link to="/" className="flex flex-col items-center justify-center">
             <ShoppingCartSimple
               className="text-secondary-purpleLight text-opacity-95"
               size={44}
               weight="duotone"
             />
-          </a>
+          </Link>
           <div className="group z-50">
             {token !== '' ? (
               <img
@@ -108,15 +108,15 @@ const NavBar = () => {
           {/** Botões */}
           <div className="flex-row justify-end">
 
-            <button className='uppercase hover:text-white px-10 py-3'>
+            <button className='uppercase hover:text-white px-10 py-3 transition-colors delay-75'>
               <Link to="/" className=''>Produtos</Link>
             </button>
 
-            <button className='uppercase hover:text-white px-10 py-3'>
+            <button className='uppercase hover:text-white px-10 py-3 transition-colors delay-75'>
               <Link to="/about" className=''>Equipe</Link>
             </button>
 
-            <button className='uppercase hover:text-white px-10 py-3'>
+            <button className='uppercase hover:text-white px-10 py-3 transition-colors delay-75'>
               <Link to="/contact" className=''>Contato</Link>
             </button>
 
