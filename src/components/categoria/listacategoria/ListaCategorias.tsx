@@ -20,6 +20,9 @@ function ListaCategorias() {
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
 
+
+  
+
   async function buscarCategoria() {
     try {
       await buscar('/categorias', setCategoria, {
@@ -27,7 +30,7 @@ function ListaCategorias() {
       });
     } catch (error: any) {
       if (error.toString().includes('403')) {
-        ToastAlerta('O token expirou, favor logar novamente', 'info');
+        ToastAlerta('O token expirou', 'info');
         handleLogout();
       }
     }
@@ -35,7 +38,7 @@ function ListaCategorias() {
 
   useEffect(() => {
     if (token === '') {
-      ToastAlerta('Você precisa estar logado', 'erro');
+      ToastAlerta('Você precisa estar logado', 'info');
       navigate('/login');
     }
   } , [token] );
