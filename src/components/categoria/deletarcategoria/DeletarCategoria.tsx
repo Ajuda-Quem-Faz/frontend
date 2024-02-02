@@ -26,7 +26,7 @@ function DeletarCategoria() {
             })
         } catch (error: any) {
             if (error.toString().includes('403')) {
-                ToastAlerta('O token Expirou!', "erro")
+                ToastAlerta('O token Expirou!', "info")
                 handleLogout()
             }
         }
@@ -34,7 +34,7 @@ function DeletarCategoria() {
 
     useEffect(() => {
         if (token === '') {
-            ToastAlerta('Você precisa estar logado!', "")
+            ToastAlerta('Você precisa estar logado!', "info")
             navigate('/')
         }
     }, [token])
@@ -82,7 +82,7 @@ function DeletarCategoria() {
                 <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.setor}</p>
                 <div className="flex">
                     <button
-                        className='text-slate-100 bg-red-600 hover:bg-red-800 w-full py-2'
+                        className='text-slate-100 bg-red-500 hover:bg-red-800 w-full py-2'
                         onClick={retornar}>
                         Não
                     </button>

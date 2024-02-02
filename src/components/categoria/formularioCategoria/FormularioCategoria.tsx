@@ -27,7 +27,7 @@ function FormularioCategoria() {
       })
     } catch (error: any) {
       if (error.toString().includes('403')){
-        ToastAlerta('O token Expirou!', '')
+        ToastAlerta('O token Expirou!', 'info')
         handleLogout()
       }
     }
@@ -44,7 +44,7 @@ function FormularioCategoria() {
 
   useEffect(() => {
     if (token === '') {
-      ToastAlerta('Você precisa estar logado!', "")
+      ToastAlerta('Você precisa estar logado!', 'info')
       navigate('/login')
     }
   }, [token])
@@ -70,15 +70,13 @@ function FormularioCategoria() {
         await atualizar(`/categorias`, categoria, setCategoria, {
           headers: { 'Authorization': token }
         })
-        ToastAlerta('A Categoria foi atualizada com sucesso!', "sucesso")
-        console.log("sucesso")
+        ToastAlerta('A Categoria foi atualizada com sucesso!', 'sucesso')
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          ToastAlerta('O Token Expirou!', "erro")
+          ToastAlerta('O Token Expirou!', 'info')
           handleLogout();
         } else {
-          ToastAlerta('Erro ao atualizar a Categoria.', "erro")
-          console.log("erro")
+          ToastAlerta('Erro ao atualizar a Categoria.', 'erro')
         }
 
       }
@@ -87,13 +85,13 @@ function FormularioCategoria() {
         await cadastrar(`/categorias`, categoria, setCategoria, {
           headers: { 'Authorization': token }
         })
-        ToastAlerta('A Categoria foi cadastrada com sucesso!', "sucesso")
+        ToastAlerta('A Categoria foi cadastrada com sucesso!', 'sucesso')
       } catch (error: any) {
         if (error.toString().includes('403')) {
-          ToastAlerta('O Token Expirou!', "erro")
+          ToastAlerta('O Token Expirou!', 'info')
           handleLogout();
         } else {
-          ToastAlerta('Erro ao cadastrar a Categoria.', "erro")
+          ToastAlerta('Erro ao cadastrar a Categoria.', 'erro')
         }
 
       }
@@ -104,58 +102,64 @@ function FormularioCategoria() {
   }
 
   return (
-    <div className="container flex flex-col items-center justify-center mx-auto">
-      <h1 className="text-4xl text-center my-8">
-        {id === undefined ? 'Cadastrar Categoria' : 'Editar Categoria'}
-      </h1>
-
-      <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="setor">Setor</label>
+    <div className="flex justify-center items-center">
+      <div className="flex justify-center text-dark-black font-semibold py-9 md:w-1/4">
+        <form
+          action=""
+          className="flex flex-col justify-center gap-2 w-2/3"
+          onSubmit={gerarNovaCategoria}
+        >
+          <div className="flex justify-center text-xl items-center gap-3">
+            <img src="./logo.png" alt="" className="h-12" />
+            <h2 className="font-bold text-center">Ajuda Quem Faz</h2>
+          </div>
+          <hr />
+          <h1 className="py-2 flex justify-center text-2xl">{id === undefined ? 'Cadastrar Categoria' : 'Editar Categoria'}</h1>
+          <label className="text-lg">Setor</label>
           <input
-            type="text"
+            className="border-2 rounded-lg text-base font-normal text-dark-black px-2 py-1"
             placeholder="Defina o setor"
+            type="text"
             name='setor'
-            className="border-2 border-slate-700 rounded p-2"
+            id="setor"
             value={categoria.setor}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             required
             onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('Digite uma Categoria válida!')}
             onInput={e => (e.target as HTMLInputElement).setCustomValidity('')}
           />
-
-          <label htmlFor="tipoServico">Descrição do serviço</label>
+          <label className="text-lg">Descrição do serviço</label>
           <input
-            type="text"
+            className="border-2 rounded-lg text-base font-normal text-dark-black px-2 py-1"
             placeholder="Descreva aqui o tipo de serviço"
+            type="text"
             name='tipoServico'
-            className="border-2 border-slate-700 rounded p-2"
+            id="tipoServico"
             value={categoria.tipoServico}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             required
             onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('Digite uma Categoria válida!')}
             onInput={e => (e.target as HTMLInputElement).setCustomValidity('')}
           />
-        </div>
-        <button
-          className="rounded text-slate-100 bg-indigo-400 
-                               hover:bg-indigo-800 w-1/2 py-2 mx-auto flex justify-center"
-          type="submit">
-
-          {isLoading ?
-            <RotatingLines
-              strokeColor="white"
-              strokeWidth="5"
-              animationDuration="0.75"
-              width="24"
-              visible={true}
-            /> :
-            <span>{id === undefined ? 'Cadastrar' : 'Atualizar'}</span>
-
-          }
-
-        </button>
-      </form>
+          <button
+            className="border-2 border-solid rounded-lg border-dark-black hover:border-secondary-purple hover:text-secondary-purple
+                 p-1 mt-4 text-lg flex justify-center"
+            type="submit"
+          >
+            {isLoading ? (
+              <RotatingLines
+                strokeColor="purple"
+                strokeWidth="5"
+                animationDuration="0.75"
+                width="28"
+                visible={true}
+              />
+            ) : (
+              <span>{id === undefined ? 'Cadastrar' : 'Atualizar'}</span>
+            )}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
