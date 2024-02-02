@@ -4,167 +4,125 @@ function About() {
   return (
     <>
       {/* Cards */}
-      <div className="bg-secondary-purpleLight w-full grid grid-cols-3 place-items-center p-2">
-        {/* Missão */}
-        <div className="bg-primary-orange grid place-items-center">
-          <h2 className="font-bold text-2xl">Missão</h2>
-          <img src="https://static.thenounproject.com/png/526867-200.png"></img>
-        </div>
-        {/* Valores */}
-        <div className="bg-primary-orange grid place-items-center">
-          <h2 className="font-bold text-2xl">Valores</h2>
-          <img src="https://static.thenounproject.com/png/526867-200.png"></img>
-        </div>
-        {/* Conquistas */}
-        <div className="bg-primary-orange grid place-items-center">
-          <h2 className="font-bold text-2xl">Conquistas</h2>
-          <img src="https://static.thenounproject.com/png/526867-200.png"></img>
+      <div className="w-full h-[640px] bg-light-grayDark rounded-bl-[20px] rounded-br-[20px]">
+        <div className="mt-20 bg-bottom grid grid-cols-3 justify-between">
+          {/* Missão */}
+          <div className="ml-[30px] mr-[20x] w-[437px] h-[443px] bg-secondary-purple grid place-items-center rounded-[35px]">
+            <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">Missão</h2>
+            <p className="mt-[39px] mb-[77px] text-center text-sky-100  text-[23px] font-medium font-['Montserrat'] leading-7 text-tertiary-blueLight">Nossa missão é
+              promover impacto social positivo ao conectar consumidores a produtos feitos por Organizações Não Governamentais (ONGs).
+              Buscamos oferecer uma plataforma onde os consumidores possam adquirir produtos de alta qualidade, enquanto contribuem
+              diretamente para causas sociais.</p>
+          </div>
+          {/* Visão */}
+          <div className="w-[437px] h-[443px] bg-secondary-purple grid place-items-center rounded-[35px]">
+            <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">Visão</h2>
+            <p className="p-[40px] mt-[39px] mb-[105px] text-center text-sky-100  text-[23px] font-medium font-['Montserrat'] leading-7 text-tertiary-blueLight">Buscamos ser a principal referência
+              global em comércio sustentável, onde cada produto vendido não apenas atende às necessidades dos consumidores, mas também
+              contribui diretamente para a construção de um mundo mais justo e equitativo.</p>
+
+          </div>
+          {/* Valores */}
+          <div className="mr-[30px] ml[20px] w-[437px] h-[443px] bg-secondary-purple grid place-items-center rounded-[35px]">
+            <h2 className="mt-[40px] font-bold text-[30px] text-tertiary-blueLight">Valores</h2>
+            <div className="mt-[42px] mb-[53px] text-center text-sky-100  text-[23px] font-medium font-['Montserrat'] leading-7 text-tertiary-blueLight">
+
+              <p className="mb-[15px]">Compromisso Social</p>
+
+              <p className="p-2 mt-[25px] mb-[25px]">Emponderamento das Comunidades</p>
+
+              <p className="mt-[25px] mb-[25px]">Sustentabilidade</p>
+
+              <p className="mt-[25px] mb-[25px]">Inovação Social</p>
+
+              <p className="mt-[20px] mb-[53px]">Transparência</p>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Historia */}
-      <div className="bg-secondary-purple w-full p-2 flex">
+      <div className="mt-[42px]">
+        <h2 className="text-primary-orange text-center text-[30px] font-bold">Conheça nossa história</h2>
+        <p className="text-pretty mx-[15px] text-center mt-[30px] mb-[30px]">A equipe de desenvolvedores desse e-commerce foi composta por indivíduos com interesses comuns
+          na área de tecnologia. A equipe se conheceu durante o bootcamp intensivo de Desenvolvimento
+          Full-Stack da Generation Brazil. Cada membro trazia habilidades únicas, desde programação e design
+          até gerenciamento de projetos. O destino os uniu quando foram sorteados para trabalhar em
+          conjunto no projeto finaldo Bootcamp. O desafio do projeto do e-commerce de produtos de ONGs
+          foi delineado com base nos Objetivos de Desenvolvimento Sustentável (ODS) da ONU,
+          especificamente na <b>ODS 1 - Erradicação da Pobreza</b>.</p>
+      </div>
+
+
+
+
+      <div className="relative bg-secondary-purple w-full h-[348px] p-2 flex rounded-[30px] shadow mb-[50px]">
         <div>
-          <h2 className="font-bold text-light-grayLight">Nossa história:</h2>
-          <p className="text-light-grayLight">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda expedita
-            amet asperiores ipsum neque excepturi. Labore quod asperiores reprehenderit,
-            facere quaerat amet quam illum libero dolorum vel corporis pariatur magnam.
-          </p>
-        </div>
-        <div>
-          <img src="https://static.thenounproject.com/png/526867-200.png"></img>
+          <div><h2 className="mx-[25px] relative font-bold text-light-grayLight text-[30px] font-bold mt-[15px]">ODS 1- Erradicação da Pobreza</h2>
+          </div>
+          <div>
+            <p className="mx-[25px] mr-[336px] absolute text-light-grayLight text-[25px] font-normal mt-[15px] leading">
+              Assumindo a ODS 1 como norteadora, o grupo buscou desenvolver estratégias
+              e soluções inovadoras que não apenas promovessem a comercialização de
+              produtos das ONGs, mas também contribuíssem para o empoderamento
+              econômico de comunidades carentes. O foco estava na criação de um modelo
+              de negócios que não apenas proporcionasse sustento às ONGs, mas também
+              impactasse positivamente as populações vulneráveis, promovendo a inclusão
+              social e o desenvolvimento econômico sustentável.
+            </p>
+          </div>
+
+
+          <div className="">
+            <img className="ml-[1165px] mr-[24px] w-[287px] h-[233px] rounded-3xl" src="https://ik.imagekit.io/ajudaquemfaz/Equipe/top-view-origami-chain-people-with-globe.jpg?updatedAt=1706881066829"></img>
+          </div>
         </div>
       </div>
+
 
       {/* Integrantes */}
-      <div className="h-full">
-        <div className="grid grid-cols-3">
-          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
-            <div className="grid place-items-center">
-              <img
-                src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"
-                alt="Imagem Temporaria"
-                className="w-32 h-32 object-cover rounded-full"
-              ></img>
-            </div>
-            <div className="grid place-items-center">
-              <h4 className="font-bold">Zabo</h4>
-              <p>
-                "Tava bom, agora ficou meio ruim também, não tava muito bom, agora parece
-                que piorou"
-              </p>
-            </div>
-          </div>
+      <h2 className="text-[30px] text-primary-orange font-bold text-center mb-[30px]">Equipe de Desenvolvimento</h2>
+      <div className="w-full flex flex-col-2">
+        <div className="w-80 h-80 shadow">
+          <img className="ml-[62px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
+            src="https://ik.imagekit.io/ajudaquemfaz/Equipe/LuizaKormann.jpg?updatedAt=1706885301115"
+            alt="Foto de Luiza Kormann"></img>
+        </div>
+        <div className="text-dark-black rounded-3xl m-1 p-2">
+          <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Luiza Kormann</h4>
+          <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
+            Lorem ipsum dolor sit amet, consectetur adipi
+            cing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad min
+            im veniam, quis nostrud exercitation
 
-          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
-            <div className="grid place-items-center">
-              <img
-                src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"
-                alt="Imagem Temporaria"
-                className="w-32 h-32 object-cover rounded-full"
-              ></img>
-            </div>
-            <div className="grid place-items-center">
-              <h4 className="font-bold">Zabo</h4>
-              <p>
-                "Tava bom, agora ficou meio ruim também, não tava muito bom, agora parece
-                que piorou"
-              </p>
-            </div>
-          </div>
+          </p>
+        </div>
+      </div >
 
-          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
-            <div className="grid place-items-center">
-              <img
-                src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"
-                alt="Imagem Temporaria"
-                className="w-32 h-32 object-cover rounded-full"
-              ></img>
-            </div>
-            <div className="grid place-items-center">
-              <h4 className="font-bold">Zabo</h4>
-              <p>
-                "Tava bom, agora ficou meio ruim também, não tava muito bom, agora parece
-                que piorou"
-              </p>
-            </div>
-          </div>
+      <div className="w-full flex flex-col-2">
+        <div className="text-dark-black rounded-3xl m-1 p-2">
+          <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Pablo Maia</h4>
+          <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
+            Lorem ipsum dolor sit amet, consectetur adipi
+            cing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad min
+            im veniam, quis nostrud exercitation
+
+          </p>
         </div>
 
-        <div className="grid grid-cols-3">
-          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
-            <div className="grid place-items-center">
-              <img
-                src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"
-                alt="Imagem Temporaria"
-                className="w-32 h-32 object-cover rounded-full"
-              ></img>
-            </div>
-            <div className="grid place-items-center">
-              <h4 className="font-bold">Zabo</h4>
-              <p>
-                "Tava bom, agora ficou meio ruim também, não tava muito bom, agora parece
-                que piorou"
-              </p>
-            </div>
-          </div>
 
-          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
-            <div className="grid place-items-center">
-              <img
-                src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"
-                alt="Imagem Temporaria"
-                className="w-32 h-32 object-cover rounded-full"
-              ></img>
-            </div>
-            <div className="grid place-items-center">
-              <h4 className="font-bold">Zabo</h4>
-              <p>
-                "Tava bom, agora ficou meio ruim também, não tava muito bom, agora parece
-                que piorou"
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
-            <div className="grid place-items-center">
-              <img
-                src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"
-                alt="Imagem Temporaria"
-                className="w-32 h-32 object-cover rounded-full"
-              ></img>
-            </div>
-            <div className="grid place-items-center">
-              <h4 className="font-bold">Zabo</h4>
-              <p>
-                "Tava bom, agora ficou meio ruim também, não tava muito bom, agora parece
-                que piorou"
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-3">
-          <div className="col-span-1"></div>
-          <div className="bg-secondary-purpleLight text-light-grayLight grid grid-cols-2 rounded-3xl m-1 p-2">
-            <div className="grid place-items-center">
-              <img
-                src="https://i.pinimg.com/474x/65/82/a8/6582a801819115700f246e35dc4338df.jpg"
-                alt="Imagem Temporaria"
-                className="w-32 h-32 object-cover rounded-full"
-              ></img>
-            </div>
-            <div className="grid place-items-center">
-              <h4 className="font-bold">Zabo</h4>
-              <p>
-                "Tava bom, agora ficou meio ruim também, não tava muito bom, agora parece
-                que piorou"
-              </p>
-            </div>
-          </div>
+        <div className="w-80 h-80 shadow">
+          <img className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
+            src="https://ik.imagekit.io/ajudaquemfaz/Equipe/PabloMaia.jpg?updatedAt=1706885318307"
+            alt="Foto de Pablo Maia"></img>
         </div>
       </div>
+
+
+
+
     </>
   );
 }
