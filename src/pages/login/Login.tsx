@@ -28,13 +28,18 @@ function Login() {
   }, [usuario]);
 
   return (
-    <div className="flex justify-center">
-      <div className="flex justify-center text-dark-black font-semibold py-9 w-1/4">
+    <div className="flex justify-center items-center">
+      <div className="flex justify-center text-dark-black font-semibold py-9 md:w-1/4">
         <form
           action=""
           className="flex flex-col justify-center gap-2 w-2/3"
           onSubmit={login}
         >
+          <div className="flex justify-center text-xl items-center gap-3">
+            <img src="./logo.png" alt="" className="h-12" />
+            <h2 className="font-bold text-center">Ajuda Quem Faz</h2>
+          </div>
+          <hr />
           <h1 className="py-2 flex justify-center text-2xl">Login</h1>
           <label className="text-lg">Usuário</label>
           <input
@@ -75,7 +80,10 @@ function Login() {
           </button>
           <p className="text-center text-base border-t-2 py-3 mt-3 font-semibold">
             Não tem uma conta?{' '}
-            <Link to={`/cadastro`} className="text-secondary-purpleLight  hover:underline">
+            <Link
+              to={`/cadastro`}
+              className="text-secondary-purpleLight  hover:underline"
+            >
               Cadastre-se aqui!
             </Link>
           </p>

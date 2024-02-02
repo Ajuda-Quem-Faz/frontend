@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Ideia from '../../components/home/info/Info';
 import Projetos from '../../components/home/produtos-carousel/Carousel-container';
+import Presentes from '../../components/home/presentes/Presentes';
 
 function Home() {
   useEffect(() => {
@@ -19,7 +20,7 @@ function Home() {
               Que bom que você voltou! Mussum Ipsum, cacilds vidis litro abertis. Nullam
               volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat
               odio. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam
-            vulputate dapibus. Detraxit consequat et quo num tendi nada. Manduma
+              vulputate dapibus. Detraxit consequat et quo num tendi nada. Manduma
               pindureta quium dia nois paga.
             </p>
           </div>
@@ -31,8 +32,9 @@ function Home() {
           />
         </div>
       </div>
-        <Projetos />
       <div className="container mx-auto">
+      <Projetos />
+        <Presentes />
         <Ideia />
       </div>
     </>

@@ -10,7 +10,7 @@ import CardOng from './CardOng';
 
 const Info = () => (
   <>
-    <div className="flex flex-col xl:grid grid-cols-5 xl:gap-16 gap-4 p-8 lg:p-8 py-4 m-4 bg-light-grayDark rounded-3xl">
+    <div className="flex flex-col xl:grid grid-cols-5 xl:gap-16 gap-4 p-8 lg:p-8 py-4 md:m-0 bg-light-grayDark rounded-3xl">
       <section className="flex flex-col gap-4 items-center">
         <h2 className="text-2xl font-bold text-secondary-purple">Ajuda Quem Faz!</h2>
         <p className="text-xl text-justify">
