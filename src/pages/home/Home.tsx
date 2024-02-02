@@ -13,7 +13,7 @@ function Home() {
         <div>
           <div
             id="boasVindasHome"
-            className="justify-center m-16 text-center text-secondary-purpleDark"
+            className="justify-center p-8 text-center text-secondary-purpleDark"
           >
             <h1 className="font-bold">Ajuda quem Faz</h1>
             <p id="textoBoasVindas" className="bottom-2.5">

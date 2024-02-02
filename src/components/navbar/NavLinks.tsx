@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { links } from './MyLinks';
-import { CaretDown, CaretUp, List, MagnifyingGlass } from '@phosphor-icons/react';
+import { CaretDown, CaretUp, List } from '@phosphor-icons/react';
 
 const NavLinks = () => {
   const [heading, setHeading] = useState('');
@@ -10,9 +10,9 @@ const NavLinks = () => {
     <>
       {links.map((link) => (
         <div>
-          <div className=" md:cursor-pointer group flex items-center justify-between">
+          <div className=" md:cursor-pointer group flex items-center w-full justify-between">
             <h1
-              className="py-2 flex items-center md:pr-0 pr-5 group gap-2 hover:text-light-grayLight"
+              className="py-2 flex items-center md:pr-0 group gap-2 hover:text-light-grayLight"
               onClick={() => {
                 heading !== link.name ? setHeading(link.name) : setHeading('');
                 setSubHeading('');
@@ -21,10 +21,9 @@ const NavLinks = () => {
               <List weight="bold" className="text-2xl" />
               <span className="md:block hidden">{link.name}</span>
             </h1>
-            <MagnifyingGlass className="text-2xl md:hidden" weight="bold" />
             {link.submenu && (
               <div>
-                <div className="absolute left-0 hidden group-hover:md:block hover:md:block">
+                <div className="absolute left-0 top-[100px] hidden group-hover:md:block hover:md:block">
                   <div className="">
                     <div
                       className="w-4 h-4 left-3 absolute 
