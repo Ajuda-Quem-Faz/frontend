@@ -81,7 +81,7 @@ const NavBar = () => {
                 )}
 
                 {/** Menu DropDown */}
-                <div className='absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray'>
+                <div className='absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray z-50'>
                   <ul className='items-center flex-row justify-between gap-10'>
 
                     {/** Menu Cadastrar categoria, só aparece quando o usuario é o admin */}
@@ -126,7 +126,7 @@ const NavBar = () => {
       {/** Barra Menu */}
       <div className="flex justify-between items-center bg-primary-orange font-semibold text-secondary-purple">
         {/** Categorias */}
-        <div className="uppercase items-center place-items-start">
+        <div className="uppercase items-center place-items-start z-50">
           <NavLinks />
         </div>
 

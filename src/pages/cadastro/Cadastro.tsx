@@ -121,6 +121,9 @@ function Cadastro() {
             type="password"
             name="senha"
             id="senha"
+            pattern=".{8,}"
+            required 
+            title="Insira um minimo de 8 caracteres"
             value={usuario.senha}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
