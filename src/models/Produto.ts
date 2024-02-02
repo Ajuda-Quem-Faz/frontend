@@ -4,7 +4,7 @@ export default interface Produto {
   id: number;
   nome: string;
   descricao: string;
-  preco: string;
+  preco: number;
   foto: string;
   categoria?: Categoria | null;
 }

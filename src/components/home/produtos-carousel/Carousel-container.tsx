@@ -52,7 +52,7 @@ export default function Projetos() {
             nome="Card 1"
             foto="https://www.cestariasregio.com.br/wp-content/uploads/2023/05/Vaso-Tucuma-3-PA-CESTARIAS-REGIO-1.jpg"
             descricao="Descrição 1"
-            preco="120.00"
+            preco={120.00}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -61,7 +61,7 @@ export default function Projetos() {
             nome="Card 1"
             foto="https://www.cestariasregio.com.br/wp-content/uploads/2023/05/Vaso-Tucuma-3-PA-CESTARIAS-REGIO-1.jpg"
             descricao="Descrição 1"
-            preco="15.00"
+            preco={15.00}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -70,7 +70,7 @@ export default function Projetos() {
             nome="Card 1"
             foto="https://www.cestariasregio.com.br/wp-content/uploads/2023/05/Vaso-Tucuma-3-PA-CESTARIAS-REGIO-1.jpg"
             descricao="Descrição 1"
-            preco="5.55"
+            preco={5.55}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -79,7 +79,7 @@ export default function Projetos() {
             nome="Card 1"
             foto="https://www.cestariasregio.com.br/wp-content/uploads/2023/05/Vaso-Tucuma-3-PA-CESTARIAS-REGIO-1.jpg"
             descricao="Descrição 1"
-            preco="72.90"
+            preco={72.90}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -88,7 +88,7 @@ export default function Projetos() {
             nome="Card 1"
             foto="https://www.cestariasregio.com.br/wp-content/uploads/2023/05/Vaso-Tucuma-3-PA-CESTARIAS-REGIO-1.jpg"
             descricao="Descrição 1"
-            preco=""
+            preco={10.50}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -97,7 +97,7 @@ export default function Projetos() {
             nome="Card 1"
             foto="https://www.cestariasregio.com.br/wp-content/uploads/2023/05/Vaso-Tucuma-3-PA-CESTARIAS-REGIO-1.jpg"
             descricao="Descrição 1"
-            preco=""
+            preco={53.25}
           />
         </SwiperSlide>
       </Swiper>

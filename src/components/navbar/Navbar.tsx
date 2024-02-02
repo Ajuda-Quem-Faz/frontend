@@ -105,14 +105,14 @@ const NavBar = () => {
       {/** Barra Menu */}
       <div className="flex justify-between items-center bg-primary-orange font-semibold text-secondary-purple">
         {/** Categorias */}
-        <div className="uppercase items-center place-items-start">
+        <div className="uppercase items-center place-items-start z-50">
           <NavLinks />
         </div>
 
         {/** Botões */}
         <div className="flex-row justify-end">
           <button className="uppercase hover:text-white px-10 py-3">
-            <Link to="/" className="">
+            <Link to="/produtos" className="">
               Produtos
             </Link>
           </button>

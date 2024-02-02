@@ -11,6 +11,7 @@ function DeletarCategoria() {
     const navigate = useNavigate();
 
     const [categoria, setCategoria] = useState<Categoria>({} as Categoria)
+    
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const { usuario, handleLogout } = useContext(AuthContext)
