@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Blocks, ColorRing, DNA, Oval, TailSpin } from "react-loader-spinner";
+import { TailSpin } from "react-loader-spinner";
 import Produto from "../../../models/Produto";
 import { buscarProdutos } from "../../../services/Service";
 import CardProduto from "../../home/produtos-carousel/CardProduto";
@@ -38,7 +38,7 @@ function ListaProduto() {
             <div className="container mx-auto my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
 
                 {produto.map((produto) => (
-                    <CardProduto key={produto.id} id={produto.id} nome={produto.nome} descricao={produto.descricao} preco={produto.preco} foto={produto.foto} />
+                    <CardProduto key={produto.id} id={produto.id} nome={produto.nome} descricao={produto.descricao} preco={produto.preco} foto={produto.foto} usuario={produto.usuario} />
                 ))}
 
             </div>

@@ -9,8 +9,21 @@ import 'swiper/css/navigation';
 import CardProduto from './CardProduto';
 import { Link } from 'react-router-dom';
 import { Navigation } from 'swiper/modules';
+import { useState, useEffect } from 'react';
+import Produto from '../../../models/Produto';
+import { buscarProdutos } from '../../../services/Service';
 
-export default function Projetos() {
+export default function Produtos() {
+  const [produto, setProduto] = useState<Produto[]>([]);
+
+  async function listarProduto() {
+    await buscarProdutos('/produtos', setProduto);
+  }
+
+  useEffect(() => {
+    listarProduto();
+  }, [produto.length]);
+
   return (
     <>
       <div className="mx-auto flex mt-8 md:text-2xl justify-between">
@@ -46,60 +59,20 @@ export default function Projetos() {
         }}
         className="mySwiper container"
       >
-        <SwiperSlide>
-          <CardProduto
-            id={1}
-            nome="Card 1"
-            foto="https://www.cestariasregio.com.br/wp-content/uploads/2023/05/Vaso-Tucuma-3-PA-CESTARIAS-REGIO-1.jpg"
-            descricao="Descrição 1"
-            preco={120.00}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardProduto
-            id={1}
-            nome="Card 1"
-            foto="https://www.cestariasregio.com.br/wp-content/uploads/2023/05/Vaso-Tucuma-3-PA-CESTARIAS-REGIO-1.jpg"
-            descricao="Descrição 1"
-            preco={15.00}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardProduto
-            id={1}
-            nome="Card 1"
-            foto="https://www.cestariasregio.com.br/wp-content/uploads/2023/05/Vaso-Tucuma-3-PA-CESTARIAS-REGIO-1.jpg"
-            descricao="Descrição 1"
-            preco={5.55}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardProduto
-            id={1}
-            nome="Card 1"
-            foto="https://www.cestariasregio.com.br/wp-content/uploads/2023/05/Vaso-Tucuma-3-PA-CESTARIAS-REGIO-1.jpg"
-            descricao="Descrição 1"
-            preco={72.90}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardProduto
-            id={1}
-            nome="Card 1"
-            foto="https://www.cestariasregio.com.br/wp-content/uploads/2023/05/Vaso-Tucuma-3-PA-CESTARIAS-REGIO-1.jpg"
-            descricao="Descrição 1"
-            preco={10.50}
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardProduto
-            id={1}
-            nome="Card 1"
-            foto="https://www.cestariasregio.com.br/wp-content/uploads/2023/05/Vaso-Tucuma-3-PA-CESTARIAS-REGIO-1.jpg"
-            descricao="Descrição 1"
-            preco={53.25}
-          />
-        </SwiperSlide>
+        {produto.map((produto) => (
+          <SwiperSlide>
+            <CardProduto
+              key={produto.id}
+              id={produto.id}
+              nome={produto.nome}
+              descricao={produto.descricao}
+              preco={produto.preco}
+              foto={produto.foto}
+              categoria={produto.categoria}
+              usuario={produto.usuario}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
