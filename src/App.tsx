@@ -13,6 +13,7 @@ import ListaCategorias from './components/categoria/listacategoria/ListaCategori
 import DeletarCategoria from './components/categoria/deletecategoria/DeleteCategoria';
 import FormularioCategoria from './components/categoria/formularioCategoria/FormularioCategoria';
 
+
 function App() {
   return (
     <>

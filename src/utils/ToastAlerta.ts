@@ -3,6 +3,18 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 export function ToastAlerta(mensagem: string, tipo: string) {
+
+  const makeid = (length: number) => {
+    var result = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+    result += characters.charAt(Math.floor(Math.random() * 
+    charactersLength));
+    }
+    return result;
+    }
+  
     switch (tipo) {
       case 'sucesso':
         toast.success(mensagem, {
@@ -14,6 +26,7 @@ export function ToastAlerta(mensagem: string, tipo: string) {
           draggable: false,
           theme: 'colored',
           progress: undefined,
+          toastId: "unique-random-text-xAu9C9-"
         });
         break;
   
@@ -27,6 +40,7 @@ export function ToastAlerta(mensagem: string, tipo: string) {
           draggable: false,
           theme: 'colored',
           progress: undefined,
+          toastId: "unique-random-text-xAu9C9-"
         });
         break;
   
@@ -40,6 +54,7 @@ export function ToastAlerta(mensagem: string, tipo: string) {
           draggable: false,
           theme: 'colored',
           progress: undefined,
+          toastId: "unique-random-text-xAu9C9-"
         });
         break;
   
@@ -53,6 +68,7 @@ export function ToastAlerta(mensagem: string, tipo: string) {
           draggable: false,
           theme: 'colored',
           progress: undefined,
+          toastId: "unique-random-text-xAu9C9-"
         });
         break;
     }
