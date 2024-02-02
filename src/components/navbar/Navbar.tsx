@@ -53,7 +53,7 @@ const NavBar = () => {
           </button>
         </div>
         <div id="header-end">
-          <div className="flex gap-4 pr-5 md:pr-0">
+          <div className="flex gap-4">
             {token !== '' ? (
               <>
                 <Link to="/">
@@ -82,7 +82,7 @@ const NavBar = () => {
                   )}
 
                   {/** Menu DropDown */}
-                  <div className="absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray z-50">
+                  <div className="absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray">
                     <ul className="items-center flex-row justify-between gap-10">
                       {/** Menu Cadastrar categoria, só aparece quando o usuario é o admin */}
                       {usuario.usuario === 'root@root.com' && (
@@ -94,7 +94,7 @@ const NavBar = () => {
                       )}
 
                       <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
-                        <Link to="/" className="block">
+                        <Link to="/cadastrarProduto" className="block">
                           Cadastrar Produto
                         </Link>
                       </li>
@@ -131,16 +131,16 @@ const NavBar = () => {
       </div>
 
       {/** Barra Menu */}
-      <div className="flex justify-between bg-primary-orange font-semibold text-secondary-purple px-2 pr-32">
+      <div className="flex justify-between bg-primary-orange font-semibold text-secondary-purple px-2">
         {/** Categorias */}
-        <div className="uppercase items-center flex text-lg z-50">
+        <div className="uppercase items-center flex text-lg">
           <NavLinks />
         </div>
 
         {/** Botões */}
-        <div className="md:flex hidden gap-8">
+        <div className="justify-end md:flex hidden gap-4">
           <button className="uppercase hover:text-white transition delay-75">
-            <Link to="/produtos" className="">
+            <Link to="/" className="">
               Produtos
             </Link>
           </button>
