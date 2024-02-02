@@ -63,7 +63,7 @@ const CardProduto = (produto: Produto) => {
             onClick={() => setShow(!Show)}
           />
           <div className={Show ? 'flex top-2 mt-3 absolute' : 'hidden'}>
-            <Link to="" className="flex px-2 rounded-s-full items-center justify-center w-full bg-primary-orange bg-opacity-80 text-white hover:bg-opacity-100">
+          <Link to={`/editarProduto/${produto.id}`} className="flex px-2 rounded-s-full items-center justify-center w-full bg-primary-orange bg-opacity-80 text-white hover:bg-opacity-100">
               <button>
                 <PencilSimple size={32} weight="bold" className="p-2" />
               </button>

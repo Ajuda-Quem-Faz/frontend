@@ -53,7 +53,7 @@ const NavBar = () => {
           </button>
         </div>
         <div id="header-end">
-          <div className="flex gap-4 pr-5 md:pr-0">
+          <div className="flex gap-4">
             {token !== '' ? (
               <>
                 <Link to="/">
@@ -94,7 +94,7 @@ const NavBar = () => {
                       )}
 
                       <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
-                        <Link to="/" className="block">
+                        <Link to="/cadastrarProduto" className="block">
                           Cadastrar Produto
                         </Link>
                       </li>
@@ -131,14 +131,14 @@ const NavBar = () => {
       </div>
 
       {/** Barra Menu */}
-      <div className="flex justify-between bg-primary-orange font-semibold text-secondary-purple px-2 pr-32">
+      <div className="flex justify-between bg-primary-orange font-semibold text-secondary-purple px-2">
         {/** Categorias */}
         <div className="uppercase items-center flex text-lg z-50">
           <NavLinks />
         </div>
 
         {/** Botões */}
-        <div className="md:flex hidden gap-8">
+        <div className="justify-end md:flex hidden gap-4">
           <button className="uppercase hover:text-white transition delay-75">
             <Link to="/produtos" className="">
               Produtos
