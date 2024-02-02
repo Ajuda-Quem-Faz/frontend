@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import Ideia from '../../components/home/info/Info';
-import Projetos from '../../components/home/produtos-carousel/Carousel-container';
+import Produtos from '../../components/home/produtos-carousel/Carousel-container';
 import Presentes from '../../components/home/presentes/Presentes';
 
 function Home() {
@@ -33,7 +33,7 @@ function Home() {
         </div>
       </div>
       <div className="container mx-auto">
-      <Projetos />
+        <Produtos />
         <Presentes />
         <Ideia />
       </div>
