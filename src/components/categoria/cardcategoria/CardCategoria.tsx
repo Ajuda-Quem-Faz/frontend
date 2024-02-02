@@ -10,7 +10,7 @@ interface CardCategoriaProps {
 function CardCategoria({ categoria }: CardCategoriaProps) {
   const [Show, setShow] = useState(false);
   return (
-    <div className="flex flex-col justify-between overflow-hidden border-2 border-primary-orangeLight rounded-3xl relative">
+    <div className="flex flex-col justify-between overflow-hidden border-2 border-primary-orangeLight rounded-3xl relative z-0">
       <DotsThree
         size={32}
         className="absolute right-0 top-0 m-2 bg-primary-orangeLight bg-opacity-0 hover:bg-opacity-100 rounded-full z-10"

@@ -13,7 +13,7 @@ import { Navigation } from 'swiper/modules';
 export default function Projetos() {
   return (
     <>
-      <div className="container flex mx-auto mt-8 md:text-2xl justify-around">
+      <div className="mx-auto flex mt-8 md:text-2xl justify-between">
         <h2 className="font-bold">Doe para projetos da sua região</h2>
         <Link to="" className=" text-primary-orange hover:underline text-nowrap">
           Ver mais
