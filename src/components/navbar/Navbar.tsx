@@ -61,7 +61,11 @@ const NavBar = () => {
                   weight="duotone"
                 />
               </Link>
+
+              {/** User Button */}
               <div className="group size-11">
+
+                {/** Foto do usuario */}
                 {usuario.foto != '' ? (
                   <img
                     src={usuario.foto}
@@ -75,24 +79,41 @@ const NavBar = () => {
                     weight="duotone"
                   />
                 )}
-                <ul className="absolute z-50 hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray">
-                  <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
-                    <Link to="/cadastroCategoria">Cadastrar Categoria</Link>
-                  </li>
-                  <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
-                    Settings
-                  </li>
-                  <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
-                    <a href="/login"> Login</a>
-                  </li>
-                  <li
-                    className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer"
-                    onClick={logout}
-                  >
-                    Logout
-                  </li>
-                </ul>
+
+                {/** Menu DropDown */}
+                <div className='absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray'>
+                  <ul className='items-center flex-row justify-between gap-10'>
+
+                    {/** Menu Cadastrar categoria, só aparece quando o usuario é o admin */}
+                    {usuario.usuario === 'root@root.com' && (
+                      <li className='hover:bg-primary-orangeDark py-4 px-4 cursor-pointer'>
+                        <Link to="/cadastroCategoria" className='block'>
+                          Cadastrar Categoria
+                        </Link>
+                      </li>
+                    )}
+
+                    <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
+                      <Link to='/' className='block'>
+                        Cadastrar Produto
+                      </Link>
+                    </li>
+                    <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
+                      <Link to='/settings' className='block'>
+                        Configurações
+                      </Link>
+                    </li>
+                    <li className='hover:bg-primary-orangeDark py-4 px-4 cursor-pointer' >
+                      <Link to='/' className='block' onClick={logout}>
+                        Sair
+                      </Link>
+                    </li>
+                  </ul>
+
+                </div>
+
               </div>
+
             </>
           ) : (
             <a className="text-center text-nowrap md:text-base text-xs" href="/login">
