@@ -1,5 +1,6 @@
 import {
   Funnel,
+  List,
   MagnifyingGlass,
   ShoppingCartSimple,
   UserCircle,
@@ -35,7 +36,7 @@ const NavBar = () => {
                 className="w-auto md:h-12 h-6 mr-2"
               />
             }
-            <h1 className="md:text-lg text-xs font-bold w-1/2">Ajuda Quem Faz</h1>
+            <h1 className="md:text-lg text-xs font-bold">Ajuda Quem Faz</h1>
           </Link>
         </div>
         <div className="input-group md:flex hidden justify-stretch w-full border-primary-orangeLight h-12">
@@ -103,27 +104,27 @@ const NavBar = () => {
       </div>
 
       {/** Barra Menu */}
-      <div className="flex justify-between items-center bg-primary-orange font-semibold text-secondary-purple">
+      <div className="flex justify-between items-center bg-primary-orange font-semibold text-secondary-purple px-2">
         {/** Categorias */}
-        <div className="uppercase items-center place-items-start">
+        <div className="uppercase items-center flex text-lg">
           <NavLinks />
         </div>
 
         {/** Botões */}
-        <div className="flex-row justify-end">
-          <button className="uppercase hover:text-white px-10 py-3">
+        <div className="justify-end md:flex hidden gap-4">
+          <button className="uppercase hover:text-white">
             <Link to="/" className="">
               Produtos
             </Link>
           </button>
 
-          <button className="uppercase hover:text-white px-10 py-3">
+          <button className="uppercase hover:text-white">
             <Link to="/about" className="">
               Equipe
             </Link>
           </button>
 
-          <button className="uppercase hover:text-white px-10 py-3">
+          <button className="uppercase hover:text-white">
             <Link to="/contact" className="">
               Contato
             </Link>
