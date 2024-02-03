@@ -28,3 +28,8 @@
   @apply font-bold;
   @apply bg-dark-black bg-opacity-15 backdrop-blur-sm hover:bg-opacity-25 transition-all pr-2 scale-75 rounded-full justify-center size-16 flex items-center;
 }
+
+.popup-content {
+  border-radius: 3.6rem;
+  max-width: 98vw;
+}
