@@ -59,7 +59,7 @@ const NavBar = () => {
                 {/** Cart Icon */}
                 <Link to="/cart">
                   <ShoppingCartSimple
-                    className="text-secondary-purpleLight text-opacity-95"
+                    className="text-secondary-purpleLight text-opacity-95 hover:text-primary-orangeLight transition delay-75"
                     size={44}
                     weight="duotone"
                   />
@@ -72,11 +72,11 @@ const NavBar = () => {
                     <img
                       src={usuario.foto}
                       alt=""
-                      className="object-cover border-2 border-secondary-purpleLight rounded-full bg-secondary-purpleLight bg-opacity-30 size-11"
+                      className="object-cover border-2 border-secondary-purpleLight rounded-full bg-secondary-purpleLight bg-opacity-30 size-11 hover:border-primary-orangeLight"
                     />
                   ) : (
                     <UserCircle
-                      className="text-secondary-purpleLight"
+                      className="text-secondary-purpleLight "
                       size={48}
                       weight="duotone"
                     />
