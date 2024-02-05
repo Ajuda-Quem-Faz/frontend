@@ -40,15 +40,24 @@ const NavBar = () => {
           </Link>
         </div>
         <div className="input-group col-span-2 w-full md:flex hidden border-primary-orangeLight">
-          <button className=" py-2 px-4 gap-3 text-sm font-bold bg-secondary-purpleLight hover:bg-secondary-purpleDark rounded-l-xl">
+          {/* <button className=" py-2 px-4 gap-3 text-sm font-bold bg-secondary-purpleLight hover:bg-secondary-purpleDark rounded-l-xl">
             <Funnel size={30} color="white" />
-          </button>
+          </button> */}
+          <select
+            name="pesquisa"
+            id="pesquisa"
+            className="bg-light-grayDark bg-secondary-purpleLight text-light-grayLight rounded-s-2xl p-2"
+          >
+            <option value="Produtos">Produtos</option>
+            <option value="Categorias">Categorias</option>
+            <option value="Ongs">Ongs</option>
+          </select>
           <input
             type="text"
             placeholder="Pesquise seu produto aqui"
-            className="bg-light-grayDark px-3 text-lg w-full"
+            className="bg-light-grayDark pl-5 text-lg w-full"
           />
-          <button className="py-2 px-4 bg-secondary-purpleLight hover:bg-secondary-purpleDark bg-opacity-95 rounded-r-xl">
+          <button className="py-2 px-4 bg-secondary-purpleLight hover:bg-secondary-purpleDark bg-opacity-95 rounded-e-2xl">
             <MagnifyingGlass size={30} color="white" />
           </button>
         </div>
