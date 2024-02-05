@@ -13,6 +13,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import { CartContext } from '../../../contexts/CartContext';
 
 interface CardProduto {
   produto: Produto;
@@ -24,6 +25,8 @@ const CardProduto = (produto: Produto) => {
   const [Show, setShow] = useState(false);
 
   const { usuario } = useContext(AuthContext);
+
+  const { adicionarProduto } = useContext(CartContext)
 
   function Curtir() {
     setLike(!Like);
@@ -73,8 +76,9 @@ const CardProduto = (produto: Produto) => {
               <h2 className=" font-semibold text-center min-h-[2lh]">{produto.nome}</h2>
               <div className="flex justify-between items-center w-full flex-row-reverse px-4">
                 <Link
-                  to={'produto.id'}
+                  to={'/cart'}
                   className="w-auto text-center p-2 px-5 rounded-2xl bg-primary-orange text-white flex gap-3 items-center hover:brightness-110"
+                  onClick={() => adicionarProduto(produto)}
                 >
                   <ShoppingCart className="text-white" weight="bold" />
                 </Link>
@@ -200,9 +204,10 @@ const CardProduto = (produto: Produto) => {
                   </div>
                   <div>
                     <Link
-                      to={'produto.id'}
+                      to={'/cart'} onClick={() => adicionarProduto(produto)}
                       className="flex items-center justify-center p-2 px-5 gap-2 rounded-2xl bg-primary-orange text-white hover:brightness-110 mt-3"
-                    >
+                      
+                  >
                       <ShoppingCart className="text-white text-3xl" weight="bold" />{' '}
                       Comprar
                     </Link>
