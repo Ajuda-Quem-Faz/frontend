@@ -22,7 +22,7 @@ const NavLinks = () => {
               <span className="md:block hidden">{link.name}</span>
             </h1>
             {link.submenu && (
-              <div>
+              <div key={'string'}>
                 <div className="absolute left-0 top-[100px] hidden group-hover:md:block hover:md:block">
                   <div>
                     <div
