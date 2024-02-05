@@ -30,14 +30,17 @@ const NavLinks = () => {
                     mt-1 bg-primary-orange rotate-45"
                     ></div>
                   </div>
-                  <div className="bg-primary-orange p-10 grid grid-cols-3 gap-10 list-none">
+                  <div className="bg-primary-orange p-10 grid grid-cols-3 gap-10 list-none rounded-ee-3xl ">
                     {link.sublinks.map((mysublinks) => (
                       <div key={mysublinks.Head}>
                         <h1 className="text-lg font-semibold text-secondary-purpleLight">
                           {mysublinks.Head}
                         </h1>
                         {mysublinks.sublink.map((slink) => (
-                          <li className="text-sm my-2.5 ml-2" key={slink.name}>
+                          <li
+                            className="text-sm my-2.5 ml-2 text-light-grayLight hover:text-light-grayDark"
+                            key={slink.name}
+                          >
                             <Link to={slink.link} className="hover:text-primary">
                               {slink.name}
                             </Link>
