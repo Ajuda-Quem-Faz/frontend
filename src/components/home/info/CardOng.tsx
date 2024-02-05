@@ -21,7 +21,7 @@ const CardOng = (props: {
               <h2 className="text-xl font-bold">{props.nome}</h2>
               <h2 className="float-end">{props.localizacao}</h2>
             </div>
-            <button className="h-full flex items-center justify-center bg-emerald-400 rounded-2xl pl-2">
+            <button className="h-full flex items-center justify-center bg-emerald-400 hover:bg-opacity-90 rounded-2xl pl-2">
               <p className="font-semibold">Doar</p>
               <CurrencyCircleDollar className="text-2xl size-10 p-1" />
             </button>

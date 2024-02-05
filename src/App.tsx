@@ -17,40 +17,43 @@ import DeletarProduto from './components/produto/deletarproduto/DeletarProduto';
 import FormularioProduto from './components/produto/formProduto/FormularioProduto';
 import { CartProvider } from './contexts/CartContext';
 import Cart from './components/cart/cart/Cart';
-
-
+import ScrollToTop from 'react-scroll-to-top';
 
 function App() {
   return (
     <>
       <CartProvider>
-      <AuthProvider>
-        <ToastContainer />
-        <BrowserRouter>
-          <div className="min-h-[80vh]">
-            <NavBar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/categorias" element={<ListaCategorias />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/about" element={<Aboutus />} />
-              <Route path="/cadastro" element={<Cadastro />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
-              <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
-              <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
-              <Route path="/produtos" element= {<ListaProduto />} />
-              <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
-              <Route path="/cadastrarProduto" element={<FormularioProduto />} />
-              <Route path="/editarProduto/:id" element={<FormularioProduto />} />
-              <Route path='/cart' element={<Cart/>}/>
-            </Routes>
-          </div>
+        <AuthProvider>
+          <ToastContainer />
+          <BrowserRouter>
+            <div className="min-h-[80vh]">
+              <NavBar />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/categorias" element={<ListaCategorias />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/about" element={<Aboutus />} />
+                <Route path="/cadastro" element={<Cadastro />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+                <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
+                <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
+                <Route path="/produtos" element={<ListaProduto />} />
+                <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
+                <Route path="/cadastrarProduto" element={<FormularioProduto />} />
+                <Route path="/editarProduto/:id" element={<FormularioProduto />} />
+                <Route path="/cart" element={<Cart />} />
+              </Routes>
+              <ScrollToTop
+                smooth
+                svgPath="M216.49,168.49a12,12,0,0,1-17,0L128,97,56.49,168.49a12,12,0,0,1-17-17l80-80a12,12,0,0,1,17,0l80,80A12,12,0,0,1,216.49,168.49Z" color='white'
+              />
+            </div>
 
-          <Footer />
-        </BrowserRouter>
-      </AuthProvider>
+            <Footer />
+          </BrowserRouter>
+        </AuthProvider>
       </CartProvider>
     </>
   );

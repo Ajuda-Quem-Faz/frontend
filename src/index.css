@@ -26,6 +26,12 @@
   @apply text-primary-orange font-bold bg-dark-black bg-opacity-40 backdrop-blur-sm hover:bg-opacity-25 transition-all pr-2 scale-[.60] md:scale-75 p-1 rounded-full justify-center size-16 flex items-center;
 }
 
+.scroll-to-top {
+  display: grid;
+  place-content: center;
+  @apply bg-primary-orange hover:brightness-110 rounded-2xl !important
+}
+
 .popup-content {
   padding: 0;
   border-radius: 1.6rem;
