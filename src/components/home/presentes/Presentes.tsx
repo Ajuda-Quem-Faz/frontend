@@ -15,34 +15,22 @@ function Presentes() {
       </div>
       <div className="grid md:grid-cols-4 gap-4 md:gap-8 grid-cols-2 items-center">
         <CardPresente
-          nome="Bolsas"
-          imagem="https://dcdn.mitiendanube.com/stores/001/933/783/products/img_08591-2ebb1facfd36e7378f16832333862733-640-0.webp"
+          link="artesanato"
+          nome="Artesanato"
+          imagem="https://dcdn.mitiendanube.com/stores/001/933/783/products/img_24941-383399b60156157bd216859903314766-640-0.webp"
         />
         <CardPresente
-          nome="Tricotados"
-          imagem="https://dcdn.mitiendanube.com/stores/001/933/783/products/image000791-8be3081e2a7c1a0bc916859971438304-640-0.webp"
+          link="decoracao"
+          nome="Decoração"
+          imagem="https://dcdn.mitiendanube.com/stores/001/933/783/products/img_69751-cfa9370a37542a249e16832467105709-640-0.webp"
         />
         <CardPresente
-          nome="Vasos"
-          imagem="https://www.wabisabiatelie.com/cdn/shop/products/wabisabiatelie_vasobarro_artesanal_P_arranjoseco6_1200x1805.jpg"
+          link="acessorios"
+          nome="Acessórios"
+          imagem="https://dcdn.mitiendanube.com/stores/001/933/783/products/img_08431-19805c1615d8db706216832327200720-640-0.webp"
         />
         <CardPresente
-          nome="Chaveiros"
-          imagem="https://dcdn.mitiendanube.com/stores/001/933/783/products/img_10791-90bd99d863013cbcfa16832442070801-640-0.webp"
-        />
-        <CardPresente
-          nome="Bolsas"
-          imagem="https://dcdn.mitiendanube.com/stores/001/933/783/products/img_08591-2ebb1facfd36e7378f16832333862733-640-0.webp"
-        />
-        <CardPresente
-          nome="Tricotados"
-          imagem="https://dcdn.mitiendanube.com/stores/001/933/783/products/image000791-8be3081e2a7c1a0bc916859971438304-640-0.webp"
-        />
-        <CardPresente
-          nome="Vasos"
-          imagem="https://www.wabisabiatelie.com/cdn/shop/products/wabisabiatelie_vasobarro_artesanal_P_arranjoseco6_1200x1805.jpg"
-        />
-        <CardPresente
+          link="chaveiros"
           nome="Chaveiros"
           imagem="https://dcdn.mitiendanube.com/stores/001/933/783/products/img_10791-90bd99d863013cbcfa16832442070801-640-0.webp"
         />
