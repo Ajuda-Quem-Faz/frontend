@@ -1,4 +1,9 @@
+import { useEffect } from 'react';
+
 function Contact() {
+  useEffect(() => {
+    document.title = 'Ajuda quem Faz - Contato';
+  }, []);
   return (
     <>
       <div

@@ -5,6 +5,10 @@ import UsuarioLogin from '../../models/UsuarioLogin';
 import { RotatingLines } from 'react-loader-spinner';
 
 function Login() {
+  useEffect(() => {
+    document.title = 'Ajuda quem Faz - Entrar';
+  }, []);
+
   const navigate = useNavigate();
   const { usuario, handleLogin, isLoading } = useContext(AuthContext);
   const [usuarioLogin, setUsuarioLogin] = useState<UsuarioLogin>({} as UsuarioLogin);

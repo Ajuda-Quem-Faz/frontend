@@ -124,16 +124,19 @@ const NavBar = () => {
               </>
             ) : (
               <div className="flex items-center">
-                <a className="text-center text-nowrap md:text-base text-xs" href="/login">
-                  Login
-                </a>
-                <div className="h-7 w-0.5 bg-light-grayDark mx-2" />
-                <a
+                <Link
                   className="text-center text-nowrap md:text-base text-xs"
-                  href="/cadastro"
+                  to={'/login'}
+                >
+                  Login
+                </Link>
+                <div className="h-7 w-0.5 bg-light-grayDark mx-2" />
+                <Link
+                  className="text-center text-nowrap md:text-base text-xs"
+                  to={'/cadastro'}
                 >
                   Cadastro
-                </a>
+                </Link>
               </div>
             )}
           </div>
