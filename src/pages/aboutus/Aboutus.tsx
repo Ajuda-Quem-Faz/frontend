@@ -1,4 +1,5 @@
 import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react"
+import { useEffect } from "react";
 import { Link } from "react-router-dom"
 
 function About() {
