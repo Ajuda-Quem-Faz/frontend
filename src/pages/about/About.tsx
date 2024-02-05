@@ -1,11 +1,8 @@
 import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react"
-import { useEffect } from "react";
-import { Link } from "react-router-dom"
 
 function About() {
-  useEffect(() => {
-    document.title = 'Ajuda quem Faz';
-  }, []);
+
+
 
   return (
     <>
@@ -117,17 +114,17 @@ function About() {
             alt="Foto de Luiza Kormann"
           ></img>
           <div className= "flex flex-col-2">
-          <Link to="https://www.linkedin.com/in/luizakormann/">
+          <a href="https://www.linkedin.com/in/luizakormann/">
             <LinkedinLogo
               size={40}
               className=" hover:text-primary-orange transition delay-75"
             ></LinkedinLogo>
-          </Link>
-            <Link to= "https://github.com/luizakormann">
+          </a>
+            <a href= "https://github.com/luizakormann">
               <GithubLogo 
               size={32} className="hover:text-primary-orange transition delay-75"
               ></GithubLogo>
-            </Link>
+            </a>
           </div>
       </div>
       <div className="text-dark-black rounded-3xl m-1 p-2">
@@ -159,17 +156,17 @@ function About() {
             alt="Foto de Pablo Maia"
           ></img>
             <div className= "flex flex-col-2">
-          <Link to="https://www.linkedin.com/in/pablo-hsm/">
+          <a href="https://www.linkedin.com/in/pablo-hsm/">
             <LinkedinLogo
               size={40}
               className=" hover:text-primary-orange transition delay-75"
             ></LinkedinLogo>
-          </Link>
-            <Link to= "https://github.com/pxmiddle">
+          </a>
+            <a href= "https://github.com/pxmiddle">
               <GithubLogo 
               size={32} className="hover:text-primary-orange transition delay-75"
               ></GithubLogo>
-            </Link>
+            </a>
           </div>
         </div>
       </div >
@@ -183,17 +180,17 @@ function About() {
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/Aline%20Conchetta.jpeg?updatedAt=1707154255911"
             alt="Foto de Aline Conchetta"></img>
             <div className= "flex flex-col-2">
-          <Link to="https://www.linkedin.com/in/aline-conchetta/">
+          <a href="https://www.linkedin.com/in/aline-conchetta/">
             <LinkedinLogo
               size={40}
               className=" hover:text-primary-orange transition delay-75"
             ></LinkedinLogo>
-          </Link>
-            <Link to= "https://github.com/AlineConchetta">
+          </a>
+            <a href= "https://github.com/AlineConchetta">
               <GithubLogo 
               size={32} className="hover:text-primary-orange transition delay-75"
               ></GithubLogo>
-            </Link>
+            </a>
           </div>
             
         </div>
@@ -226,17 +223,17 @@ function About() {
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/Vitor%20Nascimento.jpeg?updatedAt=1707151136622"
             alt="Foto de Vitor Nascimento"></img>
             <div className= "flex flex-col-2">
-          <Link to="https://www.linkedin.com/in/vitor-do-nascimento-ferreira/">
+          <a href="https://www.linkedin.com/in/vitor-do-nascimento-ferreira/">
             <LinkedinLogo
               size={40}
               className=" hover:text-primary-orange transition delay-75"
             ></LinkedinLogo>
-          </Link>
-            <Link to= "https://github.com/Vitornasc3">
+          </a>
+            <a href= "https://github.com/Vitornasc3">
               <GithubLogo 
               size={32} className="hover:text-primary-orange transition delay-75"
               ></GithubLogo>
-            </Link>
+            </a>
           </div>
         </div>
         </div >
@@ -249,17 +246,17 @@ function About() {
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/Natan%20Oliveira.jpeg?updatedAt=1707155704905"
             alt="Foto de Natan Oliveira"></img>
             <div className= "flex flex-col-2">
-          <Link to="https://www.linkedin.com/in/natan-oliveira-santos-7a5b47294/">
+          <a href="https://www.linkedin.com/in/natan-oliveira-santos-7a5b47294/">
             <LinkedinLogo
               size={40}
               className=" hover:text-primary-orange transition delay-75"
             ></LinkedinLogo>
-          </Link>
-            <Link to= "https://github.com/NatanOSantos">
+          </a>
+            <a href= "https://github.com/NatanOSantos">
               <GithubLogo 
               size={32} className="hover:text-primary-orange transition delay-75"
               ></GithubLogo>
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -291,17 +288,17 @@ function About() {
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/1702560502903.jpg?updatedAt=1707155977363"
             alt="Foto de Natan Oliveira"></img>
             <div className= "flex flex-col-2">
-          <Link to="https://www.linkedin.com/in/mdteixeira15/">
+          <a href="https://www.linkedin.com/in/mdteixeira15/">
             <LinkedinLogo
               size={40}
               className=" hover:text-primary-orange transition delay-75"
             ></LinkedinLogo>
-          </Link>
-            <Link to= "https://github.com/mdteixeira">
+          </a>
+            <a href= "https://github.com/mdteixeira">
               <GithubLogo 
               size={32} className="hover:text-primary-orange transition delay-75"
               ></GithubLogo>
-            </Link>
+            </a>
           </div>
         </div>
         </div >
@@ -313,21 +310,21 @@ function About() {
           <img
             className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/Wallysson.jpg?updatedAt=1706807217747"
-            alt="Foto de Wallysson Araujo">
+            alt="Foto de Wallysson Araujo"></img>
               <div className= "flex flex-col-2">
-          <Link to="https://www.linkedin.com/in/wallysson-araujo/">
+          <a href="https://www.linkedin.com/in/wallysson-araujo/">
             <LinkedinLogo
               size={40}
               className=" hover:text-primary-orange transition delay-75"
             ></LinkedinLogo>
-          </Link>
-            <Link to= "https://github.com/WallyssonChristian">
+          </a>
+            <a href= "https://github.com/WallyssonChristian">
               <GithubLogo 
               size={32} className="hover:text-primary-orange transition delay-75"
               ></GithubLogo>
-            </Link>
+            </a>
           </div>
-            </img>
+            
         </div>
 
 
