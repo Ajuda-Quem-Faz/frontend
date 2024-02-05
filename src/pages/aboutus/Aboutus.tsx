@@ -54,13 +54,12 @@ function About() {
           </div>
         </div>
         </div>
-      </div>
-
+      
       {/* Historia */}
+    
       <div className="mt-[42px]">
         <h2 className="text-primary-orange text-center text-[30px] font-bold">
-          Conheça nossa história
-        </h2>
+          Conheça nossa história</h2>
         <p className="text-pretty mx-[15px] text-center mt-[30px] mb-[30px]">
           A equipe de desenvolvedores desse e-commerce foi composta por indivíduos com
           interesses comuns na área de tecnologia. A equipe se conheceu durante o bootcamp
@@ -341,7 +340,6 @@ function About() {
   
     </>
   );
-}
 }
 
 export default About;
