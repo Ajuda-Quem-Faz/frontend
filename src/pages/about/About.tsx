@@ -3,16 +3,17 @@ import { Link } from "react-router-dom"
 
 function About() {
   useEffect(() => {
-    document.title = 'Ajuda quem Faz - Sobre nós';
+    document.title = 'Ajuda quem Faz';
   }, []);
 
   return (
     <>
       {/* Cards */}
-      <div className="w-full bg-light-grayDark rounded-b-3xl">
-        <div className="p-20 grid grid-cols-1 lg:grid-cols-3 justify-between gap-2">
+      <div className="w-full bg-light-grayDark">
+        <div className="p-10 grid grid-cols-1 lg:grid-cols-3 justify-between gap-2">
+
           {/* Missão */}
-          <div className="bg-secondary-purple grid place-items-center rounded-3xl">
+          <div className="flex flex-col bg-secondary-purple place-items-center justify-center p-2 rounded-3xl">
             <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">
               Missão
             </h2>
@@ -23,6 +24,7 @@ function About() {
               alta qualidade, enquanto contribuem diretamente para causas sociais.
             </p>
           </div>
+
           {/* Visão */}
           <div className=" bg-secondary-purple grid place-items-center rounded-3xl">
             <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">

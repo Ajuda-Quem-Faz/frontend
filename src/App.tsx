@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Contact from './pages/contact/Contact';
-import Aboutus from './pages/aboutus/Aboutus';
 import Footer from './components/footer/Footer';
 import NavBar from './components/navbar/Navbar';
 import Home from './pages/home/Home';
@@ -18,6 +17,7 @@ import FormularioProduto from './components/produto/formProduto/FormularioProdut
 import { CartProvider } from './contexts/CartContext';
 import Cart from './components/cart/cart/Cart';
 import ScrollToTop from 'react-scroll-to-top';
+import About from './pages/about/About';
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
                 <Route path="/home" element={<Home />} />
                 <Route path="/categorias" element={<ListaCategorias />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/about" element={<Aboutus />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
