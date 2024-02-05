@@ -1,4 +1,5 @@
 import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react"
+import { useEffect } from "react";
 import { Link } from "react-router-dom"
 
 function About() {
@@ -42,7 +43,7 @@ function About() {
             <h2 className="mt-[40px] font-bold text-[30px] text-tertiary-blueLight">
               Valores
             </h2>
-            <div className="mt-[42px] mb-[53px] text-center text-sky-100  font-medium leading-7 text-tertiary-blueLight">
+            <div className="mt-[42px] mb-[53px] text-center text-sky-100  font-medium leading-7">
               <p className="mb-[15px]">Compromisso Social</p>
 
               <p className="p-2 mt-[25px] mb-[25px]">Emponderamento das Comunidades</p>
@@ -79,7 +80,7 @@ function About() {
       <div className="relative bg-secondary-purple w-full p-2 flex rounded-[30px] shadow mb-[50px]">
         <div>
           <div>
-            <h2 className="mx-[25px] relative font-bold text-light-grayLight text-[30px] font-bold mt-[15px]">
+            <h2 className="mx-[25px] relative font-bold text-light-grayLight text-[30px] mt-[15px]">
               ODS 1- Erradicação da Pobreza
             </h2>
           </div>
