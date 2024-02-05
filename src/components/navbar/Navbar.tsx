@@ -56,7 +56,8 @@ const NavBar = () => {
           <div className="flex gap-4">
             {token !== '' ? (
               <>
-                <Link to="/">
+                {/** Cart Icon */}
+                <Link to="/cart">
                   <ShoppingCartSimple
                     className="text-secondary-purpleLight text-opacity-95"
                     size={44}
