@@ -11,11 +11,11 @@ function About() {
         <div className="p-10 grid grid-cols-1 lg:grid-cols-3 justify-between gap-2">
 
           {/* Missão */}
-          <div className="flex flex-col bg-secondary-purple place-items-center justify-center p-2 rounded-3xl">
-            <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">
+          <div className="flex flex-col bg-secondary-purple items-center text-center px-3 py-10 gap-10 min-h-80 rounded-2xl text-tertiary-blueLight">
+            <h2 className="text-3xl font-bold text-tertiary-blueLight">
               Missão
             </h2>
-            <p className="mt-[39px] mb-[77px] text-center font-medium leading-7 text-tertiary-blueLight">
+            <p>
               Nossa missão é promover impacto social positivo ao conectar consumidores a
               produtos feitos por Organizações Não Governamentais (ONGs). Buscamos
               oferecer uma plataforma onde os consumidores possam adquirir produtos de
@@ -24,32 +24,29 @@ function About() {
           </div>
 
           {/* Visão */}
-          <div className=" bg-secondary-purple grid place-items-center rounded-3xl">
-            <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">
+          <div className="flex flex-col bg-secondary-purple items-center text-center px-3 py-10 gap-10 min-h-80 rounded-2xl text-tertiary-blueLight">
+            <h2 className="text-3xl font-bold text-tertiary-blueLight">
               Visão
             </h2>
-            <p className="p-[40px] mb-[105px] text-center font-medium leading-7 text-tertiary-blueLight">
+            <p>
               Buscamos ser a principal referência global em comércio sustentável, onde
               cada produto vendido não apenas atende às necessidades dos consumidores, mas
               também contribui diretamente para a construção de um mundo mais justo e
               equitativo.
             </p>
           </div>
+
           {/* Valores */}
-          <div className="bg-secondary-purple grid place-items-center rounded-3xl">
-            <h2 className="mt-[40px] font-bold text-[30px] text-tertiary-blueLight">
+          <div className="flex flex-col bg-secondary-purple items-center text-center px-3 py-10 gap-10 min-h-80  rounded-2xl text-tertiary-blueLight">
+            <h2 className="text-3xl font-bold">
               Valores
             </h2>
-            <div className="mt-[42px] mb-[53px] text-center text-sky-100  font-medium leading-7">
-              <p className="mb-[15px]">Compromisso Social</p>
-
-              <p className="p-2 mt-[25px] mb-[25px]">Emponderamento das Comunidades</p>
-
-              <p className="mt-[25px] mb-[25px]">Sustentabilidade</p>
-
-              <p className="mt-[25px] mb-[25px]">Inovação Social</p>
-
-              <p className="mt-[20px] mb-[53px]">Transparência</p>
+            <div>
+              <p>Compromisso Social</p>
+              <p>Emponderamento das Comunidades</p>
+              <p>Sustentabilidade</p>
+              <p>Inovação Social</p>
+              <p>Transparência</p>
             </div>
           </div>
         </div>
