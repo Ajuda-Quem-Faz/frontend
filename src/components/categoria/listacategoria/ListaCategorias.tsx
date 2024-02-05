@@ -1,17 +1,18 @@
 import { useEffect, useState, useContext } from 'react';
 import { TailSpin } from 'react-loader-spinner';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import { buscar } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 import CardCategoria from '../cardcategoria/CardCategoria';
 import { ToastAlerta } from '../../../utils/ToastAlerta';
 
-
 function ListaCategorias() {
   useEffect(() => {
     document.title = 'Ajuda quem Faz - Categorias';
   }, []);
+
+  const { pesquisa } = useParams<{ pesquisa: string }>();
 
   let navigate = useNavigate();
 
@@ -19,9 +20,6 @@ function ListaCategorias() {
 
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
-
-
-  
 
   async function buscarCategoria() {
     try {
@@ -36,15 +34,26 @@ function ListaCategorias() {
     }
   }
 
+  async function buscarCategoriaPorSetor(pesquisa: string) {
+    await buscar(`/categorias/setor/${pesquisa}`, setCategoria, {
+      headers: {
+        Authorization: token,
+      },
+    });
+  }
+
   useEffect(() => {
     if (token === '') {
       ToastAlerta('Você precisa estar logado', 'info');
       navigate('/login');
     }
-  } , [token] );
+  }, [token]);
 
   useEffect(() => {
     buscarCategoria();
+    if (pesquisa !== undefined) {
+      buscarCategoriaPorSetor(pesquisa);
+    }
   }, [categoria.length]);
 
   return (

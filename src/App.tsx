@@ -18,6 +18,7 @@ import { CartProvider } from './contexts/CartContext';
 import Cart from './components/cart/cart/Cart';
 import ScrollToTop from 'react-scroll-to-top';
 import About from './pages/about/About';
+import NotFound from './pages/notFound/NotFound';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/categorias" element={<ListaCategorias />} />
+                <Route path="/categorias/setor/:pesquisa" element={<ListaCategorias />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/cadastro" element={<Cadastro />} />
@@ -44,10 +46,12 @@ function App() {
                 <Route path="/cadastrarProduto" element={<FormularioProduto />} />
                 <Route path="/editarProduto/:id" element={<FormularioProduto />} />
                 <Route path="/cart" element={<Cart />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
               <ScrollToTop
                 smooth
-                svgPath="M216.49,168.49a12,12,0,0,1-17,0L128,97,56.49,168.49a12,12,0,0,1-17-17l80-80a12,12,0,0,1,17,0l80,80A12,12,0,0,1,216.49,168.49Z" color='white'
+                svgPath="M216.49,168.49a12,12,0,0,1-17,0L128,97,56.49,168.49a12,12,0,0,1-17-17l80-80a12,12,0,0,1,17,0l80,80A12,12,0,0,1,216.49,168.49Z"
+                color="white"
               />
             </div>
 

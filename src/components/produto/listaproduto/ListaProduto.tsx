@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { TailSpin } from 'react-loader-spinner';
 import Produto from '../../../models/Produto';
 import { buscarProdutos } from '../../../services/Service';
 import CardProduto from '../../home/produtos-carousel/CardProduto';

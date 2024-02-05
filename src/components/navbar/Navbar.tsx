@@ -1,9 +1,4 @@
-import {
-  Funnel,
-  MagnifyingGlass,
-  ShoppingCartSimple,
-  UserCircle,
-} from '@phosphor-icons/react';
+import { MagnifyingGlass, ShoppingCartSimple, UserCircle } from '@phosphor-icons/react';
 import { Link, useNavigate } from 'react-router-dom';
 import NavLinks from './NavLinks';
 import { useContext } from 'react';
@@ -46,7 +41,7 @@ const NavBar = () => {
           <select
             name="pesquisa"
             id="pesquisa"
-            className="bg-light-grayDark bg-secondary-purpleLight text-light-grayLight rounded-s-2xl p-2"
+            className="bg-secondary-purpleLight text-light-grayLight rounded-s-2xl p-2"
           >
             <option value="Produtos">Produtos</option>
             <option value="Categorias">Categorias</option>
