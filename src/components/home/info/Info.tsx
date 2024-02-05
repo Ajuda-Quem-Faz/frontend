@@ -20,7 +20,7 @@ const Info = () => (
       </section>
       <section className="col-span-4">
         <h2 className="text-2xl font-semibold">
-          Milhares de projetos sendo impulsionados por você! Conheça quem faz:
+          Diversos projetos sendo impulsionados por você! Conheça quem faz:
         </h2>
         <Swiper
           slidesPerView={2}
@@ -45,43 +45,41 @@ const Info = () => (
             disableOnInteraction: false,
           }}
           modules={[Autoplay, Pagination, Navigation]}
-          className="py-6"
+          className="pt-4 pb-10"
         >
           <SwiperSlide className="h-auto">
             <CardOng
               descricao={
-                'Teste props 1, Teste card ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao '
+                'Promovemos a transformação de milhares de vidas por meio de projetos contínuos de educação, geração de renda e acesso à água, moradia e saúde. Estamos rompendo um ciclo secular de miséria no sertão. Com oportunidades, mais de 10 mil crianças e jovens já enxergam um futuro diferente.'
               }
-              nome={'Nome 1'}
-              imagem={'./logo.png'}
-              localizacao={'São Paulo, SP'}
-            />
-          </SwiperSlide>
-          <SwiperSlide className="h-auto">
-            <CardOng
-              descricao={'Texto card'}
-              nome={'Nome 2'}
-              imagem={'./logo.png'}
+              nome={'Amigos do bem'}
+              imagem={
+                'https://www.amigosdobem.org/wp-content/uploads/2021/03/Novo-LOGO-01.png'
+              }
               localizacao={'São Paulo, SP'}
             />
           </SwiperSlide>
           <SwiperSlide className="h-auto">
             <CardOng
               descricao={
-                'Teste props 3, Teste card ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao '
+                'Temos como missão atuar a favor da justiça social, promovendo o protagonismo de crianças, adolescentes e jovens nas esferas do brincar, da cultura, da inclusão digital, do meio ambiente e do apoio à educação e às famílias.'
               }
-              nome={'Nome 3'}
-              imagem={'./logo.png'}
+              nome={'O PIPA'}
+              imagem={
+                'https://opipa.org/wp-content/uploads/2020/10/Logo_pipa_fonte_oficial_2020_i.png'
+              }
               localizacao={'São Paulo, SP'}
             />
           </SwiperSlide>
           <SwiperSlide className="h-auto">
             <CardOng
               descricao={
-                'Teste props 4, Teste card ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao ao '
+                'Temos como missão atuar a favor da justiça social, promovendo o protagonismo de crianças, adolescentes e jovens nas esferas do brincar, da cultura, da inclusão digital, do meio ambiente e do apoio à educação e às famílias.'
               }
-              nome={'Nome 4'}
-              imagem={'./logo.png'}
+              nome={'O PIPA'}
+              imagem={
+                'https://opipa.org/wp-content/uploads/2020/10/Logo_pipa_fonte_oficial_2020_i.png'
+              }
               localizacao={'São Paulo, SP'}
             />
           </SwiperSlide>

@@ -26,8 +26,8 @@ export default function Produtos() {
 
   return (
     <>
-      <div className="mx-auto flex mt-8 md:text-2xl justify-between">
-        <h2 className="font-bold">Doe para projetos da sua região</h2>
+      <div className="md:text-2xl flex justify-between">
+        <h2 className="font-bold text-secondary-purple">Produtos que você vai amar</h2>
         <Link to="/produtos" className=" text-primary-orange hover:underline text-nowrap">
           Ver mais
         </Link>
@@ -37,11 +37,11 @@ export default function Produtos() {
         modules={[Navigation]}
         breakpoints={{
           1: {
-            slidesPerView: 1,
-            spaceBetween: 60,
+            slidesPerView: 2,
+            spaceBetween: 10,
           },
           640: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 40,
           },
           768: {
@@ -60,9 +60,8 @@ export default function Produtos() {
         className="mySwiper container"
       >
         {produto.map((produto) => (
-          <SwiperSlide>
+          <SwiperSlide key={produto.id}>
             <CardProduto
-              key={produto.id}
               id={produto.id}
               nome={produto.nome}
               descricao={produto.descricao}

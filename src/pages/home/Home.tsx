@@ -32,7 +32,7 @@ function Home() {
           />
         </div>
       </div>
-      <div className="container mx-auto">
+      <div className="container mx-auto grid grid-cols-1 gap-8 py-16 px-1">
         <Produtos />
         <Presentes />
         <Ideia />

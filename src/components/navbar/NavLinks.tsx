@@ -32,7 +32,7 @@ const NavLinks = () => {
                   </div>
                   <div className="bg-primary-orange p-10 grid grid-cols-3 gap-10 list-none">
                     {link.sublinks.map((mysublinks) => (
-                      <div>
+                      <div key={mysublinks.Head}>
                         <h1 className="text-lg font-semibold text-secondary-purpleLight">
                           {mysublinks.Head}
                         </h1>
@@ -58,7 +58,7 @@ const NavLinks = () => {
           >
             {/* sublinks */}
             {link.sublinks.map((slinks) => (
-              <div>
+              <div key={slinks.Head}>
                 <div>
                   <h1
                     onClick={() =>
@@ -79,7 +79,7 @@ const NavLinks = () => {
                     } list-none text-light-grayLight`}
                   >
                     {slinks.sublink.map((slink) => (
-                      <li className="py-3 pl-14">
+                      <li className="py-3 pl-14" key={slink.name}>
                         <Link to={slink.link}>{slink.name}</Link>
                       </li>
                     ))}
