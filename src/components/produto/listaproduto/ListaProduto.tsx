@@ -5,6 +5,10 @@ import { buscarProdutos } from '../../../services/Service';
 import CardProduto from '../../home/produtos-carousel/CardProduto';
 
 function ListaProduto() {
+  useEffect(() => {
+    document.title = 'Ajuda quem Faz - Produtos';
+  }, []);
+
   const [produto, setProduto] = useState<Produto[]>([]);
 
   async function listarProduto() {

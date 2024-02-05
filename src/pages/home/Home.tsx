@@ -5,7 +5,7 @@ import Presentes from '../../components/home/presentes/Presentes';
 
 function Home() {
   useEffect(() => {
-    document.title = 'Ajuda quem Faz - Home';
+    document.title = 'Ajuda quem Faz - Início';
   }, []);
   return (
     <>

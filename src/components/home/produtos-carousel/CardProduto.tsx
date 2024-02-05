@@ -26,7 +26,7 @@ const CardProduto = (produto: Produto) => {
 
   const { usuario } = useContext(AuthContext);
 
-  const { adicionarProduto } = useContext(CartContext)
+  const { adicionarProduto } = useContext(CartContext);
 
   function Curtir() {
     setLike(!Like);
@@ -56,7 +56,7 @@ const CardProduto = (produto: Produto) => {
       />
       <Popup
         trigger={
-          <div className="flex-col items-center justify-center rounded-[3rem] relative cursor-pointer">
+          <div className="flex-col items-center justify-center rounded-[3rem] relative cursor-pointer hover:text-primary-orangeDark">
             <div className="absolute flex-col w-full md:h-56 p-5 opacity-0 bg-opacity-20 transition text-white bg-dark-black md:hover:opacity-100 backdrop-blur-[2px] rounded-[3rem] backdrop-brightness-50">
               <h2 className=" font-bold lg:mb-5 mb-2 text-center w-8/12 mx-auto">
                 {produto.nome}
@@ -204,10 +204,10 @@ const CardProduto = (produto: Produto) => {
                   </div>
                   <div>
                     <Link
-                      to={'/cart'} onClick={() => adicionarProduto(produto)}
+                      to={'/cart'}
+                      onClick={() => adicionarProduto(produto)}
                       className="flex items-center justify-center p-2 px-5 gap-2 rounded-2xl bg-primary-orange text-white hover:brightness-110 mt-3"
-                      
-                  >
+                    >
                       <ShoppingCart className="text-white text-3xl" weight="bold" />{' '}
                       Comprar
                     </Link>
