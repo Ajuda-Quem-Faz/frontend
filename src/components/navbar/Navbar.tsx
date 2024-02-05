@@ -133,7 +133,7 @@ const NavBar = () => {
       {/** Barra Menu */}
       <div className="flex justify-between bg-primary-orange font-semibold text-secondary-purple px-2">
         {/** Categorias */}
-        <div className="uppercase items-center flex text-lg z-50">
+        <div className="uppercase items-center flex text-lg z-[60]">
           <NavLinks />
         </div>
 
