@@ -1,17 +1,20 @@
-import { useEffect } from 'react';
+import { GithubLogo, LinkedinLogo } from "@phosphor-icons/react"
+import { useEffect } from "react";
+import { Link } from "react-router-dom"
 
 function About() {
   useEffect(() => {
-    document.title = 'Ajuda quem Faz - Sobre nós';
+    document.title = 'Ajuda quem Faz';
   }, []);
 
   return (
     <>
       {/* Cards */}
-      <div className="w-full bg-light-grayDark rounded-b-3xl">
-        <div className="p-20 grid grid-cols-1 lg:grid-cols-3 justify-between gap-2">
+      <div className="w-full bg-light-grayDark">
+        <div className="p-10 grid grid-cols-1 lg:grid-cols-3 justify-between gap-2">
+
           {/* Missão */}
-          <div className="bg-secondary-purple grid place-items-center rounded-3xl">
+          <div className="flex flex-col bg-secondary-purple place-items-center justify-center p-2 rounded-3xl">
             <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">
               Missão
             </h2>
@@ -22,6 +25,7 @@ function About() {
               alta qualidade, enquanto contribuem diretamente para causas sociais.
             </p>
           </div>
+
           {/* Visão */}
           <div className=" bg-secondary-purple grid place-items-center rounded-3xl">
             <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">
@@ -39,7 +43,7 @@ function About() {
             <h2 className="mt-[40px] font-bold text-[30px] text-tertiary-blueLight">
               Valores
             </h2>
-            <div className="mt-[42px] mb-[53px] text-center text-sky-100  font-medium leading-7 text-tertiary-blueLight">
+            <div className="mt-[42px] mb-[53px] text-center text-sky-100  font-medium leading-7">
               <p className="mb-[15px]">Compromisso Social</p>
 
               <p className="p-2 mt-[25px] mb-[25px]">Emponderamento das Comunidades</p>
@@ -52,13 +56,13 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
-
+        </div>
+      
       {/* Historia */}
+    
       <div className="mt-[42px]">
         <h2 className="text-primary-orange text-center text-[30px] font-bold">
-          Conheça nossa história
-        </h2>
+          Conheça nossa história</h2>
         <p className="text-pretty mx-[15px] text-center mt-[30px] mb-[30px]">
           A equipe de desenvolvedores desse e-commerce foi composta por indivíduos com
           interesses comuns na área de tecnologia. A equipe se conheceu durante o bootcamp
@@ -71,10 +75,12 @@ function About() {
         </p>
       </div>
 
-      <div className="relative bg-secondary-purple w-full h-[348px] p-2 flex rounded-[30px] shadow mb-[50px]">
+      {/*OSD - 1*/}
+
+      <div className="relative bg-secondary-purple w-full p-2 flex rounded-[30px] shadow mb-[50px]">
         <div>
           <div>
-            <h2 className="mx-[25px] relative font-bold text-light-grayLight text-[30px] font-bold mt-[15px]">
+            <h2 className="mx-[25px] relative font-bold text-light-grayLight text-[30px] mt-[15px]">
               ODS 1- Erradicação da Pobreza
             </h2>
           </div>
@@ -92,7 +98,7 @@ function About() {
 
           <div className="">
             <img
-              className="mr-[24px] w-[287px] h-[233px] rounded-3xl"
+              className="w-[287px] h-[233px] rounded-3xl"
               src="https://ik.imagekit.io/ajudaquemfaz/Equipe/top-view-origami-chain-people-with-globe.jpg?updatedAt=1706881066829"
             ></img>
           </div>
@@ -100,9 +106,7 @@ function About() {
       </div>
 
       {/* Integrantes */}
-      <h2 className="text-[30px] text-primary-orange font-bold text-center mb-[30px]">
-        Equipe de Desenvolvimento
-      </h2>
+      <h2 className="text-[30px] text-primary-orange font-bold text-center mb-[30px]">Equipe de Desenvolvimento</h2>
 
       {/* Luiza */}
       <div className="w-full flex flex-col-2">
@@ -112,19 +116,33 @@ function About() {
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/LuizaKormann.jpg?updatedAt=1706885301115"
             alt="Foto de Luiza Kormann"
           ></img>
-        </div>
-        <div className="text-dark-black rounded-3xl m-1 p-2">
-          <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Luiza Kormann</h4>
-          <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
-            Lorem ipsum dolor sit amet, consectetur adipi cing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad min im veniam, quis
-            nostrud exercitation
-          </p>
-        </div>
+          <div className= "flex flex-col-2">
+          <Link to="https://www.linkedin.com/in/luizakormann/">
+            <LinkedinLogo
+              size={40}
+              className=" hover:text-primary-orange transition delay-75"
+            ></LinkedinLogo>
+          </Link>
+            <Link to= "https://github.com/luizakormann">
+              <GithubLogo 
+              size={32} className="hover:text-primary-orange transition delay-75"
+              ></GithubLogo>
+            </Link>
+          </div>
       </div>
+      <div className="text-dark-black rounded-3xl m-1 p-2">
+        <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Luiza Kormann</h4>
+        <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
+          Lorem ipsum dolor sit amet, consectetur adipi cing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad min im veniam, quis
+          nostrud exercitation
+        </p>
+      </div>
+    </div>
 
-      {/* Pablo */}
-      <div className="w-full flex flex-col-2">
+
+      {/* Pablo */ }
+      < div className = "w-full flex flex-col-2" >
         <div className="text-dark-black rounded-3xl m-1 p-2">
           <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Pablo Maia</h4>
           <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
@@ -140,17 +158,44 @@ function About() {
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/PabloMaia.jpg?updatedAt=1706885318307"
             alt="Foto de Pablo Maia"
           ></img>
+            <div className= "flex flex-col-2">
+          <Link to="https://www.linkedin.com/in/pablo-hsm/">
+            <LinkedinLogo
+              size={40}
+              className=" hover:text-primary-orange transition delay-75"
+            ></LinkedinLogo>
+          </Link>
+            <Link to= "https://github.com/pxmiddle">
+              <GithubLogo 
+              size={32} className="hover:text-primary-orange transition delay-75"
+              ></GithubLogo>
+            </Link>
+          </div>
         </div>
-      </div>
+      </div >
 
-      {/* Aline */}
-      <div className="w-full flex flex-col-2">
+
+    {/* Aline */ }
+    < div className = "w-full flex flex-col-2" >
         <div className="w-80 h-80">
           <img
             className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/Aline%20Conchetta.jpeg?updatedAt=1707154255911"
-            alt="Foto de Aline Conchetta"
-          ></img>
+            alt="Foto de Aline Conchetta"></img>
+            <div className= "flex flex-col-2">
+          <Link to="https://www.linkedin.com/in/aline-conchetta/">
+            <LinkedinLogo
+              size={40}
+              className=" hover:text-primary-orange transition delay-75"
+            ></LinkedinLogo>
+          </Link>
+            <Link to= "https://github.com/AlineConchetta">
+              <GithubLogo 
+              size={32} className="hover:text-primary-orange transition delay-75"
+              ></GithubLogo>
+            </Link>
+          </div>
+            
         </div>
 
         <div className="text-dark-black rounded-3xl m-1 p-2">
@@ -161,11 +206,11 @@ function About() {
             nostrud exercitation
           </p>
         </div>
-      </div>
+      </div >
 
-      {/* Vitor */}
+    {/* Vitor */ }
 
-      <div className="w-full flex flex-col-2">
+    < div className = "w-full flex flex-col-2" >
         <div className="text-dark-black rounded-3xl m-1 p-2">
           <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Vitor Nascimento</h4>
           <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
@@ -179,19 +224,43 @@ function About() {
           <img
             className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/Vitor%20Nascimento.jpeg?updatedAt=1707151136622"
-            alt="Foto de Vitor Nascimento"
-          ></img>
+            alt="Foto de Vitor Nascimento"></img>
+            <div className= "flex flex-col-2">
+          <Link to="https://www.linkedin.com/in/vitor-do-nascimento-ferreira/">
+            <LinkedinLogo
+              size={40}
+              className=" hover:text-primary-orange transition delay-75"
+            ></LinkedinLogo>
+          </Link>
+            <Link to= "https://github.com/Vitornasc3">
+              <GithubLogo 
+              size={32} className="hover:text-primary-orange transition delay-75"
+              ></GithubLogo>
+            </Link>
+          </div>
         </div>
-      </div>
+        </div >
 
-      {/* Natan */}
-      <div className="w-full flex flex-col-2">
+    {/* Natan */ }
+    < div className = "w-full flex flex-col-2" >
         <div className="w-80 h-80">
           <img
             className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/Natan%20Oliveira.jpeg?updatedAt=1707155704905"
-            alt="Foto de Natan Oliveira"
-          ></img>
+            alt="Foto de Natan Oliveira"></img>
+            <div className= "flex flex-col-2">
+          <Link to="https://www.linkedin.com/in/natan-oliveira-santos-7a5b47294/">
+            <LinkedinLogo
+              size={40}
+              className=" hover:text-primary-orange transition delay-75"
+            ></LinkedinLogo>
+          </Link>
+            <Link to= "https://github.com/NatanOSantos">
+              <GithubLogo 
+              size={32} className="hover:text-primary-orange transition delay-75"
+              ></GithubLogo>
+            </Link>
+          </div>
         </div>
 
         <div className="text-dark-black rounded-3xl m-1 p-2">
@@ -202,11 +271,11 @@ function About() {
             nostrud exercitation
           </p>
         </div>
-      </div>
+        </div >
 
-      {/* Matheus */}
+    {/* Matheus */ }
 
-      <div className="w-full flex flex-col-2">
+    < div className = "w-full flex flex-col-2" >
         <div className="text-dark-black rounded-3xl m-1 p-2">
           <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Matheus Teixeira</h4>
           <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
@@ -220,21 +289,47 @@ function About() {
           <img
             className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/1702560502903.jpg?updatedAt=1707155977363"
-            alt="Foto de Natan Oliveira"
-          ></img>
+            alt="Foto de Natan Oliveira"></img>
+            <div className= "flex flex-col-2">
+          <Link to="https://www.linkedin.com/in/mdteixeira15/">
+            <LinkedinLogo
+              size={40}
+              className=" hover:text-primary-orange transition delay-75"
+            ></LinkedinLogo>
+          </Link>
+            <Link to= "https://github.com/mdteixeira">
+              <GithubLogo 
+              size={32} className="hover:text-primary-orange transition delay-75"
+              ></GithubLogo>
+            </Link>
+          </div>
         </div>
-      </div>
+        </div >
 
-      {/* Wallysson */}
+    {/* Wallysson */ }
 
-      <div className="w-full flex flex-col-2">
+    < div className = "w-full flex flex-col-2" >
         <div className="w-80 h-80">
           <img
             className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/Wallysson.jpg?updatedAt=1706807217747"
-            alt="Foto de Wallysson Araujo"
-          ></img>
+            alt="Foto de Wallysson Araujo">
+              <div className= "flex flex-col-2">
+          <Link to="https://www.linkedin.com/in/wallysson-araujo/">
+            <LinkedinLogo
+              size={40}
+              className=" hover:text-primary-orange transition delay-75"
+            ></LinkedinLogo>
+          </Link>
+            <Link to= "https://github.com/WallyssonChristian">
+              <GithubLogo 
+              size={32} className="hover:text-primary-orange transition delay-75"
+              ></GithubLogo>
+            </Link>
+          </div>
+            </img>
         </div>
+
 
         <div className="text-dark-black rounded-3xl m-1 p-2">
           <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Wallysson Araújo</h4>
@@ -244,7 +339,8 @@ function About() {
             nostrud exercitation
           </p>
         </div>
-      </div>
+    </div >
+  
     </>
   );
 }
