@@ -94,26 +94,13 @@ function About() {
       </div>
 
       {/* Integrantes */}
-<<<<<<< HEAD
-
-
-
       <h2 className="text-[30px] text-primary-orange font-bold text-center mb-[30px]">Equipe de Desenvolvimento</h2>
       
       {/* Luiza */}
-      
-      <div className="w-full flex flex-col-2">
-        <div className="w-80 h-80">
-          <img className="ml-[62px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
-=======
-      <h2 className="text-[30px] text-primary-orange font-bold text-center mb-[30px]">
-        Equipe de Desenvolvimento
-      </h2>
       <div className="w-full flex flex-col-2">
         <div className="w-80 h-80 shadow">
           <img
             className="ml-[62px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
->>>>>>> f400f52a96a6ab8558531b80c3ca03310888d1b9
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/LuizaKormann.jpg?updatedAt=1706885301115"
             alt="Foto de Luiza Kormann"
           ></img>
@@ -140,7 +127,7 @@ function About() {
           </p>
         </div>
 
-        <div className="w-80 h-80 shadow">
+        <div className="w-80 h-80">
           <img
             className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/PabloMaia.jpg?updatedAt=1706885318307"
@@ -148,7 +135,7 @@ function About() {
           ></img>
         </div>
       </div>
-<<<<<<< HEAD
+
 
       {/* Aline */}
       <div className="w-full flex flex-col-2">
@@ -244,8 +231,6 @@ function About() {
         </div>
     </div>
   
-=======
->>>>>>> f400f52a96a6ab8558531b80c3ca03310888d1b9
     </>
   );
   }
