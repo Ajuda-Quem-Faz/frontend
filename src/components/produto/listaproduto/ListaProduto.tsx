@@ -1,13 +1,36 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Produto from '../../../models/Produto';
-import { buscarProdutos } from '../../../services/Service';
+import { buscar, buscarProdutos } from '../../../services/Service';
 import CardProduto from '../../home/produtos-carousel/CardProduto';
+import { useParams } from 'react-router-dom';
+import React from 'react';
+import { AuthContext } from '../../../contexts/AuthContext';
+import { ToastAlerta } from '../../../utils/ToastAlerta';
 
 function ListaProduto() {
   useEffect(() => {
     document.title = 'Ajuda quem Faz - Produtos';
   }, []);
 
+  const { usuario } = useContext(AuthContext);
+  const token = usuario.token ?? localStorage.getItem('token');
+
+  let { param } = useParams();
+
+  console.log('param: ' + param);
+
+  async function buscarPorParam() {
+    try {
+      await buscar(`/produtos/nome/${param}`, setProduto, {
+        headers: { Authorization: token },
+      });
+      console.log('produto: ' + produto);
+    } catch (error: any) {
+      if (error.toString().includes('403')) {
+        ToastAlerta('O token Expirou!', 'info');
+      }
+    }
+  }
   const [produto, setProduto] = useState<Produto[]>([]);
 
   async function listarProduto() {
@@ -43,16 +66,30 @@ function ListaProduto() {
     return loading;
   }
 
+  async function PegarProdutos() {
+    param ? buscarPorParam() : listarProduto();
+  }
+
   useEffect(() => {
-    listarProduto();
-  }, [produto.length]);
+    console.log('token: ' + token);
+    PegarProdutos();
+  }, [token, param]);
 
   return (
     <>
-      {produto.length === 0 && (
+      {produto.length === 0 && param == undefined && (
         <div className="container mx-auto my-4 gap-1 grid grid-cols-2 min-[460px]:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 md:gap-4 p-1">
           {loading()}
         </div>
+      )}
+      {produto.length === 0 && (
+        <>
+          <div>
+            <h2 className="grid text-2xl place-content-center pt-5 font-semibold h-[50vh]">
+              Você pesquisou por {param}
+            </h2>
+          </div>
+        </>
       )}
       <div className="container mx-auto my-4 gap-1 grid grid-cols-2 min-[460px]:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 md:gap-4 p-1">
         {produto.map((produto) => (

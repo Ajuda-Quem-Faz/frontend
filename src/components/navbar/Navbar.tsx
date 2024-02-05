@@ -1,10 +1,11 @@
-import { MagnifyingGlass, ShoppingCartSimple, UserCircle } from '@phosphor-icons/react';
+import { ShoppingCartSimple, UserCircle } from '@phosphor-icons/react';
 import { Link, useNavigate } from 'react-router-dom';
 import NavLinks from './NavLinks';
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 import { ToastAlerta } from '../../utils/ToastAlerta';
 import Search from './Search';
+import SearchBar from '../searchBar/SearchBar';
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -34,28 +35,7 @@ const NavBar = () => {
             <h1 className="md:text-lg text-xs font-bold">Ajuda Quem Faz</h1>
           </Link>
         </div>
-        <div className="input-group col-span-2 w-full md:flex hidden border-primary-orangeLight">
-          {/* <button className=" py-2 px-4 gap-3 text-sm font-bold bg-secondary-purpleLight hover:bg-secondary-purpleDark rounded-l-xl transition delay-75">
-            <Funnel size={30} color="white" />
-          </button> */}
-          <select
-            name="pesquisa"
-            id="pesquisa"
-            className="bg-secondary-purpleLight text-light-grayLight rounded-s-2xl p-2"
-          >
-            <option value="Produtos">Produtos</option>
-            <option value="Categorias">Categorias</option>
-            <option value="Ongs">Ongs</option>
-          </select>
-          <input
-            type="text"
-            placeholder="Pesquise seu produto aqui"
-            className="bg-light-grayDark pl-5 text-lg w-full"
-          />
-          <button className="py-2 px-4 bg-secondary-purpleLight hover:bg-secondary-purpleDark bg-opacity-95 rounded-e-2xl transition delay-75">
-            <MagnifyingGlass size={30} color="white" />
-          </button>
-        </div>
+        <SearchBar />
         <div id="header-end">
           <div className="flex gap-4">
             {token !== '' ? (

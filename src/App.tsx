@@ -42,6 +42,7 @@ function App() {
                 <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
                 <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
                 <Route path="/produtos" element={<ListaProduto />} />
+                <Route path="/produtos/:param" element={<ListaProduto />} />
                 <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
                 <Route path="/cadastrarProduto" element={<FormularioProduto />} />
                 <Route path="/editarProduto/:id" element={<FormularioProduto />} />

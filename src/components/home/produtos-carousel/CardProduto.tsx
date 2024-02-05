@@ -259,7 +259,7 @@ const CardProduto = (produto: Produto) => {
             <hr />
             <h3 className="text-2xl font-bold">Doe para {produto.usuario?.nome}</h3>
             <div className="flex w-full gap-3 justify-between">
-              <div className="grid grid-cols-3 gap-1 place-items-center w-full">
+              <div className="grid grid-cols-3 gap-1 place-items-center w-full *:cursor-pointer">
                 <p className="w-full font-semibold h-full rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1">
                   R$5,00
                 </p>
