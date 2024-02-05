@@ -81,9 +81,15 @@ function About() {
 
 
       {/* Integrantes */}
+
+
+
       <h2 className="text-[30px] text-primary-orange font-bold text-center mb-[30px]">Equipe de Desenvolvimento</h2>
+      
+      {/* Luiza */}
+      
       <div className="w-full flex flex-col-2">
-        <div className="w-80 h-80 shadow">
+        <div className="w-80 h-80">
           <img className="ml-[62px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/LuizaKormann.jpg?updatedAt=1706885301115"
             alt="Foto de Luiza Kormann"></img>
@@ -100,6 +106,8 @@ function About() {
         </div>
       </div >
 
+
+      {/* Pablo */}
       <div className="w-full flex flex-col-2">
         <div className="text-dark-black rounded-3xl m-1 p-2">
           <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Pablo Maia</h4>
@@ -112,7 +120,6 @@ function About() {
           </p>
         </div>
 
-
         <div className="w-80 h-80 shadow">
           <img className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/PabloMaia.jpg?updatedAt=1706885318307"
@@ -120,11 +127,102 @@ function About() {
         </div>
       </div>
 
+      {/* Aline */}
+      <div className="w-full flex flex-col-2">
+        <div className="w-80 h-80">
+          <img className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
+            src="https://ik.imagekit.io/ajudaquemfaz/Equipe/Aline%20Conchetta.jpeg?updatedAt=1707154255911"
+            alt="Foto de Aline Conchetta"></img>
+        </div>
 
+        <div className="text-dark-black rounded-3xl m-1 p-2">
+          <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Aline Conchetta</h4>
+          <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
+            Lorem ipsum dolor sit amet, consectetur adipi
+            cing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad min
+            im veniam, quis nostrud exercitation</p>
+        </div>
+      </div>
 
+      {/* Vitor */}
 
+      <div className="w-full flex flex-col-2">
+        <div className="text-dark-black rounded-3xl m-1 p-2">
+          <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Vitor Nascimento</h4>
+          <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
+            Lorem ipsum dolor sit amet, consectetur adipi
+            cing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad min
+            im veniam, quis nostrud exercitation</p>
+        </div>
+
+        <div className="w-80 h-80">
+          <img className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
+            src="https://ik.imagekit.io/ajudaquemfaz/Equipe/Vitor%20Nascimento.jpeg?updatedAt=1707151136622"
+            alt="Foto de Vitor Nascimento"></img>
+        </div>
+        </div>
+
+        {/* Natan */}
+        <div className="w-full flex flex-col-2">
+        <div className="w-80 h-80">
+          <img className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
+            src="https://ik.imagekit.io/ajudaquemfaz/Equipe/Natan%20Oliveira.jpeg?updatedAt=1707155704905"
+            alt="Foto de Natan Oliveira"></img>
+        </div>
+
+        <div className="text-dark-black rounded-3xl m-1 p-2">
+          <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Natan Oliveira</h4>
+          <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
+            Lorem ipsum dolor sit amet, consectetur adipi
+            cing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad min
+            im veniam, quis nostrud exercitation</p>
+        </div>
+        </div>
+
+        {/* Matheus */}
+
+        <div className="w-full flex flex-col-2">
+        <div className="text-dark-black rounded-3xl m-1 p-2">
+          <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Matheus Teixeira</h4>
+          <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
+            Lorem ipsum dolor sit amet, consectetur adipi
+            cing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad min
+            im veniam, quis nostrud exercitation</p>
+        </div>
+        
+        <div className="w-80 h-80">
+          <img className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
+            src="https://ik.imagekit.io/ajudaquemfaz/Equipe/1702560502903.jpg?updatedAt=1707155977363"
+            alt="Foto de Natan Oliveira"></img>
+        </div>
+        </div>
+
+        {/* Wallysson */}
+
+        <div className="w-full flex flex-col-2">
+        <div className="w-80 h-80">
+          <img className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
+            src="https://ik.imagekit.io/ajudaquemfaz/Equipe/Wallysson.jpg?updatedAt=1706807217747"
+            alt="Foto de Wallysson Araujo"></img>
+        </div>
+
+        
+        <div className="text-dark-black rounded-3xl m-1 p-2">
+          <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Wallysson Araújo</h4>
+          <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
+            Lorem ipsum dolor sit amet, consectetur adipi
+            cing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad min
+            im veniam, quis nostrud exercitation</p>
+        </div>
+    </div>
+  
     </>
   );
-}
+  }
 
 export default About;
