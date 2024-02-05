@@ -82,7 +82,7 @@ const NavBar = () => {
                   )}
 
                   {/** Menu DropDown */}
-                  <div className="absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray z-50">
+                  <div className="absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray z-[51]">
                     <ul className="items-center flex-row justify-between gap-10">
                       {/** Menu Cadastrar categoria, só aparece quando o usuario é o admin */}
                       {usuario.usuario === 'root@root.com' && (

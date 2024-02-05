@@ -23,8 +23,6 @@ const CardProduto = (produto: Produto) => {
 
   const [Show, setShow] = useState(false);
 
-  const [Doacao, setDoacao] = useState(0.0);
-
   const { usuario } = useContext(AuthContext);
 
   function Curtir() {
@@ -47,7 +45,7 @@ const CardProduto = (produto: Produto) => {
       <DotsThree
         size={32}
         className={
-          usuario.id === produto.usuario?.id
+          usuario.id === produto.usuario?.id || usuario.usuario === 'root@root.com'
             ? 'absolute left-4 top-2 mt-3 bg-black bg-opacity-20 hover:bg-opacity-60 rounded-full z-10 text-white'
             : 'hidden'
         }
@@ -57,7 +55,9 @@ const CardProduto = (produto: Produto) => {
         trigger={
           <div className="flex-col items-center justify-center rounded-[3rem] relative cursor-pointer">
             <div className="absolute flex-col w-full md:h-56 p-5 opacity-0 bg-opacity-20 transition text-white bg-dark-black md:hover:opacity-100 backdrop-blur-[2px] rounded-[3rem] backdrop-brightness-50">
-              <h2 className=" font-bold lg:mb-5 mb-2 text-center">{produto.nome}</h2>
+              <h2 className=" font-bold lg:mb-5 mb-2 text-center w-8/12 mx-auto">
+                {produto.nome}
+              </h2>
               <h2 className="text-lg h-30 line-clamp-4 overflow-hidden">
                 {produto.descricao}
               </h2>
@@ -115,7 +115,7 @@ const CardProduto = (produto: Produto) => {
               alt={`foto do ${produto.nome}`}
               className="rounded-2xl object-cover w-full"
             />
-            <div className="flex flex-col justify-between gap-6 w-full">
+            <div className="flex flex-col justify-between">
               <div className="card-top">
                 <div className="flex justify-between items-center mb-2">
                   <h2 className="text-2xl font-semibold">{produto.nome}</h2>
@@ -128,26 +128,43 @@ const CardProduto = (produto: Produto) => {
                 </div>
                 <h2 className="">{produto.descricao}</h2>
               </div>
-              <div className="flex items-center md:flex-nowrap w-full text-nowrap gap-2">
-                <div className="flex w-full gap-2 items-center justify-between">
-                  <div className="flex flex-col">
-                    <p className="text-xs">Preço base</p>
-                    <h2 className=" font-semibold text-lg tabular-nums">
+              <div className="grid grid-cols-2 gap-1 flex-wrap mt-4">
+                <div className="flex flex-col justify-between">
+                  <div>
+                    <p className="text-sm">Preço base</p>
+                    <h2 className=" font-semibold text-xl tabular-nums">
                       {Intl.NumberFormat('pt-BR', {
                         style: 'currency',
                         currency: 'BRL',
                       }).format(produto.preco)}
                     </h2>
-                    <p className="text-xs">Preço final</p>
-                    <h2 className=" font-semibold text-lg tabular-nums">
-                      {Intl.NumberFormat('pt-BR', {
-                        style: 'currency',
-                        currency: 'BRL',
-                      }).format(preco_final)}
-                    </h2>
                   </div>
-
-                  <div className="flex flex-wrap gap-1">
+                  <div>
+                    <p className="text-sm">Preço final</p>
+                    <span className="flex flex-col">
+                      <h2 className=" font-semibold text-xl tabular-nums">
+                        {Intl.NumberFormat('pt-BR', {
+                          style: 'currency',
+                          currency: 'BRL',
+                        }).format(preco_final)}
+                      </h2>
+                      {preco_final > produto.preco ? (
+                        <span className="text-sm text-green-500 font-medium">
+                          +
+                          {Intl.NumberFormat('pt-BR', {
+                            style: 'currency',
+                            currency: 'BRL',
+                          }).format(preco_final - produto.preco)}
+                        </span>
+                      ) : (
+                        <span className="text-sm text-transparent">.</span>
+                      )}
+                    </span>
+                  </div>
+                </div>
+                <div className="">
+                  <p className="text-xs text-center mb-1">Ajude adicionando um valor</p>
+                  <div className="grid grid-cols-2 gap-0.5">
                     <p
                       onClick={() => {
                         setPrecoFinal(preco_final + 5);
@@ -180,28 +197,16 @@ const CardProduto = (produto: Produto) => {
                     >
                       R$25,00
                     </p>
-
-                    {/* <div className="h-full w-fit rounded-2xl border-2 text-dark-blackLight flex gap-3 items-center hover:bg-light-grayDark col-span-2 font-semibold justify-center">
-                      R$
-                      <input
-                        className="bg-transparent"
-                        placeholder="Seu valor"
-                        type="number"
-                        name="doacao"
-                        defaultValue={doacao}
-                        onChange={() => {}}
-                      />
-                    </div> */}
                   </div>
-                </div>
-                <div className="text-center flex flex-col justify-between">
-                  <p className="text-xs">Comprar</p>
-                  <Link
-                    to={'produto.id'}
-                    className="grid size-16 text-center place-items-center rounded-3xl bg-primary-orange text-white hover:brightness-110"
-                  >
-                    <ShoppingCart className="text-white text-3xl" weight="bold" />
-                  </Link>
+                  <div>
+                    <Link
+                      to={'produto.id'}
+                      className="flex items-center justify-center p-2 px-5 gap-2 rounded-2xl bg-primary-orange text-white hover:brightness-110 mt-3"
+                    >
+                      <ShoppingCart className="text-white text-3xl" weight="bold" />{' '}
+                      Comprar
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -209,7 +214,7 @@ const CardProduto = (produto: Produto) => {
             <DotsThree
               size={32}
               className={
-                usuario.id === produto.usuario?.id
+                usuario.id === produto.usuario?.id || usuario.usuario === 'root@root.com'
                   ? 'absolute left-0 top-0 mt-8 ml-8 bg-black bg-opacity-20 hover:bg-opacity-60 rounded-full z-10 text-white'
                   : 'hidden'
               }
@@ -270,7 +275,7 @@ const CardProduto = (produto: Produto) => {
                     placeholder="Seu valor"
                     type="number"
                     name="doacao"
-                    defaultValue={Doacao}
+                    defaultValue={0.0}
                   />
                 </div>
               </div>
