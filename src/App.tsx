@@ -14,12 +14,16 @@ import DeletarCategoria from './components/categoria/deletarcategoria/DeletarCat
 import FormularioCategoria from './components/categoria/formularioCategoria/FormularioCategoria';
 import ListaProduto from './components/produto/listaproduto/ListaProduto';
 import DeletarProduto from './components/produto/deletarproduto/DeletarProduto';
+import FormularioProduto from './components/produto/formProduto/FormularioProduto';
+import { CartProvider } from './contexts/CartContext';
+import Cart from './components/cart/cart/Cart';
 
 
 
 function App() {
   return (
     <>
+      <CartProvider>
       <AuthProvider>
         <ToastContainer />
         <BrowserRouter>
@@ -38,12 +42,16 @@ function App() {
               <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
               <Route path="/produtos" element= {<ListaProduto />} />
               <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
+              <Route path="/cadastrarProduto" element={<FormularioProduto />} />
+              <Route path="/editarProduto/:id" element={<FormularioProduto />} />
+              <Route path='/cart' element={<Cart/>}/>
             </Routes>
           </div>
 
           <Footer />
         </BrowserRouter>
       </AuthProvider>
+      </CartProvider>
     </>
   );
 }

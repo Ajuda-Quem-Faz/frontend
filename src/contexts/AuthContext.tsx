@@ -24,7 +24,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
       senha: "",
       foto: "",
       token: "",
-      sobre: ""
+      sobre: "",
   })
 
   const [isLoading, setIsLoading] = useState(false)

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import Ideia from '../../components/home/info/Info';
-import Projetos from '../../components/home/produtos-carousel/Carousel-container';
+import Produtos from '../../components/home/produtos-carousel/Carousel-container';
 import Presentes from '../../components/home/presentes/Presentes';
 
 function Home() {
@@ -10,30 +10,17 @@ function Home() {
   return (
     <>
       <div className="lg:flex justify-between bg-light-gray">
-        <div>
-          <div
-            id="boasVindasHome"
-            className="justify-center p-8 text-center text-secondary-purpleDark"
-          >
-            <h1 className="font-bold">Ajuda quem Faz</h1>
-            <p id="textoBoasVindas" className="bottom-2.5">
-              Que bom que você voltou! Mussum Ipsum, cacilds vidis litro abertis. Nullam
-              volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat
-              odio. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam
-              vulputate dapibus. Detraxit consequat et quo num tendi nada. Manduma
-              pindureta quium dia nois paga.
-            </p>
-          </div>
+       
         </div>
         <div id="imagem" className="grid object-cover place-content-center">
           <img
-            src="https://images.unsplash.com/photo-1589051079002-b140a970f568?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://ik.imagekit.io/gwq8l9cqx/Banner%20de%20site%20promo%C3%A7%C3%A3o%20de%20ver%C3%A3o%20moderno%20azul%20e%20amarelo%20(1472%20x%20431%20px)%20(2).gif?updatedAt=1707140463109"
             alt="Cesto feito manualmente com mãos ao fundo"
           />
         </div>
-      </div>
-      <div className="container mx-auto">
-      <Projetos />
+      
+      <div className="container mx-auto grid grid-cols-1 gap-8 py-16 px-1">
+        <Produtos />
         <Presentes />
         <Ideia />
       </div>

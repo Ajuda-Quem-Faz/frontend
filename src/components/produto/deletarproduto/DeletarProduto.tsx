@@ -89,18 +89,18 @@ function DeletarProduto() {
                         className='py-2 px-6 text-black font-semibold text-2xl'>
                         {produto.nome}
                     </header>
-                    <p className="font-semibold">Categoria: {produto.categoria?.setor}</p>
+                    <p className="font-semibold pb-2">Categoria: {produto.categoria?.setor}</p>
                     <p className='py-4 text-lg h-full'>{produto.descricao}</p>
                 </div>
             </div>
             <div className="flex flex-row gap-2">
                 <button
-                    className='bg-red-600 hover:bg-red-800 w-full py-2 text-white bg-secondary-purpleLight rounded-lg hover:bg-secondary-purple'
+                    className='w-full py-2 text-white bg-secondary-purpleLight rounded-lg hover:bg-secondary-purple'
                     onClick={retornar}>
                     Não
                 </button>
                 <button
-                    className='w-full bg-primary-orange text-white
+                    className='w-full bg-red-500 hover:bg-red-800  text-white
                                    hover:bg-red flex items-center justify-center rounded-lg'
                     onClick={deletarProduto}>
                     {isLoading ?

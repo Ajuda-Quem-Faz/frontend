@@ -40,25 +40,35 @@ const NavBar = () => {
           </Link>
         </div>
         <div className="input-group col-span-2 w-full md:flex hidden border-primary-orangeLight">
-          <button className=" py-2 px-4 gap-3 text-sm font-bold bg-secondary-purpleLight hover:bg-secondary-purpleDark rounded-l-xl">
+          {/* <button className=" py-2 px-4 gap-3 text-sm font-bold bg-secondary-purpleLight hover:bg-secondary-purpleDark rounded-l-xl transition delay-75">
             <Funnel size={30} color="white" />
-          </button>
+          </button> */}
+          <select
+            name="pesquisa"
+            id="pesquisa"
+            className="bg-light-grayDark bg-secondary-purpleLight text-light-grayLight rounded-s-2xl p-2"
+          >
+            <option value="Produtos">Produtos</option>
+            <option value="Categorias">Categorias</option>
+            <option value="Ongs">Ongs</option>
+          </select>
           <input
             type="text"
             placeholder="Pesquise seu produto aqui"
-            className="bg-light-grayDark px-3 text-lg w-full"
+            className="bg-light-grayDark pl-5 text-lg w-full"
           />
-          <button className="py-2 px-4 bg-secondary-purpleLight hover:bg-secondary-purpleDark bg-opacity-95 rounded-r-xl">
+          <button className="py-2 px-4 bg-secondary-purpleLight hover:bg-secondary-purpleDark bg-opacity-95 rounded-e-2xl transition delay-75">
             <MagnifyingGlass size={30} color="white" />
           </button>
         </div>
         <div id="header-end">
-          <div className="flex gap-4 pr-5 md:pr-0">
+          <div className="flex gap-4">
             {token !== '' ? (
               <>
-                <Link to="/">
+                {/** Cart Icon */}
+                <Link to="/cart">
                   <ShoppingCartSimple
-                    className="text-secondary-purpleLight text-opacity-95"
+                    className="text-secondary-purpleLight text-opacity-95 hover:text-primary-orangeLight transition delay-75"
                     size={44}
                     weight="duotone"
                   />
@@ -71,18 +81,18 @@ const NavBar = () => {
                     <img
                       src={usuario.foto}
                       alt=""
-                      className="object-cover border-2 border-secondary-purpleLight rounded-full bg-secondary-purpleLight bg-opacity-30"
+                      className="object-cover border-2 border-secondary-purpleLight rounded-full bg-secondary-purpleLight bg-opacity-30 size-11 hover:border-primary-orangeLight"
                     />
                   ) : (
                     <UserCircle
-                      className="text-secondary-purpleLight"
+                      className="text-secondary-purpleLight "
                       size={48}
                       weight="duotone"
                     />
                   )}
 
                   {/** Menu DropDown */}
-                  <div className="absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray z-50">
+                  <div className="absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray z-[51]">
                     <ul className="items-center flex-row justify-between gap-10">
                       {/** Menu Cadastrar categoria, só aparece quando o usuario é o admin */}
                       {usuario.usuario === 'root@root.com' && (
@@ -94,7 +104,7 @@ const NavBar = () => {
                       )}
 
                       <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
-                        <Link to="/" className="block">
+                        <Link to="/cadastrarProduto" className="block">
                           Cadastrar Produto
                         </Link>
                       </li>
@@ -113,11 +123,11 @@ const NavBar = () => {
                 </div>
               </>
             ) : (
-              <div className="text-center">
+              <div className="flex items-center">
                 <a className="text-center text-nowrap md:text-base text-xs" href="/login">
                   Login
                 </a>
-                <hr />
+                <div className="h-7 w-0.5 bg-light-grayDark mx-2" />
                 <a
                   className="text-center text-nowrap md:text-base text-xs"
                   href="/cadastro"
@@ -131,14 +141,14 @@ const NavBar = () => {
       </div>
 
       {/** Barra Menu */}
-      <div className="flex justify-between bg-primary-orange font-semibold text-secondary-purple px-2 pr-32">
+      <div className="flex justify-between bg-primary-orange font-semibold text-secondary-purple px-2">
         {/** Categorias */}
-        <div className="uppercase items-center flex text-lg z-50">
+        <div className="uppercase items-center flex text-lg z-[60]">
           <NavLinks />
         </div>
 
         {/** Botões */}
-        <div className="md:flex hidden gap-8">
+        <div className="justify-end md:flex hidden gap-4">
           <button className="uppercase hover:text-white transition delay-75">
             <Link to="/produtos" className="">
               Produtos

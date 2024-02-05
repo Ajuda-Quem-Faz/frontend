@@ -17,34 +17,35 @@ function Footer() {
       <div className="flex justify-around items-center py-2 text-secondary-purpleDark font-semibold">
         <Link
           to={'/about'}
-          className="flex flex-col items-center hover:text-secondary-purpleLight"
+          className="flex flex-col items-center hover:text-primary-orange transition delay-75"
         >
           <Medal size={36}></Medal>
-          <p className="">Quem somos</p>
+          <p className="">Quem Somos</p>
         </Link>
         <Link
           to={''}
-          className="flex flex-col items-center hover:text-secondary-purpleLight"
+          className="flex flex-col items-center hover:text-primary-orange transition delay-75"
         >
           <CurrencyCircleDollar size={36}></CurrencyCircleDollar>
-          <p className="">Como contribuir</p>
+          <p className="">Como Contribuir</p>
         </Link>
         <Link
           to={''}
-          className="flex flex-col items-center hover:text-secondary-purpleLight"
+          className="flex flex-col items-center hover:text-primary-orange transition delay-75"
         >
           <Storefront size={36}></Storefront>
           <p className="">Como Vender</p>
         </Link>
       </div>
       <div className="flex px-2 w-full justify-around items-center bg-secondary-purpleDark">
-        <Link to="/">
-          <img
-            src="https://ik.imagekit.io/ajudaquemfaz/Logo/Footer%20logo%20ImgKit.png?updatedAt=1706791149016"
-            className="py-2 w-14"
-            alt="logo"
-          ></img>
-        </Link>
+
+        <img
+          src="https://ik.imagekit.io/ajudaquemfaz/Logo/Footer%20logo%20ImgKit.png?updatedAt=1706791149016"
+          className="py-2 w-14"
+          alt="logo">
+
+        </img>
+
         <div
           id="icon"
           className="flex w-full justify-end gap-8 md:mr-8 text-tertiary-blueLight"
@@ -52,25 +53,25 @@ function Footer() {
           <Link to="#">
             <InstagramLogo
               size={40}
-              className=" hover:text-primary-orange"
+              className=" hover:text-primary-orange transition delay-75"
             ></InstagramLogo>
           </Link>
           <Link to="#">
             <FacebookLogo
               size={40}
-              className=" hover:text-primary-orangeLight"
+              className=" hover:text-primary-orange transition delay-75"
             ></FacebookLogo>
           </Link>
           <Link to="#">
             <YoutubeLogo
               size={40}
-              className=" hover:text-primary-orangeLight"
+              className=" hover:text-primary-orange transition delay-75"
             ></YoutubeLogo>
           </Link>
           <Link to="#">
             <LinkedinLogo
               size={40}
-              className=" hover:text-primary-orangeLight"
+              className=" hover:text-primary-orange transition delay-75"
             ></LinkedinLogo>
           </Link>
         </div>

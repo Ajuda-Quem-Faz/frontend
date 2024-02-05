@@ -1,32 +1,39 @@
-import React from 'react';
-
 function About() {
   return (
     <>
       {/* Cards */}
-      <div className="w-full h-[640px] bg-light-grayDark rounded-bl-[20px] rounded-br-[20px]">
-        <div className="mt-20 bg-bottom grid grid-cols-3 justify-between">
+      <div className="w-full bg-light-grayDark rounded-b-3xl">
+        <div className="p-20 grid grid-cols-1 lg:grid-cols-3 justify-between gap-2">
           {/* Missão */}
-          <div className="ml-[30px] mr-[20x] w-[437px] h-[443px] bg-secondary-purple grid place-items-center rounded-[35px]">
-            <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">Missão</h2>
-            <p className="mt-[39px] mb-[77px] text-center text-sky-100  text-[23px] font-medium font-['Montserrat'] leading-7 text-tertiary-blueLight">Nossa missão é
-              promover impacto social positivo ao conectar consumidores a produtos feitos por Organizações Não Governamentais (ONGs).
-              Buscamos oferecer uma plataforma onde os consumidores possam adquirir produtos de alta qualidade, enquanto contribuem
-              diretamente para causas sociais.</p>
+          <div className="bg-secondary-purple grid place-items-center rounded-3xl">
+            <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">
+              Missão
+            </h2>
+            <p className="mt-[39px] mb-[77px] text-center font-medium leading-7 text-tertiary-blueLight">
+              Nossa missão é promover impacto social positivo ao conectar consumidores a
+              produtos feitos por Organizações Não Governamentais (ONGs). Buscamos
+              oferecer uma plataforma onde os consumidores possam adquirir produtos de
+              alta qualidade, enquanto contribuem diretamente para causas sociais.
+            </p>
           </div>
           {/* Visão */}
-          <div className="w-[437px] h-[443px] bg-secondary-purple grid place-items-center rounded-[35px]">
-            <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">Visão</h2>
-            <p className="p-[40px] mt-[39px] mb-[105px] text-center text-sky-100  text-[23px] font-medium font-['Montserrat'] leading-7 text-tertiary-blueLight">Buscamos ser a principal referência
-              global em comércio sustentável, onde cada produto vendido não apenas atende às necessidades dos consumidores, mas também
-              contribui diretamente para a construção de um mundo mais justo e equitativo.</p>
-
+          <div className=" bg-secondary-purple grid place-items-center rounded-3xl">
+            <h2 className="mt-[30px] font-bold text-[30px] text-tertiary-blueLight">
+              Visão
+            </h2>
+            <p className="p-[40px] mb-[105px] text-center font-medium leading-7 text-tertiary-blueLight">
+              Buscamos ser a principal referência global em comércio sustentável, onde
+              cada produto vendido não apenas atende às necessidades dos consumidores, mas
+              também contribui diretamente para a construção de um mundo mais justo e
+              equitativo.
+            </p>
           </div>
           {/* Valores */}
-          <div className="mr-[30px] ml[20px] w-[437px] h-[443px] bg-secondary-purple grid place-items-center rounded-[35px]">
-            <h2 className="mt-[40px] font-bold text-[30px] text-tertiary-blueLight">Valores</h2>
-            <div className="mt-[42px] mb-[53px] text-center text-sky-100  text-[23px] font-medium font-['Montserrat'] leading-7 text-tertiary-blueLight">
-
+          <div className="bg-secondary-purple grid place-items-center rounded-3xl">
+            <h2 className="mt-[40px] font-bold text-[30px] text-tertiary-blueLight">
+              Valores
+            </h2>
+            <div className="mt-[42px] mb-[53px] text-center text-sky-100  font-medium leading-7 text-tertiary-blueLight">
               <p className="mb-[15px]">Compromisso Social</p>
 
               <p className="p-2 mt-[25px] mb-[25px]">Emponderamento das Comunidades</p>
@@ -38,49 +45,56 @@ function About() {
               <p className="mt-[20px] mb-[53px]">Transparência</p>
             </div>
           </div>
-        </div>
+      </div>
       </div>
 
       {/* Historia */}
       <div className="mt-[42px]">
-        <h2 className="text-primary-orange text-center text-[30px] font-bold">Conheça nossa história</h2>
-        <p className="text-pretty mx-[15px] text-center mt-[30px] mb-[30px]">A equipe de desenvolvedores desse e-commerce foi composta por indivíduos com interesses comuns
-          na área de tecnologia. A equipe se conheceu durante o bootcamp intensivo de Desenvolvimento
-          Full-Stack da Generation Brazil. Cada membro trazia habilidades únicas, desde programação e design
-          até gerenciamento de projetos. O destino os uniu quando foram sorteados para trabalhar em
-          conjunto no projeto finaldo Bootcamp. O desafio do projeto do e-commerce de produtos de ONGs
-          foi delineado com base nos Objetivos de Desenvolvimento Sustentável (ODS) da ONU,
-          especificamente na <b>ODS 1 - Erradicação da Pobreza</b>.</p>
+        <h2 className="text-primary-orange text-center text-[30px] font-bold">
+          Conheça nossa história
+        </h2>
+        <p className="text-pretty mx-[15px] text-center mt-[30px] mb-[30px]">
+          A equipe de desenvolvedores desse e-commerce foi composta por indivíduos com
+          interesses comuns na área de tecnologia. A equipe se conheceu durante o bootcamp
+          intensivo de Desenvolvimento Full-Stack da Generation Brazil. Cada membro trazia
+          habilidades únicas, desde programação e design até gerenciamento de projetos. O
+          destino os uniu quando foram sorteados para trabalhar em conjunto no projeto
+          finaldo Bootcamp. O desafio do projeto do e-commerce de produtos de ONGs foi
+          delineado com base nos Objetivos de Desenvolvimento Sustentável (ODS) da ONU,
+          especificamente na <b>ODS 1 - Erradicação da Pobreza</b>.
+        </p>
       </div>
-
-
-
 
       <div className="relative bg-secondary-purple w-full h-[348px] p-2 flex rounded-[30px] shadow mb-[50px]">
         <div>
-          <div><h2 className="mx-[25px] relative font-bold text-light-grayLight text-[30px] font-bold mt-[15px]">ODS 1- Erradicação da Pobreza</h2>
+          <div>
+            <h2 className="mx-[25px] relative font-bold text-light-grayLight text-[30px] font-bold mt-[15px]">
+              ODS 1- Erradicação da Pobreza
+            </h2>
           </div>
           <div>
             <p className="mx-[25px] mr-[336px] absolute text-light-grayLight text-[25px] font-normal mt-[15px] leading">
-              Assumindo a ODS 1 como norteadora, o grupo buscou desenvolver estratégias
-              e soluções inovadoras que não apenas promovessem a comercialização de
-              produtos das ONGs, mas também contribuíssem para o empoderamento
-              econômico de comunidades carentes. O foco estava na criação de um modelo
-              de negócios que não apenas proporcionasse sustento às ONGs, mas também
-              impactasse positivamente as populações vulneráveis, promovendo a inclusão
-              social e o desenvolvimento econômico sustentável.
+              Assumindo a ODS 1 como norteadora, o grupo buscou desenvolver estratégias e
+              soluções inovadoras que não apenas promovessem a comercialização de produtos
+              das ONGs, mas também contribuíssem para o empoderamento econômico de
+              comunidades carentes. O foco estava na criação de um modelo de negócios que
+              não apenas proporcionasse sustento às ONGs, mas também impactasse
+              positivamente as populações vulneráveis, promovendo a inclusão social e o
+              desenvolvimento econômico sustentável.
             </p>
           </div>
 
-
           <div className="">
-            <img className="ml-[1165px] mr-[24px] w-[287px] h-[233px] rounded-3xl" src="https://ik.imagekit.io/ajudaquemfaz/Equipe/top-view-origami-chain-people-with-globe.jpg?updatedAt=1706881066829"></img>
+            <img
+              className="mr-[24px] w-[287px] h-[233px] rounded-3xl"
+              src="https://ik.imagekit.io/ajudaquemfaz/Equipe/top-view-origami-chain-people-with-globe.jpg?updatedAt=1706881066829"
+            ></img>
           </div>
         </div>
       </div>
 
-
       {/* Integrantes */}
+<<<<<<< HEAD
 
 
 
@@ -91,20 +105,28 @@ function About() {
       <div className="w-full flex flex-col-2">
         <div className="w-80 h-80">
           <img className="ml-[62px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
+=======
+      <h2 className="text-[30px] text-primary-orange font-bold text-center mb-[30px]">
+        Equipe de Desenvolvimento
+      </h2>
+      <div className="w-full flex flex-col-2">
+        <div className="w-80 h-80 shadow">
+          <img
+            className="ml-[62px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
+>>>>>>> f400f52a96a6ab8558531b80c3ca03310888d1b9
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/LuizaKormann.jpg?updatedAt=1706885301115"
-            alt="Foto de Luiza Kormann"></img>
+            alt="Foto de Luiza Kormann"
+          ></img>
         </div>
         <div className="text-dark-black rounded-3xl m-1 p-2">
           <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Luiza Kormann</h4>
           <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
-            Lorem ipsum dolor sit amet, consectetur adipi
-            cing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad min
-            im veniam, quis nostrud exercitation
-
+            Lorem ipsum dolor sit amet, consectetur adipi cing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad min im veniam, quis
+            nostrud exercitation
           </p>
         </div>
-      </div >
+      </div>
 
 
       {/* Pablo */}
@@ -112,20 +134,21 @@ function About() {
         <div className="text-dark-black rounded-3xl m-1 p-2">
           <h4 className="ml-[70px] font-bold leading-10 text-[25px]">Pablo Maia</h4>
           <p className="ml-[70px] mr-[50px] text-4xl text-[20px]">
-            Lorem ipsum dolor sit amet, consectetur adipi
-            cing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad min
-            im veniam, quis nostrud exercitation
-
+            Lorem ipsum dolor sit amet, consectetur adipi cing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad min im veniam, quis
+            nostrud exercitation
           </p>
         </div>
 
         <div className="w-80 h-80 shadow">
-          <img className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
+          <img
+            className="mr-[80px] shadow-md rounded-1x1 border-spacing-1 border-light-gray"
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/PabloMaia.jpg?updatedAt=1706885318307"
-            alt="Foto de Pablo Maia"></img>
+            alt="Foto de Pablo Maia"
+          ></img>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Aline */}
       <div className="w-full flex flex-col-2">
@@ -221,6 +244,8 @@ function About() {
         </div>
     </div>
   
+=======
+>>>>>>> f400f52a96a6ab8558531b80c3ca03310888d1b9
     </>
   );
   }
