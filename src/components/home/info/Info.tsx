@@ -74,11 +74,11 @@ const Info = () => (
           <SwiperSlide className="h-auto">
             <CardOng
               descricao={
-                'Temos como missão atuar a favor da justiça social, promovendo o protagonismo de crianças, adolescentes e jovens nas esferas do brincar, da cultura, da inclusão digital, do meio ambiente e do apoio à educação e às famílias.'
+                'Temos como missão transformar a pobreza das favelas em peça de museu. Nosso foco são iniciativas transformadoras, capazes de gerar resultados de longo prazo entregando serviços de educação, desenvolvimento econômico e cidadania em favelas, além de executamos programas de transformação sistêmica, como o Favela 3D'
               }
-              nome={'O PIPA'}
+              nome={'Gerando Falcões'}
               imagem={
-                'https://opipa.org/wp-content/uploads/2020/10/Logo_pipa_fonte_oficial_2020_i.png'
+                'https://cvee2f.p3cdn1.secureserver.net/wp-content/uploads/2022/03/logosite-gerandofalcoes.png'
               }
               localizacao={'São Paulo, SP'}
             />

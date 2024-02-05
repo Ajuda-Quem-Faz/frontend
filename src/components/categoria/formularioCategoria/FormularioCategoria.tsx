@@ -106,7 +106,7 @@ function FormularioCategoria() {
       <div className="flex justify-center text-dark-black font-semibold py-9 md:w-1/4">
         <form
           action=""
-          className="flex flex-col justify-center gap-2 w-2/3"
+          className="flex flex-col justify-center gap-2"
           onSubmit={gerarNovaCategoria}
         >
           <div className="flex justify-center text-xl items-center gap-3">
