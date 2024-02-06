@@ -32,7 +32,7 @@ const NavBar = () => {
                 className="w-auto md:h-12 h-6 mr-2"
               />
             }
-            <h1 className="md:text-lg text-xs font-bold leading-[.8]">Ajuda Quem Faz</h1>
+            <h1 className="md:text-lg text-xs font-bold leading-[.8] md:block hidden">Ajuda Quem Faz</h1>
           </Link>
         </div>
         <SearchBar />

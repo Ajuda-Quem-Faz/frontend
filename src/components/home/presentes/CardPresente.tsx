@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function CardPresente(props: { imagem: string; nome: string; link: string }) {
   return (
-    <Link to={`categorias/${props.link}`}>
+    <Link to={`/categorias/${props.link}`}>
       <div className="flex flex-col gap-2 justify-center items-center hover:brightness-95 hover:text-primary-orange">
         <img
           src={props.imagem}

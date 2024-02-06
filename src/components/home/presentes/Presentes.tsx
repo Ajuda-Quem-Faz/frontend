@@ -15,23 +15,23 @@ function Presentes() {
       </div>
       <div className="grid md:grid-cols-4 gap-4 md:gap-8 grid-cols-2 items-center">
         <CardPresente
-          link="artesanato"
+          link="Artesanato"
           nome="Artesanato"
           imagem="https://dcdn.mitiendanube.com/stores/001/933/783/products/img_24941-383399b60156157bd216859903314766-640-0.webp"
         />
         <CardPresente
-          link="decoracao"
+          link="Decoração"
           nome="Decoração"
           imagem="https://dcdn.mitiendanube.com/stores/001/933/783/products/img_69751-cfa9370a37542a249e16832467105709-640-0.webp"
         />
         <CardPresente
-          link="acessorios"
+          link="Acessórios"
           nome="Acessórios"
           imagem="https://dcdn.mitiendanube.com/stores/001/933/783/products/img_08431-19805c1615d8db706216832327200720-640-0.webp"
         />
         <CardPresente
-          link="chaveiros"
-          nome="Chaveiros"
+          link="Infantil"
+          nome="Infantil"
           imagem="https://dcdn.mitiendanube.com/stores/001/933/783/products/img_10791-90bd99d863013cbcfa16832442070801-640-0.webp"
         />
       </div>

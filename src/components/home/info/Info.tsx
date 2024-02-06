@@ -12,14 +12,14 @@ const Info = () => (
   <>
     <div className="flex flex-col xl:grid grid-cols-5 xl:gap-16 gap-4 p-8 lg:p-8 py-4 md:m-0 bg-light-grayDark rounded-3xl">
       <section className="flex flex-col gap-4 items-center">
-        <h2 className="text-2xl font-bold text-secondary-purple">Ajuda Quem Faz!</h2>
-        <p className="text-xl text-justify">
+        <h2 className="text-xl font-bold text-secondary-purple">Ajuda Quem Faz!</h2>
+        <p className="text-lg text-justify">
           Somos um site de e-commerce com produtos produzidos e gerados por projetos
           sociais de todo país
         </p>
       </section>
       <section className="col-span-4">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-xl font-semibold">
           Diversos projetos sendo impulsionados por você! Conheça quem faz:
         </h2>
         <Swiper

@@ -3,7 +3,6 @@ import Produto from '../../../models/Produto';
 import { buscar, buscarProdutos } from '../../../services/Service';
 import CardProduto from '../../home/produtos-carousel/CardProduto';
 import { useParams } from 'react-router-dom';
-import React from 'react';
 import { AuthContext } from '../../../contexts/AuthContext';
 import { ToastAlerta } from '../../../utils/ToastAlerta';
 
@@ -16,8 +15,6 @@ function ListaProduto() {
   const token = usuario.token ?? localStorage.getItem('token');
 
   let { param } = useParams();
-
-  console.log('param: ' + param);
 
   async function buscarPorParam() {
     try {
@@ -71,7 +68,6 @@ function ListaProduto() {
   }
 
   useEffect(() => {
-    console.log('token: ' + token);
     PegarProdutos();
   }, [token, param]);
 

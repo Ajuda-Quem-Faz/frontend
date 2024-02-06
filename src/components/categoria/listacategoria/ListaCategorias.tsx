@@ -12,14 +12,12 @@ function ListaCategorias() {
     document.title = 'Ajuda quem Faz - Categorias';
   }, []);
 
-  const { pesquisa } = useParams<{ pesquisa: string }>();
-
   let navigate = useNavigate();
 
   const [categoria, setCategoria] = useState<Categoria[]>([]);
 
   const { usuario, handleLogout } = useContext(AuthContext);
-  const token = usuario.token;
+  var token = usuario.token ?? localStorage.getItem('token');
 
   async function buscarCategoria() {
     try {
@@ -34,27 +32,28 @@ function ListaCategorias() {
     }
   }
 
-  async function buscarCategoriaPorSetor(pesquisa: string) {
-    await buscar(`/categorias/setor/${pesquisa}`, setCategoria, {
-      headers: {
-        Authorization: token,
-      },
-    });
+  let { param } = useParams();
+
+  async function buscarPorParam() {
+    try {
+      await buscar(`/categorias/setor/${param}`, setCategoria, {
+        headers: { Authorization: token },
+      });
+      console.log('categoria: ' + categoria);
+    } catch (error: any) {
+      if (error.toString().includes('403')) {
+        ToastAlerta('O token Expirou!', 'info');
+      }
+    }
+  }
+
+  async function PegarCategorias() {
+    param ? buscarPorParam() : buscarCategoria();
   }
 
   useEffect(() => {
-    if (token === '') {
-      ToastAlerta('Você precisa estar logado', 'info');
-      navigate('/login');
-    }
-  }, [token]);
-
-  useEffect(() => {
-    buscarCategoria();
-    if (pesquisa !== undefined) {
-      buscarCategoriaPorSetor(pesquisa);
-    }
-  }, [categoria.length]);
+    PegarCategorias();
+  }, [token, param]);
 
   return (
     <>
