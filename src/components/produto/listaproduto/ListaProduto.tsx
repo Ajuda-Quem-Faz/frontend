@@ -21,7 +21,6 @@ function ListaProduto() {
       await buscar(`/produtos/nome/${param}`, setProduto, {
         headers: { Authorization: token },
       });
-      console.log('produto: ' + produto);
     } catch (error: any) {
       if (error.toString().includes('403')) {
         ToastAlerta('O token Expirou!', 'info');

@@ -42,7 +42,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
       ToastAlerta('Usuário logado com sucesso', 'sucesso');
       setIsLoading(false);
     } catch (error) {
-      console.log(error);
       ToastAlerta('Dados do usuário inconsistentes', 'erro');
       setIsLoading(false);
     }

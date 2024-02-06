@@ -39,7 +39,6 @@ function ListaCategorias() {
       await buscar(`/categorias/setor/${param}`, setCategoria, {
         headers: { Authorization: token },
       });
-      console.log('categoria: ' + categoria);
     } catch (error: any) {
       if (error.toString().includes('403')) {
         ToastAlerta('O token Expirou!', 'info');

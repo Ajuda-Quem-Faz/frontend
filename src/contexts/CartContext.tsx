@@ -39,7 +39,6 @@ export function CartProvider({ children }: CartProviderProps) {
   // Função para adicionar Produtos no Carrinho
   function adicionarDoacao(destino: Usuario, doacao: number) {
     if (doacao > 0) destino.sobre = doacao.toString();
-    console.log(destino.sobre);
     setItems((state) => [...state, destino]);
   }
 

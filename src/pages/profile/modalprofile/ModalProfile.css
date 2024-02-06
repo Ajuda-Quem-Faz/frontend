@@ -1,4 +1,10 @@
-.popup-content{
-    border-radius: 1rem;
-    padding-bottom: 2rem;
+.popup-content {
+  padding: 0;
+  border-radius: 1.6rem;
+  max-width: 95vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  @apply md:w-[900px];
 }

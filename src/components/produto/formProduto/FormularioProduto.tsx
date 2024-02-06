@@ -67,7 +67,6 @@ function FormularioProduto() {
   useEffect(() => {
     if (id !== undefined) {
       buscarProdutoPorId(id);
-      console.log(categoria);
     }
   }, [id]);
 
@@ -82,7 +81,6 @@ function FormularioProduto() {
     buscarCategorias();
     if (id !== undefined) {
       buscarCategoriaPorId(id);
-      console.log(categoria);
     }
   }, [id]);
 

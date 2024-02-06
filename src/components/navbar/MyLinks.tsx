@@ -18,18 +18,18 @@ export const links = [
           { name: 'Reciclados', link: '/' },
         ],
       },
-      {
-        Head: 'Instituições',
-        sublink: [
-          { name: 'Assistência Social', link: '/' },
-          { name: 'Cultura', link: '/' },
-          { name: 'Saúde', link: '/' },
-          { name: 'Meio ambiente', link: '/' },
-          { name: 'Defesa de direitos', link: '/' },
-          { name: 'Habitação', link: '/' },
-          { name: 'Educação e Pesquisa', link: '/' },
-        ],
-      },
+      // {
+      //   Head: 'Instituições',
+      //   sublink: [
+      //     { name: 'Assistência Social', link: '/' },
+      //     { name: 'Cultura', link: '/' },
+      //     { name: 'Saúde', link: '/' },
+      //     { name: 'Meio ambiente', link: '/' },
+      //     { name: 'Defesa de direitos', link: '/' },
+      //     { name: 'Habitação', link: '/' },
+      //     { name: 'Educação e Pesquisa', link: '/' },
+      //   ],
+      // },
       {
         Head: 'Listar todas as categorias',
         sublink: [{ name: 'Todas as Categorias', link: '/categorias' }],

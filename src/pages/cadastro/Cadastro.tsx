@@ -41,7 +41,6 @@ function Cadastro() {
       ...usuario,
       [e.target.name]: e.target.value,
     });
-    console.log(usuario);
   }
 
   function handleConfirmarSenha(e: ChangeEvent<HTMLInputElement>) {

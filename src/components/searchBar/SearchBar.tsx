@@ -30,7 +30,6 @@ function SearchBar() {
       await buscar(`/categorias/setor/${pesquisa}`, setCategoria, {
         headers: { Authorization: token },
       });
-    console.log(uscategoria);
   }
 
   const fetchData = (value: string) => {
@@ -93,7 +92,6 @@ function SearchBar() {
         />
         <button
           onClick={() => {
-            console.log(input);
             Pesquisa();
           }}
           className="md:py-2 md:px-4 bg-secondary-purpleLight hover:bg-secondary-purpleDark bg-opacity-95 rounded-e-2xl transition delay-75"

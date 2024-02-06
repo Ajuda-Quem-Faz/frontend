@@ -82,7 +82,6 @@ function CardCart({ item }: CardProdutosProps) {
     }
   };
 
-  console.log(item);
   return (
     // Card do Produto
     <div className="flex flex-col rounded-lg overflow-hidden justify-between bg-tertiary-blueLight">
