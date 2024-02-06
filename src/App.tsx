@@ -21,6 +21,7 @@ import Cart from './components/cart/cart/Cart';
 import ScrollToTop from 'react-scroll-to-top';
 import About from './pages/about/About';
 import NotFound from './pages/notFound/NotFound';
+import Contri from './pages/contribuir/Contribuir';
 
 function App() {
   return (
@@ -41,8 +42,8 @@ function App() {
                 <Route path="/cadastro" element={<Cadastro />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/perfil" element={<Profile />} />
-              <Route path="/editarperfil" element={<UpdateProfile />} />
-              <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+                <Route path="/editarperfil" element={<UpdateProfile />} />
+                <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
                 <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
                 <Route path="/editarCategoria/:id" element={<FormularioCategoria />} />
                 <Route path="/produtos" element={<ListaProduto />} />
@@ -52,6 +53,7 @@ function App() {
                 <Route path="/editarProduto/:id" element={<FormularioProduto />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="*" element={<NotFound />} />
+                <Route path="/contribuir" element={<Contri />}/>
               </Routes>
               <ScrollToTop
                 smooth

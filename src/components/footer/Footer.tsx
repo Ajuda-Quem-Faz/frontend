@@ -23,14 +23,14 @@ function Footer() {
           <p className="">Quem Somos</p>
         </Link>
         <Link
-          to={''}
+          to={'/contribuir'}
           className="flex flex-col items-center hover:text-primary-orange transition delay-75"
         >
           <CurrencyCircleDollar size={36}></CurrencyCircleDollar>
           <p className="">Como Contribuir</p>
         </Link>
         <Link
-          to={''}
+          to={'/contribuir'}
           className="flex flex-col items-center hover:text-primary-orange transition delay-75"
         >
           <Storefront size={36}></Storefront>
