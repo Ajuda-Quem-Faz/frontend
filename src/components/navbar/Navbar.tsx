@@ -22,7 +22,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="md:grid grid-cols-4 py-2 px-2 md:px-0 place-items-center flex justify-between">
+      <div className="md:grid grid-cols-5 py-2 px-2 md:px-0 place-items-center flex justify-between">
         <div className="flex items-center logo-container">
           <Link to="/home" className="flex flex-row items-center">
             {
