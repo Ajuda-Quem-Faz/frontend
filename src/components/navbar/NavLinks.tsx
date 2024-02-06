@@ -9,7 +9,7 @@ const NavLinks = () => {
   return (
     <>
       {links.map((link) => (
-        <div>
+        <div key={link.name}>
           <div className="group flex items-center w-full justify-between">
             <h1
               className="py-2 flex items-center md:pr-0 group gap-2 hover:text-light-grayLight"
@@ -92,7 +92,7 @@ const NavLinks = () => {
                     } list-none text-light-grayLight grid grid-cols-2 gap-x-16`}
                   >
                     {slinks.sublink.map((slink) => (
-                      <li>
+                      <div key={slink.name}>
                         <li
                           className="grid text-sm my-2.5 text-light-grayLight hover:text-light-grayDark"
                           key={slink.name}
@@ -105,7 +105,7 @@ const NavLinks = () => {
                             {slink.name}
                           </Link>
                         </li>
-                      </li>
+                      </div>
                     ))}
                   </div>
                   <div className="bottom">

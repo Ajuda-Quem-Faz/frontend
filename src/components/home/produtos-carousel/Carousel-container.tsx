@@ -12,8 +12,6 @@ import { Navigation } from 'swiper/modules';
 import { useState, useEffect } from 'react';
 import Produto from '../../../models/Produto';
 import { buscarProdutos } from '../../../services/Service';
-import { TailSpin } from 'react-loader-spinner';
-import { ShoppingCart } from '@phosphor-icons/react';
 
 export default function Produtos() {
   const [produto, setProduto] = useState<Produto[]>([]);
@@ -23,7 +21,7 @@ export default function Produtos() {
   }
 
   var Skeleton = (
-    <SwiperSlide key={1}>
+    <SwiperSlide>
       <div className="flex-col items-center justify-center rounded-[3rem] animate-pulse">
         <div className="card-main">
           <div className="bg-gray-200 flex flex-col items-center h-32 min-[375px]:h-46 sm:h-48 md:h-56 w-full md:rounded-[3rem] rounded-3xl" />

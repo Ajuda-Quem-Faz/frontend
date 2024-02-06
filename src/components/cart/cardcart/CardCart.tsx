@@ -88,11 +88,11 @@ function CardCart({ item }: CardProdutosProps) {
       {/** Parte de cima  <p className='text-sm italic text-center'>Quantidade: </p> */}
       <div className="py-4">
         {item.sobre && (
-          <h3 className="text-xl text-center font-bold uppercase">
+          <div className="text-xl text-center font-bold uppercase">
             <h3 className="text-2xl h-full pt-5 text-center font-bold uppercase">
               Doação
             </h3>
-          </h3>
+          </div>
         )}
         <img
           src={item.foto}
@@ -110,14 +110,14 @@ function CardCart({ item }: CardProdutosProps) {
             </h3>
           )}
           {item.sobre && (
-            <h3 className="text-xl text-center font-bold uppercase">
+            <div className="text-xl text-center font-bold uppercase">
               <h3 className="text-3xl h-full pt-5 text-center font-bold uppercase">
                 {Intl.NumberFormat('pt-BR', {
                   style: 'currency',
                   currency: 'BRL',
                 }).format(item.sobre)}
               </h3>
-            </h3>
+            </div>
           )}
 
           {/** Quantidade */}
