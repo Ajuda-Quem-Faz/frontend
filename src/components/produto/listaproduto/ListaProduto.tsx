@@ -82,15 +82,15 @@ function ListaProduto() {
           {loading()}
         </div>
       )}
-      {produto.length === 0 && (
-        <>
-          <div>
-            <h2 className="grid text-2xl place-content-center pt-5 font-semibold h-[50vh]">
-              Você pesquisou por {param}
-            </h2>
-          </div>
-        </>
-      )}
+      <>
+        <div className="container mx-auto mt-4 font-medium flex items-center  justify-around">
+          <h2 className="">
+            <span className="text-dark-blackLight">Você pesquisou por </span>
+            <span className="font-semibold">{param}</span>
+          </h2>
+          <h2>{produto.length} resultados</h2>
+        </div>
+      </>
       <div className="container mx-auto my-4 gap-1 grid grid-cols-2 min-[460px]:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 md:gap-4 p-1">
         {produto.map((produto) => (
           <div className="card relative">

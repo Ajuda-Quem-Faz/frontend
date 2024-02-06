@@ -73,10 +73,10 @@ function Cadastro() {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="flex justify-center text-dark-black font-semibold py-9 md:w-1/4">
+      <div className="flex justify-center text-dark-black font-semibold py-9">
         <form
           action=""
-          className="flex flex-col justify-center gap-2 md:w-2/3"
+          className="flex flex-col justify-center gap-2 min-w-[265px] sm:w-96"
           onSubmit={cadastrarNovoUsuario}
         >
           <div className="flex justify-center text-xl items-center gap-3">
@@ -155,7 +155,7 @@ function Cadastro() {
               <span>Cadastrar</span>
             )}
           </button>
-          <p className="text-center text-base border-t-2 py-3 mt-3 font-semibold">
+          <p className="text-center text-base border-t-2 py-3 mt-3 font-semibold ">
             Já tem uma conta?{' '}
             <Link to={`/login`} className="text-secondary-purpleLight  hover:underline">
               Entre aqui!

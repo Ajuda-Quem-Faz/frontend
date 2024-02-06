@@ -78,11 +78,11 @@ function Footer() {
       </div>
       <div
         id="footer-bottom"
-        className="flex justify-between px-1 font-bold text-xs py-1"
+        className="flex justify-between px-1 *:text-sm py-1"
       >
-        <p>©2024 AjudaQuemFaz </p>
-        <p>Termos de uso</p>
-        <p>Politica de Privacidade</p>
+        <p className='text-xs'>©2024 AjudaQuemFaz </p>
+        <p className='text-xs'>Termos de uso</p>
+        <p className='text-xs'>Politica de Privacidade</p>
       </div>
     </footer>
   );

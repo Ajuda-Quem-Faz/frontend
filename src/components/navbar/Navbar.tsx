@@ -32,36 +32,34 @@ const NavBar = () => {
                 className="w-auto md:h-12 h-6 mr-2"
               />
             }
-            <h1 className="md:text-lg text-xs font-bold">Ajuda Quem Faz</h1>
+            <h1 className="md:text-lg text-xs font-bold leading-[.8]">Ajuda Quem Faz</h1>
           </Link>
         </div>
         <SearchBar />
         <div id="header-end">
-          <div className="flex gap-4">
+          <div className="flex md:gap-4 gap-1 pl-2 items-center">
             {token !== '' ? (
               <>
                 {/** Cart Icon */}
                 <Link to="/cart">
                   <ShoppingCartSimple
-                    className="text-secondary-purpleLight text-opacity-95 hover:text-primary-orangeLight transition delay-75"
-                    size={44}
+                    className="text-secondary-purpleLight text-opacity-95 hover:text-primary-orangeLight transition delay-75 text-3xl"
                     weight="duotone"
                   />
                 </Link>
 
                 {/** User Button */}
-                <div className="group size-11">
+                <div className="group md:size-11 size-7">
                   {/** Foto do usuario */}
                   {usuario.foto != '' ? (
                     <img
                       src={usuario.foto}
                       alt=""
-                      className="object-cover border-2 border-secondary-purpleLight rounded-full bg-secondary-purpleLight bg-opacity-30 size-11 hover:border-primary-orangeLight"
+                      className="object-cover md:border-2 border border-secondary-purpleLight rounded-full bg-secondary-purpleLight bg-opacity-30 md:size-11 size-7 hover:border-primary-orangeLight"
                     />
                   ) : (
                     <UserCircle
-                      className="text-secondary-purpleLight "
-                      size={48}
+                      className="text-secondary-purpleLight md:size-11 size-7"
                       weight="duotone"
                     />
                   )}
