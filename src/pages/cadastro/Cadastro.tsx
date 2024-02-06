@@ -139,16 +139,15 @@ function Cadastro() {
             onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenha(e)}
           />
           <button
-            className="border-2 border-solid rounded-lg border-dark-black hover:border-secondary-purple hover:text-secondary-purple
-                 p-1 mt-4 text-lg flex justify-center"
+           className="text-xl mt-4 rounded-lg bg-secondary-purpleLight text-white py-2 hover:text-primary-orangeDark hover:bg-secondary-purple flex justify-center"
             type="submit"
           >
             {isLoading ? (
               <RotatingLines
-                strokeColor="purple"
+                strokeColor="orange"
                 strokeWidth="5"
                 animationDuration="0.75"
-                width="28"
+                width="24"
                 visible={true}
               />
             ) : (

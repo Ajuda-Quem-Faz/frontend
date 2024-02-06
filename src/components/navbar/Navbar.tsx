@@ -84,7 +84,7 @@ const NavBar = () => {
                       </li>
                       <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
                         <Link to="/perfil" className="block">
-                          Configurações
+                          Perfil
                         </Link>
                       </li>
                       <li className="hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">

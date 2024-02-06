@@ -4,6 +4,8 @@ import { useNavigate, useParams } from "react-router";
 import { atualizar, buscar } from "../../../services/Service";
 import { ToastAlerta } from "../../../utils/ToastAlerta";
 import Usuario from "../../../models/Usuario";
+import { RotatingLines } from "react-loader-spinner";
+import UsuarioLogin from "../../../models/UsuarioLogin";
 
 
 function UpdateProfile() {
@@ -12,14 +14,15 @@ function UpdateProfile() {
 
     const navigate = useNavigate();
 
-    const { usuario, handleLogout } = useContext(AuthContext)
+    const { usuario, handleLogout, handleLogin } = useContext(AuthContext)
 
     const [usuarioAtualizado, setUsuarioAtualizado] = useState<Usuario>(usuario)
 
     const token = usuario.token
 
-    const { id } = useParams<{ id: string }>();
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
+    const { id } = useParams<{ id: string }>();
 
     async function buscarPorId(id: string) {
         try {
@@ -36,7 +39,12 @@ function UpdateProfile() {
 
     useEffect(() => {
         if (id !== undefined) {
+            buscarPorId(id)
+        }
+    }, [id])
 
+    useEffect(() => {
+        if (id !== undefined) {
             buscarPorId(id)
         }
     }, [id])
@@ -70,18 +78,19 @@ function UpdateProfile() {
     }
 
     function retornar() {
-        navigate("/perfil")
+        navigate("/login")
+        usuario.token = ''
     }
 
     async function atualizarUsuario(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        // setIsLoading(true)
+        setIsLoading(true)
 
         try {
             await atualizar(`/usuarios/atualizar`, usuarioAtualizado, setUsuarioAtualizado, {
                 headers: { 'Authorization': token }
             })
-            ToastAlerta('O usuário foi atualizada com sucesso!', 'sucesso')
+            ToastAlerta('O usuário foi atualizada com sucesso! Por favor, refaça o login!', 'sucesso')
         } catch (error: any) {
             if (error.toString().includes('403')) {
                 ToastAlerta('O Token Expirou!', 'info')
@@ -92,14 +101,14 @@ function UpdateProfile() {
 
         }
 
-        // setIsLoading(false)
+        setIsLoading(false)
         retornar()
     }
 
 
     return (
 
-        <div className="flex flex-col items-center mt-4">
+        <div className="flex flex-col items-center my-8">
 
             <div className="flex flex-col items-center gap-3 justify-center border-b w-4/6">
                 <img src="./logo.png" alt="Logo Ajuda quem faz" className="w-14" />
@@ -144,7 +153,17 @@ function UpdateProfile() {
                     value={usuarioAtualizado.sobre}
                     onChange={(e: ChangeEvent<HTMLTextAreaElement>) => atualizarEstadoArea(e)} />
 
-                <button className="mt-4 rounded-lg bg-secondary-purpleLight text-white py-1 hover:text-primary-orangeDark hover:bg-secondary-purple flex justify-center">Atualizar</button>
+                <button className="text-xl mt-4 rounded-lg bg-secondary-purpleLight text-white py-1 hover:text-primary-orangeDark hover:bg-secondary-purple flex justify-center">            {isLoading ? (
+                    <RotatingLines
+                        strokeColor="orange"
+                        strokeWidth="5"
+                        animationDuration="0.75"
+                        width="28"
+                        visible={true}
+                    />
+                ) : (
+                    <span className="text-lg">{'Atualizar'}</span>
+                )}</button>
 
             </form>
         </div>
