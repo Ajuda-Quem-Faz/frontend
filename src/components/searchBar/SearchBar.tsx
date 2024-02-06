@@ -83,7 +83,7 @@ function SearchBar() {
           type="text"
           name="pesquisa"
           placeholder="Pesquise seu produto aqui"
-          className="bg-light-grayDark md:pl-5 pl-1 text-sm md:text-lg w-full "
+          className="bg-neutral-100 md:pl-5 pl-1 text-sm md:text-lg w-full "
           value={input}
           onChange={(e) => handleChange(e.target.value)}
           autoComplete="off"
