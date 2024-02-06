@@ -57,6 +57,13 @@ function FormularioCategoria() {
     })
   }
 
+  function atualizarEstadoArea(e: ChangeEvent<HTMLTextAreaElement>) {
+    setCategoria({
+      ...categoria,
+      [e.target.name]: e.target.value
+    })
+  }
+
   function retornar() {
     navigate("/categorias")
   }
@@ -103,18 +110,18 @@ function FormularioCategoria() {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="flex justify-center text-dark-black font-semibold py-9 md:w-1/4">
+      <div className="flex justify-center text-dark-black font-semibold py-9 w-2/4 sm:w-2/4 lg:2/4">
         <form
           action=""
-          className="flex flex-col justify-center gap-2"
+          className="flex flex-col justify-center gap-2 w-full lg:w-2/3"
           onSubmit={gerarNovaCategoria}
         >
           <div className="flex justify-center text-xl items-center gap-3">
-            <img src="./logo.png" alt="" className="h-12" />
+            <img src="../logo.png" alt="" className="h-12" />
             <h2 className="font-bold text-center">Ajuda Quem Faz</h2>
           </div>
           <hr />
-          <h1 className="py-2 flex justify-center text-2xl">{id === undefined ? 'Cadastrar Categoria' : 'Editar Categoria'}</h1>
+          <h1 className="py-2 flex justify-center text-xl">{id === undefined ? 'Cadastrar Categoria' : 'Editar Categoria'}</h1>
           <label className="text-lg">Setor</label>
           <input
             className="border-2 rounded-lg text-base font-normal text-dark-black px-2 py-1"
@@ -129,29 +136,28 @@ function FormularioCategoria() {
             onInput={e => (e.target as HTMLInputElement).setCustomValidity('')}
           />
           <label className="text-lg">Descrição do serviço</label>
-          <input
+          <textarea
             className="border-2 rounded-lg text-base font-normal text-dark-black px-2 py-1"
             placeholder="Descreva aqui o tipo de serviço"
-            type="text"
+            rows={10}
             name='tipoServico'
             id="tipoServico"
             value={categoria.tipoServico}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            onChange={(e: ChangeEvent<HTMLTextAreaElement>) => atualizarEstadoArea(e)}
             required
             onInvalid={e => (e.target as HTMLInputElement).setCustomValidity('Digite uma Categoria válida!')}
             onInput={e => (e.target as HTMLInputElement).setCustomValidity('')}
           />
           <button
-            className="border-2 border-solid rounded-lg border-dark-black hover:border-secondary-purple hover:text-secondary-purple
-                 p-1 mt-4 text-lg flex justify-center"
+            className="text-xl mt-4 rounded-lg bg-secondary-purpleLight text-white py-2 hover:text-primary-orangeDark hover:bg-secondary-purple flex justify-center"
             type="submit"
           >
             {isLoading ? (
               <RotatingLines
-                strokeColor="purple"
+                strokeColor="orange"
                 strokeWidth="5"
                 animationDuration="0.75"
-                width="28"
+                width="24"
                 visible={true}
               />
             ) : (
