@@ -26,7 +26,7 @@ const CardProduto = (produto: Produto) => {
 
   const { usuario } = useContext(AuthContext);
 
-  const { adicionarProduto } = useContext(CartContext);
+  const { adicionarProduto, adicionarDoacao } = useContext(CartContext);
 
   function Curtir() {
     setLike(!Like);
@@ -78,7 +78,10 @@ const CardProduto = (produto: Produto) => {
                 <Link
                   to={'/cart'}
                   className="w-auto text-center p-2 px-5 rounded-2xl bg-primary-orange text-white flex gap-3 items-center hover:brightness-110"
-                  onClick={() => adicionarProduto(produto)}
+                  onClick={() => {
+                    adicionarProduto(produto);
+                    adicionarDoacao(produto.usuario!, preco_final - produto.preco);
+                  }}
                 >
                   <ShoppingCart className="text-white" weight="bold" />
                 </Link>
@@ -205,7 +208,10 @@ const CardProduto = (produto: Produto) => {
                   <div>
                     <Link
                       to={'/cart'}
-                      onClick={() => adicionarProduto(produto)}
+                      onClick={() => {
+                        adicionarProduto(produto);
+                        adicionarDoacao(produto.usuario!, preco_final - produto.preco);
+                      }}
                       className="flex items-center justify-center p-2 px-5 gap-2 rounded-2xl bg-primary-orange text-white hover:brightness-110 mt-3"
                     >
                       <ShoppingCart className="text-white text-3xl" weight="bold" />{' '}

@@ -55,7 +55,8 @@ function SearchBar() {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  async function Esconder() { // necessário para permitir o clique nas opções
+  async function Esconder() {
+    // necessário para permitir o clique nas opções
     await delay(100);
     setshow(false);
   }
@@ -63,7 +64,7 @@ function SearchBar() {
   return (
     <>
       <div
-        className="input-group col-span-2 w-10/12 flex border-primary-orangeLight relative"
+        className="input-group col-span-3 sm:w-full flex border-primary-orangeLight relative"
         onFocus={() => setshow(true)}
         onBlur={() => Esconder()} // necessário para permitir o clique nas opções
       >
