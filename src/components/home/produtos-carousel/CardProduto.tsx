@@ -51,7 +51,7 @@ const CardProduto = (produto: Produto) => {
         size={32}
         className={
           usuario.id === produto.usuario?.id || usuario.usuario === 'root@root.com'
-            ? 'absolute left-4 top-2 mt-3 bg-black bg-opacity-20 hover:bg-opacity-60 rounded-full z-10 text-white'
+            ? 'cursor-pointer absolute left-4 top-2 mt-3 bg-black bg-opacity-20 hover:bg-opacity-60 rounded-full z-10 text-white'
             : 'hidden'
         }
         onClick={() => setShow(!Show)}
@@ -228,7 +228,7 @@ const CardProduto = (produto: Produto) => {
               size={32}
               className={
                 usuario.id === produto.usuario?.id || usuario.usuario === 'root@root.com'
-                  ? 'absolute left-0 top-0 mt-8 ml-8 bg-black bg-opacity-20 hover:bg-opacity-60 rounded-full z-10 text-white'
+                  ? 'absolute left-0 top-0 mt-8 ml-8 bg-black bg-opacity-20 hover:bg-opacity-60 rounded-full z-10 text-white cursor-pointer'
                   : 'hidden'
               }
               onClick={() => setShow(!Show)}

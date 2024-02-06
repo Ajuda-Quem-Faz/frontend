@@ -1,5 +1,5 @@
 import { CaretRight, MagnifyingGlass } from '@phosphor-icons/react';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { buscar } from '../../services/Service';
 import { AuthContext } from '../../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
@@ -58,15 +58,16 @@ function SearchBar() {
     // necessário para permitir o clique nas opções
     await delay(100);
     setshow(false);
+    setInput('');
+    setProduto([]);
+    setCategoria([]);
   }
+
+  useEffect(() => {}), [];
 
   return (
     <>
-      <div
-        className="input-group col-span-3 sm:w-full flex border-primary-orangeLight relative"
-        onFocus={() => setshow(true)}
-        onBlur={() => Esconder()} // necessário para permitir o clique nas opções
-      >
+      <div className="input-group col-span-3 sm:w-full flex border-primary-orangeLight relative">
         <select
           name="pesquisa"
           id="pesquisa"
@@ -89,6 +90,8 @@ function SearchBar() {
           onKeyDown={(e) => {
             if (e.key === 'Enter') Pesquisa();
           }}
+          onFocus={() => setshow(true)}
+          onBlur={() => Esconder()} // necessário para permitir o clique nas opções
         />
         <button
           onClick={() => {
