@@ -29,7 +29,7 @@
 .scroll-to-top {
   display: grid;
   place-content: center;
-  @apply bg-primary-orange hover:brightness-110 rounded-2xl bottom-32 !important
+  @apply bg-primary-orange hover:brightness-110 rounded-2xl bottom-32 !important;
 }
 
 .popup-content {

@@ -32,7 +32,9 @@ const NavBar = () => {
                 className="w-auto md:h-12 h-6 mr-2"
               />
             }
-            <h1 className="md:text-lg text-xs font-bold leading-[.8] md:block hidden">Ajuda Quem Faz</h1>
+            <h1 className="md:text-lg text-xs font-bold leading-[.8] md:block hidden">
+              Ajuda Quem Faz
+            </h1>
           </Link>
         </div>
         <SearchBar />
@@ -43,7 +45,7 @@ const NavBar = () => {
                 {/** Cart Icon */}
                 <Link to="/cart">
                   <ShoppingCartSimple
-                    className="text-secondary-purpleLight text-opacity-95 hover:text-primary-orangeLight transition delay-75 text-3xl"
+                    className="text-secondary-purpleLight text-opacity-95 hover:text-primary-orangeLight transition delay-75 text-3xl md:size-10"
                     weight="duotone"
                   />
                 </Link>
@@ -51,7 +53,7 @@ const NavBar = () => {
                 {/** User Button */}
                 <div className="group md:size-11 size-7">
                   {/** Foto do usuario */}
-                  
+
                   {usuario.foto != '' ? (
                     <img
                       src={usuario.foto}

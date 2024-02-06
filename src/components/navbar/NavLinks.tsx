@@ -30,7 +30,7 @@ const NavLinks = () => {
                     mt-1 bg-primary-orange rotate-45"
                     ></div>
                   </div>
-                  <div className="bg-primary-orange p-10 grid grid-cols-3 gap-10 list-none rounded-ee-3xl">
+                  <div className="bg-primary-orange p-10 grid gap-10 list-none rounded-ee-3xl">
                     {link.sublinks.map((mysublinks) => (
                       <div key={mysublinks.Head}>
                         <h1 className="text-lg font-semibold text-secondary-purpleLight">
@@ -38,14 +38,24 @@ const NavLinks = () => {
                         </h1>
                         {mysublinks.sublink.map((slink) => (
                           <li
-                            className="text-sm my-2.5 ml-2 text-light-grayLight hover:text-light-grayDark"
+                            className="grid text-sm my-2.5 text-light-grayLight hover:text-light-grayDark"
                             key={slink.name}
                           >
-                            <Link to={slink.link} className="hover:text-primary">
+                            <Link
+                              className="h-full w-full"
+                              key={slink.name}
+                              to={`/categorias/${slink.name}`}
+                            >
                               {slink.name}
                             </Link>
                           </li>
                         ))}
+                        <hr className="my-6" />
+                        <li className="grid text-sm my-5 text-light-grayLight hover:text-light-grayDark">
+                          <Link className="h-full w-full" to={`/categorias/`}>
+                            Todas as categorias
+                          </Link>
+                        </li>
                       </div>
                     ))}
                   </div>
@@ -62,16 +72,16 @@ const NavLinks = () => {
             {/* sublinks */}
             {link.sublinks.map((slinks) => (
               <div key={slinks.Head}>
-                <div>
+                <div className="grid min-w-72 ml-8">
                   <h1
                     onClick={() =>
                       subHeading !== slinks.Head
                         ? setSubHeading(slinks.Head)
                         : setSubHeading('')
                     }
-                    className="py-4 pl-7 font-semibold md:pr-0 pr-5 flex gap-2 items-center"
+                    className="font-semibold md:pr-0 pr-5 flex gap-2 items-center mb-4"
                   >
-                    <span className="text-xl md:mt-1 md:ml-2 inline">
+                    <span className="text-xl">
                       {subHeading === slinks.Head ? <CaretUp /> : <CaretDown />}
                     </span>
                     {slinks.Head}
@@ -79,13 +89,32 @@ const NavLinks = () => {
                   <div
                     className={`${
                       subHeading === slinks.Head ? 'md:hidden' : 'hidden'
-                    } list-none text-light-grayLight`}
+                    } list-none text-light-grayLight grid grid-cols-2 gap-x-16`}
                   >
                     {slinks.sublink.map((slink) => (
-                      <li className="py-3 pl-14" key={slink.name}>
-                        <Link to={slink.link}>{slink.name}</Link>
+                      <li>
+                        <li
+                          className="grid text-sm my-2.5 text-light-grayLight hover:text-light-grayDark"
+                          key={slink.name}
+                        >
+                          <Link
+                            className="h-full w-full"
+                            key={slink.name}
+                            to={`/categorias/${slink.name}`}
+                          >
+                            {slink.name}
+                          </Link>
+                        </li>
                       </li>
                     ))}
+                  </div>
+                  <div className="bottom">
+                    <hr className="mt-2" />
+                    <li className="grid text-sm my-5 text-light-grayLight hover:text-light-grayDark">
+                      <Link className="h-full" to={`/categorias/`}>
+                        Todas as categorias
+                      </Link>
+                    </li>
                   </div>
                 </div>
               </div>

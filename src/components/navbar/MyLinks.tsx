@@ -30,10 +30,6 @@ export const links = [
       //     { name: 'Educação e Pesquisa', link: '/' },
       //   ],
       // },
-      {
-        Head: 'Listar todas as categorias',
-        sublink: [{ name: 'Todas as Categorias', link: '/categorias' }],
-      },
     ],
   },
 ];

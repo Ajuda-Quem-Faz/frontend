@@ -34,6 +34,8 @@ const CardProduto = (produto: Produto) => {
 
   const [preco_final, setPrecoFinal] = useState(produto.preco);
 
+  const [doacao, setDoacao] = useState(0);
+
   return (
     <>
       <button
@@ -178,7 +180,7 @@ const CardProduto = (produto: Produto) => {
                       }}
                       className="cursor-pointer tabular-nums font-semibold h-full rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1"
                     >
-                      R$5,00
+                      R$5
                     </p>
                     <p
                       onClick={() => {
@@ -186,7 +188,7 @@ const CardProduto = (produto: Produto) => {
                       }}
                       className="cursor-pointer tabular-nums font-semibold h-full rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1"
                     >
-                      R$10,00
+                      R$10
                     </p>
                     <p
                       onClick={() => {
@@ -194,7 +196,7 @@ const CardProduto = (produto: Produto) => {
                       }}
                       className="cursor-pointer tabular-nums font-semibold h-full rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1"
                     >
-                      R$15,00
+                      R$15
                     </p>
                     <p
                       onClick={() => {
@@ -202,7 +204,7 @@ const CardProduto = (produto: Produto) => {
                       }}
                       className="cursor-pointer tabular-nums font-semibold h-full rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1"
                     >
-                      R$25,00
+                      R$25
                     </p>
                   </div>
                   <div>
@@ -264,39 +266,64 @@ const CardProduto = (produto: Produto) => {
             </div>
             <hr />
             <h3 className="text-2xl font-bold">Doe para {produto.usuario?.nome}</h3>
-            <div className="flex w-full gap-3 justify-between">
+            <div className="flex w-full justify-between gap-2">
               <div className="grid grid-cols-3 gap-1 place-items-center w-full *:cursor-pointer">
-                <p className="w-full font-semibold h-full rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1">
-                  R$5,00
+                <p
+                  onClick={() => setDoacao(doacao + 5)}
+                  className="w-full font-semibold h-full text-xs rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1"
+                >
+                  R$5
                 </p>
-                <p className="w-full font-semibold h-full rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1">
-                  R$10,00
+                <p
+                  onClick={() => setDoacao(doacao + 10)}
+                  className="w-full font-semibold h-full text-xs rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1"
+                >
+                  R$10
                 </p>
-                <p className="w-full font-semibold h-full rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1">
-                  R$15,00
+                <p
+                  onClick={() => setDoacao(doacao + 15)}
+                  className="w-full font-semibold h-full text-xs rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1"
+                >
+                  R$15
                 </p>
-                <p className="w-full font-semibold h-full rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1">
-                  R$25,00
+                <p
+                  onClick={() => setDoacao(doacao + 25)}
+                  className="w-full font-semibold h-full text-xs rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1"
+                >
+                  R$25
                 </p>
-
-                <div className="h-full w-full rounded-2xl border-2 text-dark-blackLight flex gap-3 items-center hover:bg-light-grayDark col-span-2 font-semibold justify-center">
-                  R$
+                <p
+                  onClick={() => setDoacao(doacao + 50)}
+                  className="w-full font-semibold h-full text-xs rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1"
+                >
+                  R$50
+                </p>
+                <p
+                  onClick={() => setDoacao(doacao + 100)}
+                  className="w-full font-semibold h-full text-xs rounded-2xl border-2 text-dark-blackLight grid place-items-center hover:bg-light-grayDark px-1"
+                >
+                  R$100
+                </p>
+                {/* <div className="grid rounded-2xl border-2 text-dark-blackLight place-items-center hover:bg-light-grayDark  col-span-2 h-full items-center grid-cols-5 flex-grow gap-2">
+                  <h2 className="font-semibold ml-5 mr-2">R$</h2>
                   <input
-                    className="w-24 bg-transparent"
-                    placeholder="Seu valor"
+                    className="w-full col-span-4 font-semibold h-full text-xs px-1 bg-transparent focus:border-emerald-400"
                     type="number"
                     name="doacao"
-                    defaultValue={0.0}
+                    id="doacao"
                   />
-                </div>
+                </div> */}
               </div>
-              <div className="text-center flex flex-col justify-between">
-                <p className="text-xs">Doar</p>
+              <div className="flex flex-col text-center">
+                <h2>R${doacao}</h2>
                 <Link
-                  to={'produto.id'}
-                  className="grid size-16 text-center place-items-center rounded-3xl bg-emerald-500 text-white hover:brightness-110"
+                  to={'/cart'}
+                  onClick={() => {
+                    adicionarDoacao(produto.usuario!, doacao);
+                  }}
+                  className="flex items-center justify-center p-3 gap-2 rounded-2xl bg-emerald-400 text-white hover:brightness-110 mt-2"
                 >
-                  <CurrencyCircleDollar className="text-white size-10" />
+                  <CurrencyCircleDollar className="text-white text-3xl" weight="bold" />
                 </Link>
               </div>
             </div>

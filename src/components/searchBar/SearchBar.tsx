@@ -70,7 +70,7 @@ function SearchBar() {
         <select
           name="pesquisa"
           id="pesquisa"
-          className="bg-secondary-purpleLight text-light-grayLight rounded-s-2xl p-2"
+          className="bg-secondary-purpleLight text-light-grayLight rounded-s-2xl pl-2 text-xs"
           onChange={(event) => {
             setValue(event.target.value);
           }}

@@ -11,7 +11,8 @@ function ListaProduto() {
     document.title = 'Ajuda quem Faz - Produtos';
   }, []);
 
-  const { usuario } = useContext(AuthContext);
+  const { usuario, handleLogout } = useContext(AuthContext);
+
   const token = usuario.token ?? localStorage.getItem('token');
 
   let { param } = useParams();
@@ -24,6 +25,7 @@ function ListaProduto() {
     } catch (error: any) {
       if (error.toString().includes('403')) {
         ToastAlerta('O token Expirou!', 'info');
+        handleLogout();
       }
     }
   }
@@ -78,13 +80,15 @@ function ListaProduto() {
         </div>
       )}
       <>
-        <div className="container mx-auto mt-4 font-medium flex items-center  justify-around">
-          <h2 className="">
-            <span className="text-dark-blackLight">Você pesquisou por </span>
-            <span className="font-semibold">{param}</span>
-          </h2>
-          <h2>{produto.length} resultados</h2>
-        </div>
+        {param != undefined && (
+          <div className="container mx-auto mt-4 font-medium flex items-center  justify-around">
+            <h2 className="">
+              <span className="text-dark-blackLight">Você pesquisou por </span>
+              <span className="font-semibold">{param}</span>
+            </h2>
+            <h2>{produto.length} resultados</h2>
+          </div>
+        )}
       </>
       <div className="container mx-auto my-4 gap-1 grid grid-cols-2 min-[460px]:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 md:gap-4 p-1">
         {produto.map((produto) => (

@@ -38,8 +38,10 @@ export function CartProvider({ children }: CartProviderProps) {
 
   // Função para adicionar Produtos no Carrinho
   function adicionarDoacao(destino: Usuario, doacao: number) {
-    if (doacao > 0) destino.sobre = doacao.toString();
-    setItems((state) => [...state, destino]);
+    if (doacao > 0) {
+      destino.sobre = doacao.toString();
+      setItems((state) => [...state, destino]);
+    }
   }
 
   // Função para Remover um produto especifico do Carrinho

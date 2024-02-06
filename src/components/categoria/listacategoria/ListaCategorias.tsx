@@ -42,6 +42,7 @@ function ListaCategorias() {
     } catch (error: any) {
       if (error.toString().includes('403')) {
         ToastAlerta('O token Expirou!', 'info');
+        handleLogout();
       }
     }
   }

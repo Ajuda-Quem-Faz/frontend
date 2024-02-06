@@ -25,7 +25,7 @@ function CardCart({ item }: CardProdutosProps) {
     };
 
     return (
-      <div className="p-4 bg-white rounded-lg shadow-md">
+      <div className="">
         <p className="mb-4 text-lg">Tem certeza que deseja remover o produto?</p>
         <div className="flex justify-between">
           <button

@@ -57,6 +57,7 @@ const Info = () => (
                 'https://www.amigosdobem.org/wp-content/uploads/2021/03/Novo-LOGO-01.png'
               }
               localizacao={'São Paulo, SP'}
+              link={'https://www.amigosdobem.org/'}
             />
           </SwiperSlide>
           <SwiperSlide className="h-auto">
@@ -69,6 +70,7 @@ const Info = () => (
                 'https://opipa.org/wp-content/uploads/2020/10/Logo_pipa_fonte_oficial_2020_i.png'
               }
               localizacao={'São Paulo, SP'}
+              link={'https://opipa.org/'}
             />
           </SwiperSlide>
           <SwiperSlide className="h-auto">
@@ -81,6 +83,7 @@ const Info = () => (
                 'https://cvee2f.p3cdn1.secureserver.net/wp-content/uploads/2022/03/logosite-gerandofalcoes.png'
               }
               localizacao={'São Paulo, SP'}
+              link={'https://gerandofalcoes.com/'}
             />
           </SwiperSlide>
         </Swiper>
