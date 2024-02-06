@@ -67,19 +67,21 @@ const NavBar = () => {
                 {/** User Button */}
                 <div className="group size-11">
                   {/** Foto do usuario */}
+                  
                   {usuario.foto != '' ? (
-                    <img
-                      src={usuario.foto}
-                      alt=""
-                      className="object-cover border-2 border-secondary-purpleLight rounded-full bg-secondary-purpleLight bg-opacity-30 size-11"
-                    />
-                  ) : (
-                    <UserCircle
-                      className="text-secondary-purpleLight"
-                      size={48}
-                      weight="duotone"
-                    />
-                  )}
+                      <img
+                        src={usuario.foto}
+                        alt=""
+                        className="object-cover border-2 border-secondary-purpleLight rounded-full bg-secondary-purpleLight bg-opacity-30 size-11"
+                      />
+                      ) : (
+                      <UserCircle
+                        className="text-secondary-purpleLight"
+                        size={48}
+                        weight="duotone"
+                      />
+                      )}
+                      
 
                   {/** Menu DropDown */}
                   <div className="absolute hidden text-secondary-purpleDark pt-1 group-hover:block w-56 right-5 bg-light-gray z-50">
@@ -99,7 +101,7 @@ const NavBar = () => {
                         </Link>
                       </li>
                       <li className=" hover:bg-primary-orangeDark py-4 px-4 cursor-pointer">
-                        <Link to="/settings" className="block">
+                        <Link to="/perfil" className="block">
                           Configurações
                         </Link>
                       </li>
