@@ -45,11 +45,11 @@ function About() {
 
       {/* Historia */}
       <div className="container mx-auto">
-        <div className="py-10 px-10">
+        <div className="pt-8 px-12">
           <h2 className="text-primary-orange text-3xl mb-3 font-bold">
             Conheça nossa história
           </h2>
-          <p>
+          <p className='px-2 text-xl'>
             A equipe de desenvolvedores desse e-commerce foi composta por indivíduos com
             interesses comuns na área de tecnologia. A equipe se conheceu durante o
             bootcamp intensivo de Desenvolvimento Full-Stack da Generation Brazil. Cada
@@ -64,12 +64,12 @@ function About() {
 
         {/*ODS - 1*/}
 
-        <div className="flex md:flex-row flex-col-reverse gap-6 bg-secondary-purple p-4 m-2 rounded-3xl justify-center items-center">
-          <div className="justify-evenly">
+        <div className="flex md:flex-row flex-col-reverse gap-6 bg-secondary-purple p-8 m-10 rounded-3xl justify-center items-center">
+          <div className="justify-evenly px-6 py-4">
             <h2 className="text-2xl mb-4 font-bold text-light-grayLight">
               ODS 1- Erradicação da Pobreza
             </h2>
-            <p className="text-light-grayLight">
+            <p className="text-light-grayLight text-xl">
               Assumindo a ODS 1 como norteadora, o grupo buscou desenvolver estratégias e
               soluções inovadoras que não apenas promovessem a comercialização de produtos
               das ONGs, mas também contribuíssem para o empoderamento econômico de
@@ -87,7 +87,7 @@ function About() {
 
         {/* Integrantes */}
         <div id="integrantes" className="flex flex-col my-10">
-          <h2 className="text-3xl text-primary-orange font-bold">
+          <h2 className="text-3xl text-primary-orange font-bold px-12">
             Equipe de Desenvolvimento
           </h2>
 
@@ -98,7 +98,7 @@ function About() {
             github="luizakormann"
             imagem="https://ik.imagekit.io/ajudaquemfaz/Equipe/LuizaKormann.jpg?updatedAt=1706885301115"
             sobre={
-              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum doloremque minus necessitatibus, amet tenetur aspernatur, nulla asperiores magnam beatae debitis quas labore, qui dolor nam? Fuga, corrupti natus eaque dolor non consectetur nihil consequatur id rerum culpa animi. Assumenda praesentium maxime nisi officia nihil dicta deleniti est accusamus cumque!'
+              'Profissional formada em Relações Internacionais, aos 29 anos, reconhecida por sua comunicação eficaz e comprometimento. Além de ser uma excelente conciliadora e elemento unificador para o grupo, ela encontrou sua verdadeira paixão na análise de dados e desenvolvimento backend, refletindo sua determinação e vontade de se reinventar profissionalmente.'
             }
           />
           {/* Pablo Maia */}
@@ -108,7 +108,7 @@ function About() {
             github="pxmiddle"
             imagem="https://ik.imagekit.io/ajudaquemfaz/Equipe/PabloMaia.jpg?updatedAt=1706885318307"
             sobre={
-              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum doloremque minus necessitatibus, amet tenetur aspernatur, nulla asperiores magnam beatae debitis quas labore, qui dolor nam? Fuga, corrupti natus eaque dolor non consectetur nihil consequatur id rerum culpa animi. Assumenda praesentium maxime nisi officia nihil dicta deleniti est accusamus cumque!'
+              'Aos 24 anos, está atualmente cursando Análise e Desenvolvimento de Sistemas. Com a conclusão bem-sucedida do bootcamp da Generation em Desenvolvimento Full Stack, ele demonstra ser uma pessoa centrada, focada e direta em suas abordagens. Sua presença é fundamental para manter o grupo no caminho certo, assegurando que todos permaneçam concentrados e no ritmo para alcançar os objetivos estabelecidos.'
             }
           />
           {/* Aline */}
@@ -118,7 +118,7 @@ function About() {
             github="AlineConchetta"
             imagem="https://ik.imagekit.io/ajudaquemfaz/Equipe/Aline%20Conchetta.jpeg?updatedAt=1707154255911"
             sobre={
-              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum doloremque minus necessitatibus, amet tenetur aspernatur, nulla asperiores magnam beatae debitis quas labore, qui dolor nam? Fuga, corrupti natus eaque dolor non consectetur nihil consequatur id rerum culpa animi. Assumenda praesentium maxime nisi officia nihil dicta deleniti est accusamus cumque!'
+              'Aos 24 anos, iniciou sua jornada acadêmica na licenciatura em Arte-Teatro, mas interrompeu para seguir seu interesse na área de tecnologia. Ingressou no curso de Desenvolvimento Mobile, onde encontrou sua paixão e facilidade. Atualmente, está prestes a concluir o bootcamp de Dev Full Stack pela Generation. Com habilidades em UX e UI, desempenhou um papel essencial no design do projeto. Além disso, é comunicativa, espontânea e traz consigo ideias criativas, planejando eventualmente unir tecnologia e ensino em sua carreira.'
             }
           />
           {/* Natan */}
@@ -128,7 +128,7 @@ function About() {
             github="Vitornasc3"
             imagem="https://ik.imagekit.io/ajudaquemfaz/Equipe/Vitor%20Nascimento.jpeg?updatedAt=1707151136622"
             sobre={
-              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum doloremque minus necessitatibus, amet tenetur aspernatur, nulla asperiores magnam beatae debitis quas labore, qui dolor nam? Fuga, corrupti natus eaque dolor non consectetur nihil consequatur id rerum culpa animi. Assumenda praesentium maxime nisi officia nihil dicta deleniti est accusamus cumque!'
+              'Aos 28 anos, é uma pessoa notavelmente calma e centrada, capaz de manter a tranquilidade mesmo nas situações mais desafiadoras. Sua jornada começou na hotelaria, onde ascendeu ao cargo de chefe de recepção. Movido pela paixão pela tecnologia, decidiu redirecionar sua carreira, ingressando na faculdade de Análise de Sistemas. Vitor concluiu com sucesso o bootcamp de Desenvolvimento Full Stack da Generation, destacando-se como um profissional dedicado e versátil.'
             }
           />
           {/* Natan */}
@@ -138,7 +138,7 @@ function About() {
             github="NatanOSantos"
             imagem="https://ik.imagekit.io/ajudaquemfaz/Equipe/Natan%20Oliveira.jpeg?updatedAt=1707155704905"
             sobre={
-              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum doloremque minus necessitatibus, amet tenetur aspernatur, nulla asperiores magnam beatae debitis quas labore, qui dolor nam? Fuga, corrupti natus eaque dolor non consectetur nihil consequatur id rerum culpa animi. Assumenda praesentium maxime nisi officia nihil dicta deleniti est accusamus cumque!'
+              'Trazendo consigo uma bagagem sólida em administração e marketing educacional, mas desde a infância nutre o desejo de trabalhar com tecnologia. Além de completar o Bootcamp de Desenvolvimento Full Stack da Generation, ele também se dedicou ao bootcamp da Dio, focado em .NET. Gentil, proativo e sempre disposto a ajudar o grupo, Natan surpreende a todos com sua dedicação e habilidade, destacando-se especialmente nas tarefas que assume.'
             }
           />
           {/*  Wallysson Araujo */}
@@ -148,7 +148,7 @@ function About() {
             github="WallyssonChristian"
             imagem="https://ik.imagekit.io/ajudaquemfaz/Equipe/Wallysson.jpg?updatedAt=1706807217747"
             sobre={
-              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum doloremque minus necessitatibus, amet tenetur aspernatur, nulla asperiores magnam beatae debitis quas labore, qui dolor nam? Fuga, corrupti natus eaque dolor non consectetur nihil consequatur id rerum culpa animi. Assumenda praesentium maxime nisi officia nihil dicta deleniti est accusamus cumque!'
+              'Formado em Análise e Desenvolvimento de Sistemas, traz consigo uma sólida formação ao completar o bootcamp do Santander em Python e estar prestes a concluir o bootcamp da Generation em Desenvolvimento Full Stack. Com um notável domínio de lógica, ele se destaca por sua organização excepcional nas demandas. Sua habilidade em dividir tarefas no grupo demonstra não apenas sua destreza técnica, mas também sua capacidade de liderança e eficiência na gestão de projetos.'
             }
           />
           {/* Matheus Teixeira */}
@@ -158,8 +158,7 @@ function About() {
             github="mdteixeira"
             imagem="https://media.licdn.com/dms/image/D4D03AQHLgZebL_uvaA/profile-displayphoto-shrink_400_400/0/1702560502903?e=1712793600&v=beta&t=VqtgrX72wkZXMJRbYUInQdIDgthNrVj-Sr9kYh6EVJA"
             sobre={
-              'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eum doloremque minus necessitatibus, amet tenetur aspernatur, nulla asperiores magnam beatae debitis quas labore, qui dolor nam? Fuga, corrupti natus eaque dolor non consectetur nihil consequatur id rerum culpa animi. Assumenda praesentium maxime nisi officia nihil dicta deleniti est accusamus cumque!'
-            }
+              'Aos 19 anos, explorou a automação durante o ensino médio, descobrindo sua paixão pelo software em vez de hardware. Aprendeu Python e, atualmente, cursa Ciência da Computação. Concluiu os bootcamps em Front End (Santander) e Full Stack (Generation). Destacou-se como peça fundamental no desenvolvimento front end deste projeto, demonstrando proatividade e colaboração excepcionais.'}
           />
         </div>
       </div>
