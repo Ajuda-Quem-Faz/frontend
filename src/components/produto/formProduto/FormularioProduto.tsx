@@ -145,7 +145,7 @@ function FormularioProduto() {
           onSubmit={gerarNovoProduto}
         >
           <div className="flex justify-center text-xl items-center gap-3">
-            <img src="./logo.png" alt="" className="h-12" />
+            <img src="../logo.png" alt="" className="h-12" />
             <h2 className="font-bold text-center">Ajuda Quem Faz</h2>
           </div>
           <hr />
@@ -204,7 +204,6 @@ function FormularioProduto() {
             onInput={(e) => (e.target as HTMLInputElement).setCustomValidity('')}
           />
           <label className="text-lg">Foto</label>
-          <img src={produto.foto} className="h-64 object-cover rounded-2xl" alt="" />
           <input
             type="foto"
             placeholder="Foto"
@@ -218,6 +217,7 @@ function FormularioProduto() {
             //   backgroundPosition: 'center',
             // }}
           />
+          <img src={produto.foto} className="h-64 object-cover rounded-2xl" alt="" />
           <label className="text-lg">Tema da postagem</label>
           <select
             name="categoria"
@@ -235,16 +235,15 @@ function FormularioProduto() {
             ))}
           </select>
           <button
-            className="border-2 border-solid rounded-lg border-dark-black hover:border-secondary-purple hover:text-secondary-purple
-                   p-1 mt-4 text-lg flex justify-center" // Eu usei a mesma classe que você usou no primeiro código
+            className="text-xl mt-4 rounded-lg bg-secondary-purpleLight text-white py-2 hover:text-primary-orangeDark hover:bg-secondary-purple flex justify-center" // Eu usei a mesma classe que você usou no primeiro código
             type="submit"
           >
             {isLoading ? (
               <RotatingLines
-                strokeColor="purple"
+                strokeColor="orange"
                 strokeWidth="5"
                 animationDuration="0.75"
-                width="28"
+                width="24"
                 visible={true}
               />
             ) : (
