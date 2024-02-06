@@ -5,6 +5,7 @@ import { ToastAlerta } from "../../../utils/ToastAlerta";
 import ModalProfile from "../modalprofile/ModalProfile";
 import { UserCircle } from "@phosphor-icons/react";
 
+
 function profile() {
 
     const navigate = useNavigate();
@@ -18,37 +19,41 @@ function profile() {
         }
     }, [usuario.token])
 
+    useEffect(() => {
+        console.log(usuario)
+    }, [usuario])
+
     return (
-        <div className="flex flex-col items-center mt-7 text-lg font-medium">
+        <div className="flex flex-col items-center mt-7 text-lg font-medium mx-20">
             <div className="flex flex-col items-center gap-3 justify-center border-b md:w-2/4 w-full">
                 <img src="./logo.png" alt="Logo Ajuda quem faz" className="w-14" />
                 <h2 className="font-semibold text-2xl pb-3 text-center">Ajuda Quem Faz</h2>
 
             </div>
 
-            <div id="exibirPerfil" className="flex flex-col justify-center items-center p-6 w-2/3 gap-4">
+            <div id="exibirPerfil" className="flex items-center justify-center lg:flex-row-reverse p-6 w-2/3 gap-4 flex-col-reverse">
 
-                <div>
+                <div className="flex flex-col gap-5">
+                    <p className="text-lg">Nome: {usuario.nome}</p>
+                    <p className="text-lg">Email: {usuario.usuario}</p>
+                    <p className="text-lg">Sobre: {usuario.sobre}</p>
+                    <span className="text-center mt-3"><ModalProfile /></span>
+                </div>
+
+                <div className="flex justify-center items-center gap-4 pt-2 mx-14">
                     {usuario.foto != '' ? (
                         <img
                             src={usuario.foto}
                             alt={`foto do usuario ${usuario.nome}`}
-                            className="object-cover border-2 border-secondary-purpleLight rounded-full bg-secondary-purpleLight size-52"
+                            className="object-cover shadow-2xl rounded-3xl w-8/12 lg:w-[30rem]"
                         />
                     ) : (
                         <UserCircle
-                            className="text-secondary-purpleLight text-center"
-                            size={90}
+                            className="text-secondary-purpleLight text-center text-[12rem]"
                             weight="duotone"
                         />
                     )}
                 </div>
-                <p>Nome: {usuario.nome}</p>
-                <p>Email: {usuario.usuario}</p>
-                <p>Sobre: {usuario.sobre}</p>
-
-                <span ><ModalProfile /></span>
-
             </div>
 
         </div>

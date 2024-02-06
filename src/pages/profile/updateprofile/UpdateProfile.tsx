@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router';
 import { atualizar, buscar } from '../../../services/Service';
 import { ToastAlerta } from '../../../utils/ToastAlerta';
 import Usuario from '../../../models/Usuario';
+import { RotatingLines } from 'react-loader-spinner';
 
 function UpdateProfile() {
   const [confirmaSenha, setConfirmaSenha] = useState<string>('');
@@ -15,6 +16,8 @@ function UpdateProfile() {
   const [usuarioAtualizado, setUsuarioAtualizado] = useState<Usuario>(usuario);
 
   const token = usuario.token;
+
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const { id } = useParams<{ id: string }>();
 
@@ -30,6 +33,12 @@ function UpdateProfile() {
       }
     }
   }
+
+  useEffect(() => {
+    if (id !== undefined) {
+      buscarPorId(id);
+    }
+  }, [id]);
 
   useEffect(() => {
     if (id !== undefined) {
@@ -63,18 +72,22 @@ function UpdateProfile() {
   }
 
   function retornar() {
-    navigate('/perfil');
+    navigate('/login');
+    usuario.token = '';
   }
 
   async function atualizarUsuario(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
-    // setIsLoading(true)
+    setIsLoading(true);
 
     try {
       await atualizar(`/usuarios/atualizar`, usuarioAtualizado, setUsuarioAtualizado, {
         headers: { Authorization: token },
       });
-      ToastAlerta('O usuário foi atualizada com sucesso!', 'sucesso');
+      ToastAlerta(
+        'O usuário foi atualizada com sucesso! Por favor, refaça o login!',
+        'sucesso'
+      );
     } catch (error: any) {
       if (error.toString().includes('403')) {
         ToastAlerta('O Token Expirou!', 'info');
@@ -84,7 +97,7 @@ function UpdateProfile() {
       }
     }
 
-    // setIsLoading(false)
+    setIsLoading(false);
     retornar();
   }
 
@@ -95,7 +108,11 @@ function UpdateProfile() {
         <h2 className="font-semibold text-2xl pb-3 text-center">Ajuda Quem Faz</h2>
       </div>
 
-      <form action="" className="flex flex-col gap-2 p-4 min-w-96" onSubmit={atualizarUsuario}>
+      <form
+        action=""
+        className="flex flex-col gap-2 p-4 min-w-96"
+        onSubmit={atualizarUsuario}
+      >
         <label htmlFor="">Nome</label>
         <input
           type="text"
@@ -144,8 +161,19 @@ function UpdateProfile() {
           onChange={(e: ChangeEvent<HTMLTextAreaElement>) => atualizarEstadoArea(e)}
         />
 
-        <button className="mt-4 rounded-lg bg-secondary-purpleLight text-white py-1 hover:text-primary-orangeDark hover:bg-secondary-purple flex justify-center">
-          Atualizar
+        <button className="text-xl mt-4 rounded-lg bg-secondary-purpleLight text-white py-1 hover:text-primary-orangeDark hover:bg-secondary-purple flex justify-center">
+          {' '}
+          {isLoading ? (
+            <RotatingLines
+              strokeColor="orange"
+              strokeWidth="5"
+              animationDuration="0.75"
+              width="28"
+              visible={true}
+            />
+          ) : (
+            <span className="text-lg">{'Atualizar'}</span>
+          )}
         </button>
       </form>
     </div>
