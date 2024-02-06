@@ -1,85 +1,150 @@
+import {  Buildings, Envelope, Phone } from "@phosphor-icons/react"
+import { useState } from "react"
+import { ToastAlerta } from "../../utils/ToastAlerta";
+
 function Contact() {
+    const [showButton, setShowButton] = useState(false);
+    const [showButton2, setShowButton2] = useState(false);
+
+    const toggleButton = () => {
+      setShowButton(!showButton);
+      
+    };
+    const toggleForm = () => {
+        setShowButton2(!showButton2);
+        
+      };
+  
+
+    function envioForm(){
+        ToastAlerta('Mensagem enviada com sucesso!', 'sucesso')
+    }
+
   return (
-    <>
-      <div
+   <div className="">
+    <div className="flex flex-col items-center">
+    <div className=" flex flex-row text-3xl w-full justify-center py-6">
+        <div className="flex flex-row w-9/12 gap-12">
+        <div className=" bg-secondary-purple text-center rounded-3xl w-1/3 py-3 flex flex-col items-center justify-center text-primary-orange">
+            <div className=" flex flex-row ">
+            <Phone size={36} weight="regular" color="#ff9900" className="mb-1"/>
+            <h1 className="mb-4 text-3xl">Telefone</h1>
+            </div>
+            <p className="text-tertiary-blueLight text-2xl">(11) 3317-2475</p>
+            <p className="text-tertiary-blueLight text-2xl">(11) 98226-5087</p>
+
+        </div>
+        <div className=" bg-secondary-purple text-center rounded-3xl w-1/3 py-3 flex flex-col items-center justify-center text-primary-orange">
+         <div className="flex flex-row">
+         <Envelope size={36} weight="regular" color="#ff9900" className="mb-1 "/>
+         <h1 className="mb-4 text-3xl">Email</h1>
+         </div>
+         <p className="text-tertiary-blueLight text-2xl pb-7">ajudaquemfaz@gmail.com</p>
+
+        </div>
+        <div className=" bg-secondary-purple text-center rounded-3xl w-1/3 py-3 flex flex-col items-center justify-center text-primary-orange">
+            <div className="flex flex-row">
+            <Buildings size={36} weight="regular" color="#ff9900" className="mb-1" />
+            <h1 className="mb-4 text-3xl">Escritório</h1>
+            </div>
+
+            <p className="text-tertiary-blueLight text-xl">Rua Mafra 178, Parque Císper</p>
+            <p className=" text-tertiary-blueLight text-xl">CEP: 03823-010</p>
+        </div>
+        </div>
+
+    </div>
+    
+    <div
         id="container-contact"
-        className="grid grid-cols-2 w-5/6 mx-auto my-10 rounded-3xl bg-primary-orange"
+        className="flex flex-cols-2  w-9/12 rounded-3xl bg-secondary-purple"
       >
         {/* Left SIDE */}
-        <div className="w-full p-4 m-6">
+        <div className=" p-4 m-6">
           {/* Entre em contato */}
           <div className="flex flex-col pb-4">
-            <h1 className="font-bold text-3xl">Entre em contato conosco!</h1>
-            <p>
+            <h1 className="font-bold text-3xl text-primary-orange">Entre em contato conosco!</h1>
+            <p className=" text-tertiary-blueLight">
               Encontrou um problema, tem sugestões ou quer nos ajudar? Entre em contato
               conosco!
             </p>
           </div>
 
           {/* Container Botoes */}
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-2 text-secondary-purpleDark">
             {/* Container SOU */}
             <div>
+
               <button
                 type="submit"
-                className="rounded-xl bg-light-grayLight hover:bg-light-grayDark
-              w-3/4 h-10 py-2 my-4 flex justify-center items-center"
+                className="rounded-xl bg-tertiary-blue hover:bg-light-grayDark
+              w-3/4 h-10 py-2 my-4 flex justify-center items-center focus:bg-primary-orange"
+              onClick={toggleButton}
               >
                 Sou comprador
               </button>
               <button
                 type="submit"
-                className="rounded-xl bg-light-grayLight hover:bg-light-grayDark
-              w-3/4 h-10 py-2 my-4 flex justify-center items-center"
+                className="rounded-xl bg-tertiary-blue hover:bg-light-grayDark
+              w-3/4 h-10 py-2 my-4 flex justify-center items-center focus:bg-primary-orange"
+              onClick={toggleButton}
               >
                 Sou vendedor
               </button>
             </div>
             {/* Container Problemas */}
-            <div>
+            {showButton && <div>
               <button
                 type="submit"
-                className="rounded-xl bg-light-grayLight hover:bg-light-grayDark
+                className="rounded-xl bg-tertiary-blue focus:bg-primary-orange
               w-3/4 h-10 py-2 my-4 flex justify-center items-center"
+              onClick={toggleForm}
               >
                 Problemas com frete
               </button>
               <button
                 type="submit"
-                className="rounded-xl bg-light-grayLight hover:bg-light-grayDark
+                className="rounded-xl bg-tertiary-blue hover:bg-light-grayDark focus:bg-primary-orange
               w-3/4 h-10 py-2 my-4 flex justify-center items-center"
+              onClick={toggleForm}
+
               >
                 Problemas com entrega
               </button>
               <button
                 type="submit"
-                className="rounded-xl bg-light-grayLight hover:bg-light-grayDark
-              w-3/4 h-10 py-2 my-4 flex justify-center items-center"
+                className="rounded-xl bg-tertiary-blue hover:bg-light-grayDark
+              w-3/4 h-10 py-2 my-4 flex justify-center items-center focus:bg-primary-orange"
+              onClick={toggleForm}
+
               >
                 Problemas com produto
               </button>
               <button
                 type="submit"
-                className="rounded-xl bg-light-grayLight hover:bg-light-grayDark
-              w-3/4 h-10 py-2 my-4 flex justify-center items-center"
+                className="rounded-xl bg-tertiary-blue hover:bg-light-grayDark
+              w-3/4 h-10 py-2 my-4 flex justify-center items-center focus:bg-primary-orange"
+              onClick={toggleForm}
+
               >
                 Problemas com frete
               </button>
-            </div>
+            </div>}
           </div>
         </div>
 
         {/* Right SIDE */}
-        <div className="w-full  place-items-center space-y-4 px-10 py-10">
+        {showButton2 && <div className="w-1/2  place-items-center space-y-4 px-10 py-10 text-primary-orange ">
           {/* Nome */}
-          <div className="w-full flex flex-col">
+          <div className=" w-auto flex flex-col">
             <label className="font-bold ml-2">Nome</label>
             <input
               type="text"
               id="nome"
               name="nome"
               placeholder="Nome"
-              className="border-2 bg-light-grayDark rounded-2xl p-2"
+              required
+              className="border-2 bg-secondary-purple rounded-2xl p-2 text-tertiary-blueLight"
             />
           </div>
           {/* E-Mail */}
@@ -90,18 +155,18 @@ function Contact() {
               id="email"
               name="email"
               placeholder="Exemplo@email.com"
-              className="border-2 bg-light-grayDark rounded-2xl p-2"
+              className="border-2 bg-secondary-purple rounded-2xl p-2 text-tertiary-blueLight"
             />
           </div>
           {/* Telefone */}
           <div className="w-full flex flex-col">
             <label className="font-bold ml-2">Telefone</label>
             <input
-              type="number"
+              type="tel"
               id="telefone"
               name="telefone"
               placeholder="(00) 90000-0000"
-              className="border-2 bg-light-grayDark rounded-2xl p-2"
+              className="border-2 bg-secondary-purple rounded-2xl p-2 text-tertiary-blueLight"
             />
           </div>
           {/* Descrição */}
@@ -112,23 +177,25 @@ function Contact() {
               id="descricao"
               name="descricao"
               placeholder="Conte um pouco sobre seu problema."
-              className="border-2 bg-light-grayDark rounded-2xl p-2 h-32"
+              className="border-2 bg-secondary-purple rounded-2xl h-32 p-2 text-tertiary-blueLight"
             />
           </div>
           {/* Enviar */}
           <div className="w-full flex flex-col place-items-center">
             <button
               type="submit"
-              className="rounded-2xl bg-light-grayLight hover:bg-light-grayDark
-              w-2/4 py-2 flex justify-center"
+              className="rounded-2xl bg-primary-orange hover:bg-light-grayDark
+              w-2/4 py-2 flex justify-center text-secondary-purpleDark font-semibold" onClick={envioForm}
             >
-              Enviar
+                <span>Enviar</span>
+              
             </button>
           </div>
-        </div>
+        </div>}
       </div>
-    </>
-  );
+           </div>
+           </div>
+           )
 }
 
-export default Contact;
+export default Contact

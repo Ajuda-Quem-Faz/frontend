@@ -1,12 +1,11 @@
 import { useEffect, useState, useContext } from 'react';
 import { TailSpin } from 'react-loader-spinner';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import { buscar } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 import CardCategoria from '../cardcategoria/CardCategoria';
 import { ToastAlerta } from '../../../utils/ToastAlerta';
-
 
 function ListaCategorias() {
   useEffect(() => {
@@ -18,10 +17,7 @@ function ListaCategorias() {
   const [categoria, setCategoria] = useState<Categoria[]>([]);
 
   const { usuario, handleLogout } = useContext(AuthContext);
-  const token = usuario.token;
-
-
-  
+  var token = usuario.token ?? localStorage.getItem('token');
 
   async function buscarCategoria() {
     try {
@@ -36,16 +32,28 @@ function ListaCategorias() {
     }
   }
 
-  useEffect(() => {
-    if (token === '') {
-      ToastAlerta('Você precisa estar logado', 'info');
-      navigate('/login');
+  let { param } = useParams();
+
+  async function buscarPorParam() {
+    try {
+      await buscar(`/categorias/setor/${param}`, setCategoria, {
+        headers: { Authorization: token },
+      });
+      console.log('categoria: ' + categoria);
+    } catch (error: any) {
+      if (error.toString().includes('403')) {
+        ToastAlerta('O token Expirou!', 'info');
+      }
     }
-  } , [token] );
+  }
+
+  async function PegarCategorias() {
+    param ? buscarPorParam() : buscarCategoria();
+  }
 
   useEffect(() => {
-    buscarCategoria();
-  }, [categoria.length]);
+    PegarCategorias();
+  }, [token, param]);
 
   return (
     <>

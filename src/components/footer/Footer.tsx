@@ -17,21 +17,21 @@ function Footer() {
       <div className="flex justify-around items-center py-2 text-secondary-purpleDark font-semibold">
         <Link
           to={'/about'}
-          className="flex flex-col items-center hover:text-primary-orange"
+          className="flex flex-col items-center hover:text-primary-orange transition delay-75"
         >
           <Medal size={36}></Medal>
           <p className="">Quem Somos</p>
         </Link>
         <Link
           to={''}
-          className="flex flex-col items-center hover:text-primary-orange"
+          className="flex flex-col items-center hover:text-primary-orange transition delay-75"
         >
           <CurrencyCircleDollar size={36}></CurrencyCircleDollar>
           <p className="">Como Contribuir</p>
         </Link>
         <Link
           to={''}
-          className="flex flex-col items-center hover:text-primary-orange"
+          className="flex flex-col items-center hover:text-primary-orange transition delay-75"
         >
           <Storefront size={36}></Storefront>
           <p className="">Como Vender</p>
@@ -53,36 +53,36 @@ function Footer() {
           <Link to="#">
             <InstagramLogo
               size={40}
-              className=" hover:text-primary-orange"
+              className=" hover:text-primary-orange transition delay-75"
             ></InstagramLogo>
           </Link>
           <Link to="#">
             <FacebookLogo
               size={40}
-              className=" hover:text-primary-orange"
+              className=" hover:text-primary-orange transition delay-75"
             ></FacebookLogo>
           </Link>
           <Link to="#">
             <YoutubeLogo
               size={40}
-              className=" hover:text-primary-orange"
+              className=" hover:text-primary-orange transition delay-75"
             ></YoutubeLogo>
           </Link>
           <Link to="#">
             <LinkedinLogo
               size={40}
-              className=" hover:text-primary-orange"
+              className=" hover:text-primary-orange transition delay-75"
             ></LinkedinLogo>
           </Link>
         </div>
       </div>
       <div
         id="footer-bottom"
-        className="flex justify-between px-1 font-bold text-xs py-1"
+        className="flex justify-between px-1 *:text-sm py-1"
       >
-        <p>©2024 AjudaQuemFaz </p>
-        <p>Termos de uso</p>
-        <p>Politica de Privacidade</p>
+        <p className='text-xs'>©2024 AjudaQuemFaz </p>
+        <p className='text-xs'>Termos de uso</p>
+        <p className='text-xs'>Politica de Privacidade</p>
       </div>
     </footer>
   );
