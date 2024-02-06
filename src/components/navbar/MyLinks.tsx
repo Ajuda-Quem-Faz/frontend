@@ -7,7 +7,6 @@ export const links = [
         Head: 'Produtos',
         sublink: [
           { name: 'Acessórios', link: '/' },
-          { name: 'Alimentos', link: '/' },
           { name: 'Artesanato', link: '/' },
           { name: 'Cosméticos', link: '/' },
           { name: 'Decoração', link: '/' },

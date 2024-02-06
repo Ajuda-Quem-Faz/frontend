@@ -34,13 +34,12 @@ function Contri() {
           <h1 className=" text-2xl text-secondary-purpleDark font-semibold py-2">Como contribuir?</h1>
           <p className=" text-xl text-secondary-purple">
             A sua contribuição pode ser feita de 02 formas: enquanto adquire um
-            produto ou pela página de projetos. 
+            produto ou doando. 
             <p className=" text-xl text-secondary-purple">
             Enquanto você adquire um
-            produto, pode optar por contribuir com mais um valor, se assim
-            desejar. Caso não tenha interesse em adquirir um produto,
-            <Link to="" className=" text-xl text-primary-orange"> clique aqui</Link> para ser direcionado a página de
-            projetos.
+            produto, pode optar por contribuir com um valor a mais, se assim
+            desejar. Caso tenha interesse em ajudar algum projeto sem realizar a compra, basta selecionar algum produto da Ong na qual deseje contribuir e selecionar a opção "Doe para a ONG".
+            <Link to="/produtos" className=" text-xl text-primary-orange hover:underline"> Clique aqui</Link> para ser redirecionado à página de produtos.
             </p>
           </p>
         </div>
@@ -61,11 +60,11 @@ function Contri() {
             <h1 className=" text-2xl font-semibold py-2">Anuncie seus produtos aqui!</h1>
             <p className=" text-xl">
               Para vender produtos em nosso e-commerce, é necessário ser
-              afiliado a uma organização não governamental (ONG) e oferecer
-              itens que a própria ONG produza ou adquira com o propósito de
-              revenda. Essa iniciativa visa angariar recursos para impulsionar
+              afiliado ao nosso site e oferecer
+              itens de produção autoral. 
+              <p className=" text-xl">Essa iniciativa visa angariar recursos para impulsionar
               os projetos sociais da organização, proporcionando uma forma
-              sustentável de financiamento.
+              sustentável de financiamento.</p>
             </p>
           </div>
           <div className="flex flex-row gap-10 px-24 py-6 justify-around items-center">

@@ -12,7 +12,7 @@ function About() {
             <h2 className="text-2xl font-bold text-tertiary-blueLight">Missão</h2>
             <p className="text-justify mx-3">
               Promover impacto social positivo ao conectar consumidores a produtos feitos
-              por Organizações Não Governamentais (ONGs). Buscamos oferecer uma plataforma
+              por Organizações Não Governamentais (ONGs) e pequenos produtores. Buscamos oferecer uma plataforma
               onde os consumidores possam adquirir produtos de alta qualidade, enquanto
               contribuem diretamente para causas sociais.
             </p>
@@ -55,10 +55,10 @@ function About() {
             bootcamp intensivo de Desenvolvimento Full-Stack da Generation Brazil. Cada
             membro trazia habilidades únicas, desde programação e design até gerenciamento
             de projetos. O destino os uniu quando foram sorteados para trabalhar em
-            conjunto no projeto finaldo Bootcamp. O desafio do projeto do e-commerce de
+            conjunto no projeto final do Bootcamp. O desafio do projeto do e-commerce de
             produtos de ONGs foi delineado com base nos Objetivos de Desenvolvimento
             Sustentável (ODS) da ONU, especificamente na{' '}
-            <strong>ODS 1 - Erradicação da Pobreza</strong>.
+            <strong className=' text-xl'>ODS 1 - Erradicação da Pobreza</strong>.
           </p>
         </div>
 
