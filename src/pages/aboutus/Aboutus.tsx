@@ -76,7 +76,6 @@ function About() {
       {/*OSD - 1*/}
 
       <div className="relative bg-secondary-purple w-full p-2 flex rounded-[30px] shadow mb-[50px]">
-        <div>
           <div>
             <h2 className="mx-[25px] relative font-bold text-light-grayLight text-[30px] font-bold mt-[15px]">
               ODS 1- Erradicação da Pobreza
@@ -93,15 +92,14 @@ function About() {
               desenvolvimento econômico sustentável.
             </p>
           </div>
-
           <div className="">
             <img
               className="w-[287px] h-[233px] rounded-3xl"
               src="https://ik.imagekit.io/ajudaquemfaz/Equipe/top-view-origami-chain-people-with-globe.jpg?updatedAt=1706881066829"
             ></img>
-          </div>
+
         </div>
-      </div>
+        </div>
 
       {/* Integrantes */}
       <h2 className="text-[30px] text-primary-orange font-bold text-center mb-[30px]">Equipe de Desenvolvimento</h2>
@@ -110,7 +108,7 @@ function About() {
       <div className="w-full flex flex-col-2">
         <div className="w-80 h-80 shadow">
           <img
-            className="ml-[62px] shadow-md rounded-3x1 border-spacing-1 border-light-gray rounded-b-3xl"
+            className="ml-[62px] shadow-md border-spacing-1 border-light-gray rounded-b-3xl"
             src="https://ik.imagekit.io/ajudaquemfaz/Equipe/LuizaKormann.jpg?updatedAt=1706885301115"
             alt="Foto de Luiza Kormann"
           ></img>
