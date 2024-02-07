@@ -24,25 +24,25 @@ function Contact() {
    <div className="">
     <div className="flex flex-col items-center">
     <div className=" flex flex-row text-3xl w-full justify-center py-6">
-        <div className="flex flex-row w-9/12 gap-12">
-        <div className=" bg-secondary-purple text-center rounded-3xl w-1/3 py-3 flex flex-col items-center justify-center text-primary-orange">
+        <div className="flex flex-col md:w-full md:items-center gap-12 md:flex-col lg:flex-row lg:w-9/12">
+        <div className=" bg-secondary-purple text-center rounded-3xl lg:w-1/3 md:w-3/4 w-[22rem] py-3 flex flex-col items-center justify-center text-primary-orange">
             <div className=" flex flex-row ">
             <Phone size={36} weight="regular" color="#ff9900" className="mb-1"/>
             <h1 className="mb-4 text-3xl">Telefone</h1>
             </div>
-            <p className="text-tertiary-blueLight text-2xl">(11) 3317-2475</p>
-            <p className="text-tertiary-blueLight text-2xl">(11) 98226-5087</p>
+            <p className="text-tertiary-blueLight text-xl">(11) 3317-2475</p>
+            <p className="text-tertiary-blueLight text-xl">(11) 98226-5087</p>
 
         </div>
-        <div className=" bg-secondary-purple text-center rounded-3xl w-1/3 py-3 flex flex-col items-center justify-center text-primary-orange">
+        <div className=" bg-secondary-purple text-center rounded-3xl lg:w-1/3 md:w-3/4 w-[22rem] py-3 flex flex-col items-center justify-center text-primary-orange">
          <div className="flex flex-row">
-         <Envelope size={36} weight="regular" color="#ff9900" className="mb-1 "/>
+         <Envelope size={36} weight="regular" color="#ff9900" className="mb-1"/>
          <h1 className="mb-4 text-3xl">Email</h1>
          </div>
-         <p className="text-tertiary-blueLight text-2xl pb-7">ajudaquemfaz@gmail.com</p>
+         <p className="text-tertiary-blueLight text-xl pb-7">ajudaquemfaz@gmail.com</p>
 
         </div>
-        <div className=" bg-secondary-purple text-center rounded-3xl w-1/3 py-3 flex flex-col items-center justify-center text-primary-orange">
+        <div className=" bg-secondary-purple text-center rounded-3xl lg:w-1/3 md:w-3/4 w-[22rem] py-3 flex flex-col items-center justify-center text-primary-orange">
             <div className="flex flex-row">
             <Buildings size={36} weight="regular" color="#ff9900" className="mb-1" />
             <h1 className="mb-4 text-3xl">Escritório</h1>
@@ -57,7 +57,7 @@ function Contact() {
     
     <div
         id="container-contact"
-        className="flex flex-cols-2  w-9/12 rounded-3xl bg-secondary-purple"
+        className="grid grid-cols-1  w-9/12 rounded-3xl bg-secondary-purple lg:flex-cols-2 sm:flex sm:flex-cols-1"
       >
         {/* Left SIDE */}
         <div className=" p-4 m-6">
@@ -71,7 +71,7 @@ function Contact() {
           </div>
 
           {/* Container Botoes */}
-          <div className="grid grid-cols-2 text-secondary-purpleDark">
+          <div className="grid grid-cols-1 text-secondary-purpleDark lg:grid-cols-2">
             {/* Container SOU */}
             <div>
 
@@ -134,7 +134,7 @@ function Contact() {
         </div>
 
         {/* Right SIDE */}
-        {showButton2 && <div className="w-1/2  place-items-center space-y-4 px-10 py-10 text-primary-orange ">
+        {showButton2 && <div className="w-full sm:w-2/4 lg:2/4 place-items-center space-y-4 px-10 py-10 text-primary-orange ">
           {/* Nome */}
           <div className=" w-auto flex flex-col">
             <label className="font-bold ml-2">Nome</label>
@@ -172,12 +172,12 @@ function Contact() {
           {/* Descrição */}
           <div className="w-full flex flex-col">
             <label className="font-bold ml-2">Descrição</label>
-            <input
-              type="text"
+            <textarea
               id="descricao"
+              rows={8}
               name="descricao"
               placeholder="Conte um pouco sobre seu problema."
-              className="border-2 bg-secondary-purple rounded-2xl h-32 p-2 text-tertiary-blueLight"
+              className="border-2 bg-secondary-purple rounded-2xl p-2 text-tertiary-blueLight"
             />
           </div>
           {/* Enviar */}

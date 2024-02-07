@@ -1,4 +1,3 @@
-import { GithubLogo, LinkedinLogo } from '@phosphor-icons/react';
 import CardAbout from './CardAbout';
 
 function About() {
