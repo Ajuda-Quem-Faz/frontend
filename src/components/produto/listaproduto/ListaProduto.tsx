@@ -81,7 +81,7 @@ function ListaProduto() {
       )}
       <>
         {param != undefined && (
-          <div className="container mx-auto mt-4 font-medium flex items-center  justify-around">
+          <div className="container mx-auto mt-4 font-medium flex items-center flex-wrap gap-2 justify-around">
             <h2 className="">
               <span className="text-dark-blackLight">Você pesquisou por </span>
               <span className="font-semibold">{param}</span>

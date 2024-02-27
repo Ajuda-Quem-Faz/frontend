@@ -53,7 +53,7 @@ function App() {
                 <Route path="/editarProduto/:id" element={<FormularioProduto />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="*" element={<NotFound />} />
-                <Route path="/contribuir" element={<Contri />}/>
+                <Route path="/contribuir" element={<Contri />} />
               </Routes>
               <ScrollToTop
                 smooth

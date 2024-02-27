@@ -67,11 +67,11 @@ function SearchBar() {
 
   return (
     <>
-      <div className="input-group col-span-3 sm:w-full flex border-primary-orangeLight relative">
+      <div className="input-group w-full flex min-h-12 md:min-h-0 relative">
         <select
           name="pesquisa"
           id="pesquisa"
-          className="bg-secondary-purpleLight text-light-grayLight rounded-s-2xl pl-2 text-xs"
+          className="bg-secondary-purpleLight text-light-grayLight md:rounded-s-2xl text-xs p-2.5 appearance-none text-center"
           onChange={(event) => {
             setValue(event.target.value);
           }}
@@ -83,7 +83,7 @@ function SearchBar() {
           type="text"
           name="pesquisa"
           placeholder="Pesquise seu produto aqui"
-          className="bg-neutral-100 md:pl-5 pl-1 text-sm md:text-lg w-full "
+          className="bg-neutral-100 md:pl-5 pl-3 text-sm md:text-lg w-full rounded-none"
           value={input}
           onChange={(e) => handleChange(e.target.value)}
           autoComplete="off"
@@ -97,12 +97,12 @@ function SearchBar() {
           onClick={() => {
             Pesquisa();
           }}
-          className="md:py-2 md:px-4 bg-secondary-purpleLight hover:bg-secondary-purpleDark bg-opacity-95 rounded-e-2xl transition delay-75"
+          className="md:py-2 md:px-4 bg-secondary-purpleLight hover:bg-secondary-purpleDark bg-opacity-95 md:rounded-e-2xl md:p-0 px-3 transition delay-75"
         >
           <MagnifyingGlass className="text-3xl p-1" color="white" />
         </button>
         {show ? (
-          <ul className="results-list absolute top-14 border-2 bg-light-grayLight z-[120] w-full rounded-2xl flex flex-col font-medium left-0 max-h-64 overflow-y-auto">
+          <ul className="results-list absolute md:top-14 top-12 border-2 bg-light-grayLight z-[120] w-full rounded-2xl flex flex-col font-medium left-0 max-h-64 overflow-y-auto">
             {token !== '' ? (
               value === 'Produtos' ? (
                 <h2 className="p-3 bg-gray-200">

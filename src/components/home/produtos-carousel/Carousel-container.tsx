@@ -128,6 +128,7 @@ export default function Produtos() {
         {produto.map((produto) => (
           <SwiperSlide key={produto.id}>
             <CardProduto
+              key={produto.id}
               id={produto.id}
               nome={produto.nome}
               descricao={produto.descricao}

@@ -23,7 +23,7 @@ const NavLinks = () => {
             </h1>
             {link.submenu && (
               <div key={'string'}>
-                <div className="absolute left-0 top-[100px] hidden group-hover:md:block hover:md:block">
+                <div className="absolute left-0 top-[85px] hidden group-hover:md:block hover:md:block">
                   <div>
                     <div
                       className="w-4 h-4 left-3 absolute 
@@ -72,7 +72,7 @@ const NavLinks = () => {
             {/* sublinks */}
             {link.sublinks.map((slinks) => (
               <div key={slinks.Head}>
-                <div className="grid min-w-72 ml-8">
+                <div className="min-w-72 mt-5">
                   <h1
                     onClick={() =>
                       subHeading !== slinks.Head

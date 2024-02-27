@@ -22,7 +22,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="md:grid grid-cols-5 py-2 px-2 md:px-0 place-items-center flex justify-between">
+      <div className="flex gap-4 px-4 items-center w-full justify-between min-h-12">
         <div className="flex items-center logo-container">
           <Link to="/home" className="flex flex-row items-center">
             {
@@ -32,12 +32,14 @@ const NavBar = () => {
                 className="w-auto md:h-12 h-6 mr-2"
               />
             }
-            <h1 className="md:text-lg text-xs font-bold leading-[.8] md:block hidden">
+            <h1 className="md:text-lg text-xs font-bold md:leading-[1] py-1 md:block hidden">
               Ajuda Quem Faz
             </h1>
           </Link>
         </div>
-        <SearchBar />
+        <div className="w-9/12 hidden md:block left-0">
+          <SearchBar />
+        </div>
         <div id="header-end">
           <div className="flex md:gap-4 gap-1 pl-2 items-center">
             {token !== '' ? (
@@ -120,14 +122,14 @@ const NavBar = () => {
       </div>
 
       {/** Barra Menu */}
-      <div className="flex justify-between bg-primary-orange font-semibold text-secondary-purple px-2">
+      <div className="flex justify-between flex-wrap-reverse bg-primary-orange font-semibold text-secondary-purple px-2">
         {/** Categorias */}
-        <div className="uppercase items-center flex text-lg z-[60]">
+        <div className="uppercase items-center flex text-lg md:z-[60] z-10">
           <NavLinks />
         </div>
 
         {/** Botões */}
-        <div className="justify-end md:flex hidden gap-4">
+        <div className="absolute w-full left-0 top-12 flex justify-center gap-4 items-start md:pt-2 pt-3">
           <button className="uppercase hover:text-white transition delay-75">
             <Link to="/produtos" className="">
               Produtos
@@ -146,7 +148,9 @@ const NavBar = () => {
             </Link>
           </button>
         </div>
-        <Search />
+        <div className="z-50">
+          <Search />
+        </div>
       </div>
     </div>
   );
