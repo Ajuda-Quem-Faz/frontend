@@ -37,7 +37,7 @@ const CardProduto = (produto: Produto) => {
   const [doacao, setDoacao] = useState(0);
 
   return (
-    <>
+    <div className="relative">
       <button
         className="absolute z-50 sm:mt-3 sm:mr-3 mt-1 mr-1 right-0 backdrop-blur-sm bg-dark-black bg-opacity-40 rounded-full sm:p-3 p-2 hover:bg-opacity-70"
         onClick={() => Curtir()}
@@ -330,7 +330,7 @@ const CardProduto = (produto: Produto) => {
           </div>
         </div>
       </Popup>
-    </>
+    </div>
   );
 };
 
