@@ -29,7 +29,7 @@ const NavBar = () => {
               <img
                 src="./logo.png"
                 alt="Logo do website"
-                className="w-auto md:h-12 h-6 mr-2"
+                className="w-auto md:h-12 h-6 mr-2 p-1"
               />
             }
             <h1 className="md:text-lg text-xs font-bold md:leading-[1] py-1 md:block hidden">
@@ -129,7 +129,7 @@ const NavBar = () => {
         </div>
 
         {/** Botões */}
-        <div className="absolute w-full left-0 top-12 flex justify-center gap-4 items-start md:pt-2 pt-3">
+        <div className="absolute w-full left-0 top-12 flex justify-center md:justify-end md:pr-4 gap-4 items-start md:pt-2 pt-3">
           <button className="uppercase hover:text-white transition delay-75">
             <Link to="/produtos" className="">
               Produtos
