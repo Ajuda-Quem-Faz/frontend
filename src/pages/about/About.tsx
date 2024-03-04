@@ -9,7 +9,7 @@ function About() {
         <div className="lg:container lg:mx-auto lg:p-10 p-4 grid md:grid-cols-3 justify-between gap-2">
           {/* Missão */}
           <div className="flex flex-col bg-secondary-purple items-center px-3 py-10 gap-10 rounded-2xl text-tertiary-blueLight">
-            <h2 className="text-2xl font-bold text-tertiary-blueLight">Missão</h2>
+            <h2 className="text-2xl font-bold text-primary-orange">Missão</h2>
             <p className="text-justify mx-3">
               Promover impacto social positivo ao conectar consumidores a produtos feitos
               por Organizações Não Governamentais (ONGs) e pequenos produtores. Buscamos oferecer uma plataforma
@@ -20,7 +20,7 @@ function About() {
 
           {/* Visão */}
           <div className="flex flex-col bg-secondary-purple items-center px-3 py-10 gap-10 rounded-2xl text-tertiary-blueLight">
-            <h2 className="text-2xl font-bold text-tertiary-blueLight">Visão</h2>
+            <h2 className="text-2xl font-bold text-primary-orange">Visão</h2>
             <p className="text-justify mx-3">
               Buscamos ser a principal referência global em comércio sustentável, onde
               cada produto vendido não apenas atende às necessidades dos consumidores, mas
@@ -31,7 +31,7 @@ function About() {
 
           {/* Valores */}
           <div className="flex flex-col bg-secondary-purple items-center px-3 py-10 gap-10 rounded-2xl text-tertiary-blueLight">
-            <h2 className="text-2xl font-bold">Valores</h2>
+            <h2 className="text-2xl font-bold text-primary-orange">Valores</h2>
             <div className="text-center space-y-5">
               <p className="">Compromisso Social</p>
               <p className="">Emponderamento das Comunidades</p>
