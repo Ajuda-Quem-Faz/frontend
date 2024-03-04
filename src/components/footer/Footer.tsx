@@ -19,21 +19,21 @@ function Footer() {
           to={'/about'}
           className="flex flex-col items-center hover:text-primary-orange transition delay-75"
         >
-          <Medal size={36}></Medal>
+          <Medal size={42}></Medal>
           <p className="">Quem Somos</p>
         </Link>
         <Link
           to={'/contribuir'}
           className="flex flex-col items-center hover:text-primary-orange transition delay-75"
         >
-          <CurrencyCircleDollar size={36}></CurrencyCircleDollar>
+          <CurrencyCircleDollar size={42}></CurrencyCircleDollar>
           <p className="">Como Contribuir</p>
         </Link>
         <Link
           to={'/contribuir'}
           className="flex flex-col items-center hover:text-primary-orange transition delay-75"
         >
-          <Storefront size={36}></Storefront>
+          <Storefront size={42}></Storefront>
           <p className="">Como Vender</p>
         </Link>
       </div>
@@ -50,28 +50,28 @@ function Footer() {
           id="icon"
           className="flex w-full justify-end gap-8 md:mr-8 text-tertiary-blueLight"
         >
-          <Link to="#">
+          <Link to="/home">
             <InstagramLogo
-              size={40}
-              className=" hover:text-primary-orange transition delay-75"
+             
+              className=" hover:text-primary-orange text-[2.5rem]"
             ></InstagramLogo>
           </Link>
-          <Link to="#">
+          <Link to="/home">
             <FacebookLogo
-              size={40}
-              className=" hover:text-primary-orange transition delay-75"
+             
+              className=" hover:text-primary-orange text-[2.5rem]"
             ></FacebookLogo>
           </Link>
-          <Link to="#">
+          <Link to="/home">
             <YoutubeLogo
-              size={40}
-              className=" hover:text-primary-orange transition delay-75"
+             
+              className=" hover:text-primary-orange text-[2.5rem]"
             ></YoutubeLogo>
           </Link>
-          <Link to="#">
+          <Link to="/about">
             <LinkedinLogo
-              size={40}
-              className=" hover:text-primary-orange transition delay-75"
+             
+              className=" hover:text-primary-orange text-[2.5rem]"
             ></LinkedinLogo>
           </Link>
         </div>

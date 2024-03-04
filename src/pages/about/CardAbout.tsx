@@ -8,10 +8,10 @@ function CardAbout(pessoa: {
   imagem: string;
 }) {
   return (
-    <div className="bg-white shadow-2xl p-8 m-10 rounded-3xl flex md:flex-row flex-col-reverse gap-4">
+    <div className="bg-white shadow-2xl p-8 m-10 rounded-3xl flex md:flex-row flex-col-reverse gap-4 items-center">
       <div className="flex flex-col gap-8 p-4">
         <h4 className="text-2xl sm:text-3xl font-bold">{pessoa.nome}</h4>
-        <p className="sm:text-2xl">{pessoa.sobre}</p>
+        <p className="lg:text-2xl">{pessoa.sobre}</p>
       </div>
 
       <div className="sm:min-w-72">
