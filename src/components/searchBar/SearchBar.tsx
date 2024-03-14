@@ -76,8 +76,8 @@ function SearchBar() {
             setValue(event.target.value);
           }}
         >
-          <option value="Produtos">Produtos</option>
-          <option value="Categorias">Categorias</option>
+          <option className='text-xs' value="Produtos">Produtos</option>
+          <option className='text-xs' value="Categorias">Categorias</option>
         </select>
         <input
           type="text"

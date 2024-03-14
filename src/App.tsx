@@ -30,8 +30,8 @@ function App() {
         <AuthProvider>
           <ToastContainer />
           <BrowserRouter>
-            <div className="min-h-[80vh]">
               <NavBar />
+            <div className="min-h-[80vh] sm:pt-[85px] pt-[77px]">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />

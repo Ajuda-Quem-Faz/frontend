@@ -61,6 +61,12 @@ export default function Produtos() {
     <>
       <div className="md:text-2xl flex justify-between">
         <h2 className="font-bold text-secondary-purple">Produtos que você vai amar</h2>
+        {/* <select>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select> */}
         <Link to="/produtos" className=" text-primary-orange hover:underline text-nowrap">
           Ver mais
         </Link>

@@ -1,11 +1,12 @@
-import { ShoppingCartSimple, UserCircle } from '@phosphor-icons/react';
+import { CaretRight, ShoppingCartSimple, UserCircle, X } from '@phosphor-icons/react';
 import { Link, useNavigate } from 'react-router-dom';
 import NavLinks from './NavLinks';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 import { ToastAlerta } from '../../utils/ToastAlerta';
 import Search from './Search';
 import SearchBar from '../searchBar/SearchBar';
+import Cart from '../cart/cart/Cart';
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -14,6 +15,8 @@ const NavBar = () => {
   const { usuario } = useContext(AuthContext);
   const token = usuario.token;
 
+  const [carrinho, setCarrinho] = useState(false);
+
   function logout() {
     handleLogout();
     ToastAlerta('O Usuário foi desconectado com sucesso!', 'sucesso');
@@ -21,18 +24,18 @@ const NavBar = () => {
   }
 
   return (
-    <div>
-      <div className="flex gap-4 px-4 items-center w-full justify-between min-h-12">
+    <div className="fixed w-full z-50">
+      <div className="flex gap-4 px-4 items-center w-full justify-between min-h-12 bg-white">
         <div className="flex items-center logo-container">
           <Link to="/home" className="flex flex-row items-center">
             {
               <img
                 src="./logo.png"
                 alt="Logo do website"
-                className="w-auto md:h-12 h-6 mr-2 p-1"
+                className="w-auto md:h-12 h-6 mr-2 md:py-1"
               />
             }
-            <h1 className="md:text-lg text-xs font-bold md:leading-[1] py-1 md:block hidden">
+            <h1 className="md:text-lg text-xs font-bold md:leading-[1] py-1 md:block hidden text-secondary-purpleDark">
               Ajuda Quem Faz
             </h1>
           </Link>
@@ -45,12 +48,37 @@ const NavBar = () => {
             {token !== '' ? (
               <>
                 {/** Cart Icon */}
-                <Link to="/cart">
+                {/* <Link to="/cart">
                   <ShoppingCartSimple
                     className="text-secondary-purpleLight text-opacity-95 hover:text-primary-orangeLight transition delay-75 text-3xl md:size-10"
                     weight="duotone"
                   />
-                </Link>
+                </Link> */}
+                <button onClick={() => setCarrinho(!carrinho)}>
+                  <ShoppingCartSimple
+                    className={
+                      carrinho
+                        ? 'text-primary-orange text-opacity-95 hover:text-primary-orangeLight transition delay-75 text-3xl md:size-10'
+                        : 'text-secondary-purple text-opacity-95 hover:text-secondary-purpleLight transition delay-75 text-3xl md:size-10'
+                    }
+                    weight="duotone"
+                  />
+                </button>
+
+                {carrinho ? (
+                  <div className="absolute right-0 sm:top-[88px] top-[77px] rounded-bl-2xl bg-neutral-50 border-b border-l border-primary-orange pb-5 z-10 sm:w-1/3 w-screen pt-7">
+                    <button
+                      className="absolute right-0 top-0 me-1.5 mt-1.5 p-2 rounded-full text-primary-orange bg-primary-orangeLight bg-opacity-50 hover:bg-opacity-85 flex gap-2 items-center"
+                      onClick={() => setCarrinho(!carrinho)}
+                    >
+                      Fechar
+                      <CaretRight className=" " weight="bold" />
+                    </button>
+                    <Cart />
+                  </div>
+                ) : (
+                  ''
+                )}
 
                 {/** User Button */}
                 <div className="group md:size-11 size-7">
