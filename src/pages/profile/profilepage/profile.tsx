@@ -6,7 +6,7 @@ import ModalProfile from "../modalprofile/ModalProfile";
 import { UserCircle } from "@phosphor-icons/react";
 
 
-function profile() {
+function Profile() {
 
     const navigate = useNavigate();
 
@@ -31,9 +31,9 @@ function profile() {
 
             </div>
 
-            <div id="exibirPerfil" className="flex items-center justify-center lg:flex-row-reverse p-6 w-2/3 gap-4 flex-col-reverse">
+            <div id="exibirPerfil" className="flex items-center justify-center lg:flex-row-reverse p-6 gap-4 flex-col-reverse">
 
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-5 w-auto">
                     <p className="text-lg">Nome: {usuario.nome}</p>
                     <p className="text-lg">Email: {usuario.usuario}</p>
                     <p className="text-lg">Sobre: {usuario.sobre}</p>
@@ -45,7 +45,7 @@ function profile() {
                         <img
                             src={usuario.foto}
                             alt={`foto do usuario ${usuario.nome}`}
-                            className="object-cover shadow-2xl rounded-3xl w-8/12 lg:w-[30rem]"
+                            className="object-cover shadow-2xl rounded-3xl h-auto max-w-xs mx-auto"
                         />
                     ) : (
                         <UserCircle
@@ -60,4 +60,4 @@ function profile() {
     )
 }
 
-export default profile
+export default Profile
