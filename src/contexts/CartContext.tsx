@@ -21,6 +21,7 @@ export const CartContext = createContext({} as CartContextProps);
 export function CartProvider({ children }: CartProviderProps) {
   // Estado que armazenará os Produtos do Carrinho
   const [items, setItems] = useState<any[]>([]);
+  const [preco, setPreco] = useState(0);
 
   // Estadoque retorna o número de itens do Carrinho
   const quantidadeItems = items.length;
@@ -39,7 +40,7 @@ export function CartProvider({ children }: CartProviderProps) {
   // Função para adicionar Produtos no Carrinho
   function adicionarDoacao(destino: Usuario, doacao: number) {
     if (doacao > 0) {
-      destino.sobre = doacao.toString();
+      destino.doacao = doacao.toString();
       setItems((state) => [...state, destino]);
     }
   }
@@ -59,6 +60,14 @@ export function CartProvider({ children }: CartProviderProps) {
   function limparCart() {
     ToastAlerta('Compra Efetuada com Sucesso', 'sucesso');
     setItems([]);
+  }
+
+  // Função para Limpar o Carrinho
+  function retornaTotal() {
+    items.map((item) => {
+      setPreco((prev) => prev + item.preco);
+    });
+    return preco;
   }
 
   return (

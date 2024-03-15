@@ -106,13 +106,13 @@ function CardCart({ item }: CardProdutosProps) {
                 }).format(item.preco)}
               </h3>
             )}
-            {item.sobre && (
+            {item.doacao && (
               <div className="text-center font-bold uppercase">
                 <h3 className=" h-full text-center font-bold uppercase">
                   {Intl.NumberFormat('pt-BR', {
                     style: 'currency',
                     currency: 'BRL',
-                  }).format(item.sobre)}
+                  }).format(item.doacao)}
                 </h3>
               </div>
             )}

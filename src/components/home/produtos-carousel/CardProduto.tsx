@@ -9,7 +9,7 @@ import {
 } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
 import Produto from '../../../models/Produto';
-import { useContext, useState } from 'react';
+import { MouseEventHandler, useContext, useState } from 'react';
 import { AuthContext } from '../../../contexts/AuthContext';
 
 import Popup from 'reactjs-popup';
@@ -120,7 +120,7 @@ const CardProduto = (produto: Produto) => {
         }
         modal
       >
-        {(close) => (
+        <>
           <div className="flex flex-col gap-8 p-4 overflow-y-auto">
             <div className="produto grid sm:grid-cols-2 grid-cols-1 gap-8 items-stretch">
               <img
@@ -134,9 +134,9 @@ const CardProduto = (produto: Produto) => {
                     <h2 className="text-2xl font-semibold">{produto.nome}</h2>
                     <button onClick={() => Curtir()}>
                       {/* <Heart
-                        className="text-primary-orangeLight rounded-full text-3xl"
-                        weight={Like ? 'fill' : 'bold'}
-                      /> */}
+                      className="text-primary-orangeLight rounded-full text-3xl"
+                      weight={Like ? 'fill' : 'bold'}
+                    /> */}
                     </button>
                   </div>
                   <h2 className="">{produto.descricao}</h2>
@@ -216,6 +216,7 @@ const CardProduto = (produto: Produto) => {
                         to={'/'}
                         onClick={() => {
                           adicionarProduto(produto);
+                          close();
                           adicionarDoacao(produto.usuario!, preco_final - produto.preco);
                         }}
                         className="flex items-center justify-center p-2 px-5 gap-2 rounded-2xl bg-primary-orange text-white hover:brightness-110 mt-3"
@@ -238,12 +239,6 @@ const CardProduto = (produto: Produto) => {
                 }
                 onClick={() => setShow(!Show)}
               />
-              <button
-                className="absolute right-0 top-0 me-1.5 mt-1.5 text-red-500 bg-red-300 rounded-full p-2 hover:bg-opacity-85 border-red-300 border"
-                onClick={close}
-              >
-                <X size={20} weight="bold" />
-              </button>
               <div className={Show ? 'flex top-0 mt-8 ml-14 absolute' : 'hidden'}>
                 <Link
                   to={`/editarProduto/${produto.id}`}
@@ -316,14 +311,14 @@ const CardProduto = (produto: Produto) => {
                     R$100
                   </p>
                   {/* <div className="grid rounded-2xl border-2 text-dark-blackLight place-items-center hover:bg-light-grayDark  col-span-2 h-full items-center grid-cols-5 flex-grow gap-2">
-                  <h2 className="font-semibold ml-5 mr-2">R$</h2>
-                  <input
-                    className="w-full col-span-4 font-semibold h-full text-xs px-1 bg-transparent focus:border-emerald-400"
-                    type="number"
-                    name="doacao"
-                    id="doacao"
-                  />
-                </div> */}
+                <h2 className="font-semibold ml-5 mr-2">R$</h2>
+                <input
+                  className="w-full col-span-4 font-semibold h-full text-xs px-1 bg-transparent focus:border-emerald-400"
+                  type="number"
+                  name="doacao"
+                  id="doacao"
+                />
+              </div> */}
                 </div>
                 <div className="flex flex-col text-center">
                   <h2>R${doacao}</h2>
@@ -340,7 +335,7 @@ const CardProduto = (produto: Produto) => {
               </div>
             </div>
           </div>
-        )}
+        </>
       </Popup>
     </div>
   );
