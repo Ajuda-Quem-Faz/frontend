@@ -15,6 +15,7 @@ import { AuthContext } from '../../../contexts/AuthContext';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import { CartContext } from '../../../contexts/CartContext';
+import { ToastAlerta } from '../../../utils/ToastAlerta';
 
 // interface CardProduto {
 //   produto: Produto;
@@ -42,7 +43,7 @@ const CardProduto = (produto) => {
   return (
     <div className="relative">
       <button
-        className="absolute z-50 sm:mt-3 sm:mr-3 mt-1 mr-1 right-0 backdrop-blur-sm bg-dark-black bg-opacity-40 rounded-full sm:p-3 p-2 hover:bg-opacity-70"
+        className="absolute z-20 sm:mt-3 sm:mr-3 mt-1 mr-1 right-0 backdrop-blur-sm bg-dark-black bg-opacity-40 rounded-full sm:p-3 p-2 hover:bg-opacity-70"
         onClick={() => Curtir()}
       >
         <Heart
@@ -334,6 +335,7 @@ const CardProduto = (produto) => {
                     <div
                       onClick={() => {
                         adicionarDoacao(produto.usuario, doacao);
+                        ToastAlerta('Doação adicionada ao carrinho!', 'sucesso')
                         close();
                       }}
                       className="flex items-center justify-center p-3 gap-2 rounded-2xl bg-emerald-400 text-white hover:brightness-110 mt-2"
