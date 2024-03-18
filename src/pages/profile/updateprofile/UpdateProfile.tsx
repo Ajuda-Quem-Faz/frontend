@@ -41,12 +41,6 @@ function UpdateProfile() {
   }, [id]);
 
   useEffect(() => {
-    if (id !== undefined) {
-      buscarPorId(id);
-    }
-  }, [id]);
-
-  useEffect(() => {
     if (token === '') {
       ToastAlerta('Você precisa estar logado!', 'info');
       navigate('/login');
@@ -80,25 +74,32 @@ function UpdateProfile() {
     e.preventDefault();
     setIsLoading(true);
 
-    try {
-      await atualizar(`/usuarios/atualizar`, usuarioAtualizado, setUsuarioAtualizado, {
-        headers: { Authorization: token },
-      });
-      ToastAlerta(
-        'O usuário foi atualizada com sucesso! Por favor, refaça o login!',
-        'sucesso'
-      );
-    } catch (error: any) {
-      if (error.toString().includes('403')) {
-        ToastAlerta('O Token Expirou!', 'info');
-        handleLogout();
-      } else {
-        ToastAlerta('Erro ao atualizar Usuário.', 'erro');
-      }
-    }
+    if (confirmaSenha === usuarioAtualizado.senha && usuarioAtualizado.senha.length >= 8) {
 
-    setIsLoading(false);
-    retornar();
+      try {
+        await atualizar(`/usuarios/atualizar`, usuarioAtualizado, setUsuarioAtualizado, {
+          headers: { Authorization: token },
+        });
+        ToastAlerta(
+          'O usuário foi atualizada com sucesso! Por favor, refaça o login!',
+          'sucesso'
+        );
+      } catch (error: any) {
+        if (error.toString().includes('403')) {
+          ToastAlerta('O Token Expirou!', 'info');
+          handleLogout();
+        } else {
+          ToastAlerta('Erro ao atualizar Usuário.', 'erro');
+        }
+      }
+      setIsLoading(false);
+      retornar();
+    } else {
+      ToastAlerta('Senhas inconsistentes', 'erro')
+      setUsuarioAtualizado({ ...usuario, senha: '' });
+      setConfirmaSenha('');
+      setIsLoading(false);
+    }
   }
 
   return (
